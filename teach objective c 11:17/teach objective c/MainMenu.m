@@ -1,31 +1,19 @@
-//
-//  HelloWorldLayer.m
-//  teach objective c
-//
-//  Created by vilayouth vongsomxai on 2013/11/14.
-//  Copyright vilayouth vongsomxai 2013年. All rights reserved.
-//
 
 
-// Import the interfaces
+#import "MainMenu.h"
 #import "HelloWorldLayer.h"
-
-// Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
 #import "test2.h"
-#pragma mark - HelloWorldLayer
 
-// HelloWorldLayer implementation
-@implementation HelloWorldLayer
+@implementation MainMenu
 
-// Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
 {
     // 'scene' is an autorelease object.
     CCScene *scene = [CCScene node];
     
     // 'layer' is an autorelease object.
-    HelloWorldLayer *layer = [HelloWorldLayer node];
+    MainMenu *layer = [MainMenu node];
     
     // add layer as a child to scene
     [scene addChild: layer];
@@ -34,7 +22,6 @@
     return scene;
 }
 
-// on "init" you need to initialize your instance
 -(id) init
 {
     // always call "super" init
@@ -47,7 +34,7 @@
         self.setup=[CCSprite spriteWithFile:@"Setup2.png"];
         self.Howto=[CCSprite spriteWithFile:@"Howto2.png"];
         
-         CGSize size=[CCDirector sharedDirector].winSize; //画面のサイズを取得しているそうです
+        CGSize size=[CCDirector sharedDirector].winSize; //画面のサイズを取得しているそうです
         
         self.back.position=ccp(size.width/2,size.height/2);
         self.start.position=ccp(225,140); //(横,縦)になってる。これはimage1の位置
@@ -74,7 +61,7 @@
     UITouch *t = [touches anyObject];
     CGPoint p = [t locationInView:[t view]];
     //self.start.position = ccp(p.x, [CCDirector sharedDirector].winSize.height-p.y); //クリックして表示するときの座標！！
-    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[test2 scene] ]];
+        [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[test2 scene] ]];
 }
 
 

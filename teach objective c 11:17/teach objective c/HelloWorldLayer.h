@@ -15,10 +15,9 @@
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
-{
-}
 
-@property(nonatomic,strong) CCSprite *image1,*image2;
+
+@property(nonatomic,strong) CCSprite *back,*start,*monster,*Score,*setup,*Howto;
 //@property int number;
 -(void) shownumber;
 

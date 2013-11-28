@@ -143,9 +143,17 @@
 		77E5D5C41834687C0092C262 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D5C31834687C0092C262 /* IntroLayer.m */; };
 		77E5D5CC183468900092C262 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5D5CB1834688F0092C262 /* test.m */; };
 		77E5D5CE183469230092C262 /* BOOM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77E5D5CD183469230092C262 /* BOOM.jpg */; };
-		EADCA0B818385B250068E021 /* Unknown in Resources */ = {isa = PBXBuildFile; fileRef = EADCA0B618385B250068E021 /* Unknown */; };
-		EADCA0B918385B250068E021 /* Unknown-2 in Resources */ = {isa = PBXBuildFile; fileRef = EADCA0B718385B250068E021 /* Unknown-2 */; };
-		EADCA0BD18385B810068E021 /* hukukouga.png in Resources */ = {isa = PBXBuildFile; fileRef = EADCA0BC18385B810068E021 /* hukukouga.png */; };
+		EA9CB8D31844F911006797DF /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9CB8CD1844F911006797DF /* back2.png */; };
+		EA9CB8D51844F911006797DF /* Howto2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9CB8CF1844F911006797DF /* Howto2.png */; };
+		EA9CB8D61844F911006797DF /* Monster2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9CB8D01844F911006797DF /* Monster2.png */; };
+		EA9CB8D71844F911006797DF /* Setup2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9CB8D11844F911006797DF /* Setup2.png */; };
+		EA9CB8D81844F911006797DF /* start2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9CB8D21844F911006797DF /* start2.png */; };
+		EA9CB8DC1844FF2B006797DF /* Score2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9CB8DB1844FF2B006797DF /* Score2.png */; };
+		EA9CB8DF184511D9006797DF /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9CB8DE184511D9006797DF /* MainMenu.m */; };
+		EADCA192184191820068E021 /* hukukouga.png in Resources */ = {isa = PBXBuildFile; fileRef = EADCA191184191820068E021 /* hukukouga.png */; };
+		EADCA1981841A1830068E021 /* universe2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADCA1971841A1830068E021 /* universe2.jpg */; };
+		EADCA19B1841AC2A0068E021 /* test2.m in Sources */ = {isa = PBXBuildFile; fileRef = EADCA19A1841AC2A0068E021 /* test2.m */; };
+		EADCA19D1841B4F00068E021 /* neko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EADCA19C1841B4F00068E021 /* neko.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -433,9 +441,19 @@
 		77E5D5CA1834688F0092C262 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
 		77E5D5CB1834688F0092C262 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		77E5D5CD183469230092C262 /* BOOM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BOOM.jpg; path = Resources/BOOM.jpg; sourceTree = "<group>"; };
-		EADCA0B618385B250068E021 /* Unknown */ = {isa = PBXFileReference; lastKnownFileType = file; name = Unknown; path = Resources/Unknown; sourceTree = "<group>"; };
-		EADCA0B718385B250068E021 /* Unknown-2 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Unknown-2"; path = "Resources/Unknown-2"; sourceTree = "<group>"; };
-		EADCA0BC18385B810068E021 /* hukukouga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hukukouga.png; path = "../../../../Documents/2kouki/modering/Picture/変換後/hukukouga.png"; sourceTree = "<group>"; };
+		EA9CB8CD1844F911006797DF /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back2.png; path = "../../../Documents/2kouki/modering/Picture/Main Menu/名称未設定フォルダ/back2.png"; sourceTree = "<group>"; };
+		EA9CB8CF1844F911006797DF /* Howto2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Howto2.png; path = "../../../Documents/2kouki/modering/Picture/Main Menu/名称未設定フォルダ/Howto2.png"; sourceTree = "<group>"; };
+		EA9CB8D01844F911006797DF /* Monster2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Monster2.png; path = "../../../Documents/2kouki/modering/Picture/Main Menu/名称未設定フォルダ/Monster2.png"; sourceTree = "<group>"; };
+		EA9CB8D11844F911006797DF /* Setup2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Setup2.png; path = "../../../Documents/2kouki/modering/Picture/Main Menu/名称未設定フォルダ/Setup2.png"; sourceTree = "<group>"; };
+		EA9CB8D21844F911006797DF /* start2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start2.png; path = "../../../Documents/2kouki/modering/Picture/Main Menu/名称未設定フォルダ/start2.png"; sourceTree = "<group>"; };
+		EA9CB8DB1844FF2B006797DF /* Score2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Score2.png; path = "../../../Documents/2kouki/modering/Picture/Main Menu/名称未設定フォルダ/Score2.png"; sourceTree = "<group>"; };
+		EA9CB8DD184511CC006797DF /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		EA9CB8DE184511D9006797DF /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
+		EADCA191184191820068E021 /* hukukouga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hukukouga.png; path = "../../../Documents/2kouki/modering/Picture/変換後/hukukouga.png"; sourceTree = "<group>"; };
+		EADCA1971841A1830068E021 /* universe2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = universe2.jpg; path = ../../../Documents/2kouki/modering/Picture/universe2.jpg; sourceTree = "<group>"; };
+		EADCA1991841AC2A0068E021 /* test2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test2.h; sourceTree = "<group>"; };
+		EADCA19A1841AC2A0068E021 /* test2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test2.m; sourceTree = "<group>"; };
+		EADCA19C1841B4F00068E021 /* neko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = neko.jpg; path = ../../../Documents/2kouki/modering/Picture/neko.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +518,10 @@
 				77E5D5BD1834687C0092C262 /* AppDelegate.m */,
 				77E5D5BF1834687C0092C262 /* HelloWorldLayer.h */,
 				77E5D5C01834687C0092C262 /* HelloWorldLayer.m */,
+				EADCA1991841AC2A0068E021 /* test2.h */,
+				EADCA19A1841AC2A0068E021 /* test2.m */,
+				EA9CB8DD184511CC006797DF /* MainMenu.h */,
+				EA9CB8DE184511D9006797DF /* MainMenu.m */,
 				77E5D5C21834687C0092C262 /* IntroLayer.h */,
 				77E5D5C31834687C0092C262 /* IntroLayer.m */,
 				77E5D42C183468790092C262 /* Resources */,
@@ -514,12 +536,18 @@
 		77E5D42C183468790092C262 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EADCA0B618385B250068E021 /* Unknown */,
-				EADCA0B718385B250068E021 /* Unknown-2 */,
+				EA9CB8CD1844F911006797DF /* back2.png */,
+				EA9CB8CF1844F911006797DF /* Howto2.png */,
+				EA9CB8DB1844FF2B006797DF /* Score2.png */,
+				EA9CB8D01844F911006797DF /* Monster2.png */,
+				EA9CB8D11844F911006797DF /* Setup2.png */,
+				EA9CB8D21844F911006797DF /* start2.png */,
 				77E5D5CD183469230092C262 /* BOOM.jpg */,
 				77E5D42D183468790092C262 /* Default.png */,
-				EADCA0BC18385B810068E021 /* hukukouga.png */,
+				EADCA19C1841B4F00068E021 /* neko.jpg */,
+				EADCA1971841A1830068E021 /* universe2.jpg */,
 				77E5D42F183468790092C262 /* Default@2x.png */,
+				EADCA191184191820068E021 /* hukukouga.png */,
 				77E5D431183468790092C262 /* Default-568h@2x.png */,
 				77E5D433183468790092C262 /* Default-Landscape~ipad.png */,
 				77E5D435183468790092C262 /* Icon-72.png */,
@@ -948,21 +976,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E5D43E183468790092C262 /* Icon.png in Resources */,
+				EA9CB8D61844F911006797DF /* Monster2.png in Resources */,
 				77E5D5CE183469230092C262 /* BOOM.jpg in Resources */,
+				EA9CB8D81844F911006797DF /* start2.png in Resources */,
 				77E5D59C1834687B0092C262 /* ChangeLog in Resources */,
+				EADCA1981841A1830068E021 /* universe2.jpg in Resources */,
 				77E5D430183468790092C262 /* Default@2x.png in Resources */,
-				EADCA0BD18385B810068E021 /* hukukouga.png in Resources */,
 				77E5D43A183468790092C262 /* Icon-Small.png in Resources */,
+				EADCA192184191820068E021 /* hukukouga.png in Resources */,
 				77E5D436183468790092C262 /* Icon-72.png in Resources */,
 				77E5D42E183468790092C262 /* Default.png in Resources */,
-				EADCA0B918385B250068E021 /* Unknown-2 in Resources */,
 				77E5D438183468790092C262 /* Icon-Small-50.png in Resources */,
+				EA9CB8D51844F911006797DF /* Howto2.png in Resources */,
+				EA9CB8D71844F911006797DF /* Setup2.png in Resources */,
 				77E5D443183468790092C262 /* iTunesArtwork in Resources */,
+				EA9CB8DC1844FF2B006797DF /* Score2.png in Resources */,
 				77E5D43C183468790092C262 /* Icon-Small@2x.png in Resources */,
+				EA9CB8D31844F911006797DF /* back2.png in Resources */,
 				77E5D434183468790092C262 /* Default-Landscape~ipad.png in Resources */,
+				EADCA19D1841B4F00068E021 /* neko.jpg in Resources */,
 				77E5D432183468790092C262 /* Default-568h@2x.png in Resources */,
 				77E5D440183468790092C262 /* Icon@2x.png in Resources */,
-				EADCA0B818385B250068E021 /* Unknown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,6 +1052,7 @@
 				77E5D49A1834687A0092C262 /* CCGrabber.m in Sources */,
 				77E5D5A41834687B0092C262 /* mat3.c in Sources */,
 				77E5D5BE1834687C0092C262 /* AppDelegate.m in Sources */,
+				EADCA19B1841AC2A0068E021 /* test2.m in Sources */,
 				77E5D52E1834687B0092C262 /* CCES2Renderer.m in Sources */,
 				77E5D4A01834687A0092C262 /* CCLabelAtlas.m in Sources */,
 				77E5D4BC1834687A0092C262 /* CCParallaxNode.m in Sources */,
@@ -1072,6 +1107,7 @@
 				77E5D5241834687B0092C262 /* cocos2d.m in Sources */,
 				77E5D4D11834687A0092C262 /* CCProgressTimer.m in Sources */,
 				77E5D4A61834687A0092C262 /* CCLabelTTF.m in Sources */,
+				EA9CB8DF184511D9006797DF /* MainMenu.m in Sources */,
 				77E5D5531834687B0092C262 /* CCFileUtils.m in Sources */,
 				77E5D5401834687B0092C262 /* CCEventDispatcher.m in Sources */,
 				77E5D4F61834687A0092C262 /* CCSpriteBatchNode.m in Sources */,
