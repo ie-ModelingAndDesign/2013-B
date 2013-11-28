@@ -1,9 +1,19 @@
+//
+//  MainMenu.m
+//  Beta
+//
+//  Created by Shiho OMINE on 2013/11/29.
+//  Copyright (c) 2013年 vilayouth vongsomxai. All rights reserved.
+//
 
 
-#import "MainMenu.h"
-#import "HelloWorldLayer.h"
+
 #import "AppDelegate.h"
-#import "test2.h"
+#import "MainMenu.h"
+#import "GameScene.h"
+#import "CharacterDoc.h"
+#import "GameObject.h"
+#import "MainCharacter.h"
 
 @implementation MainMenu
 
@@ -27,12 +37,12 @@
     // always call "super" init
     // Apple recommends to re-assign "self" with the "super's" return value
     if( (self=[super init]) ) {
-        self.back=[CCSprite spriteWithFile:@"back2.png"]; //これで、.hで宣言したimage1=画像名　って感じ！！
+        self.back=[CCSprite spriteWithFile:@"back.png"]; //これで、.hで宣言したimage1=画像名　って感じ！！
         self.ready=[CCSprite spriteWithFile:@"ready.png"]; //これで、.hで宣言したimage1=画像名　って感じ！！
-        self.monster=[CCSprite spriteWithFile:@"Monster2.png"];
-        self.Score=[CCSprite spriteWithFile:@"Score2.png"];
+        self.monster=[CCSprite spriteWithFile:@"Monster.png"];
+        self.Score=[CCSprite spriteWithFile:@"Score.png"];
         self.setting=[CCSprite spriteWithFile:@"Setting.png"];
-        self.Howto=[CCSprite spriteWithFile:@"Howto2.png"];
+        self.Howto=[CCSprite spriteWithFile:@"Howto.png"];
         
         CGSize size=[CCDirector sharedDirector].winSize; //画面のサイズを取得しているそうです
         
@@ -53,7 +63,9 @@
         self.isTouchEnabled=YES; //この一行でタッチに対応出来ました。でも処理はまだ入れていません！
         [self schedule:@selector(update:)]; //この命令で更新機能ができるらしい。0.03秒ごとに更新！！みたいな
     }
-
+    
+    
+    
     [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"BGMop.mp3" loop:YES];
     
     return self;
@@ -63,26 +75,31 @@
     for (UITouch *i in touches) {
         CGPoint location=[self convertTouchToNodeSpace:i];
         if (CGRectContainsPoint(self.ready.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
             [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[test2 scene] ]];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene scene] ]];
         }
-
+        
         if (CGRectContainsPoint(self.monster.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
             printf("monster");
         }
-    
+        
         
         if (CGRectContainsPoint(self.Score.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
             printf("Score");
         }
-     
+        
         
         if (CGRectContainsPoint(self.setting.boundingBox, location)) {
-            printf("setting");
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            printf("Setup");
         }
-     
+        
         
         if (CGRectContainsPoint(self.Howto.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
             printf("Howto");
         }
         
