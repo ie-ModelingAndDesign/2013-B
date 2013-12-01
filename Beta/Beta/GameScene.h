@@ -16,6 +16,6 @@
 
 //controller
 @property(nonatomic, strong) CCSprite *moveboard;
-@property(nonatomic, strong) CCSprite *attackboard;
+@property(nonatomic, strong) CCSprite *attackboard1,*attackboard2,*attackboard3;
 +(CCScene *) scene;
 @end

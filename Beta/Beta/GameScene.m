@@ -31,14 +31,24 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
 		self.moveboard=[CCSprite spriteWithFile:@"moveboard.png"];
-        self.attackboard=[CCSprite spriteWithFile:@"attackboard.png"];
+        self.attackboard1=[CCSprite spriteWithFile:@"attackboard.png"];
+        self.attackboard2=[CCSprite spriteWithFile:@"attackboard.png"];
+        self.attackboard3=[CCSprite spriteWithFile:@"attackboard.png"];
         self.moveboard.position=ccp(50, 50);
         CGSize size=[CCDirector sharedDirector].winSize;
-        self.attackboard.position=ccp(size.width-50, 50);
+        self.attackboard1.position=ccp(size.width-140, 50);
+        self.attackboard2.position=ccp(size.width-100, 50);
+        self.attackboard3.position=ccp(size.width-60, 50);
         [self addChild:self.moveboard];
-        [self addChild:self.attackboard];
+        [self addChild:self.attackboard1];
+        [self addChild:self.attackboard2];
+        [self addChild:self.attackboard3];
         
         self.character=[[MainCharacter alloc]init];
+        self.character.position=ccp(size.width/2, size.height/2);
+        self.character.positionx=self.character.position.x;
+        self.character.positiony=self.character.position.y;
+        
         [self addChild:self.character];
         
         self.isTouchEnabled = YES;
@@ -51,7 +61,7 @@
     for (UITouch *i in touches) {
         CGPoint location = [self convertTouchToNodeSpace: i];
         if (CGRectContainsPoint(self.moveboard.boundingBox,location) ) {
-            float speed=5;
+            float speed=1;
             float dx=location.x-self.moveboard.position.x;
             float dy=location.y-self.moveboard.position.y;
             float dr=dx*dx+dy*dy;
@@ -65,7 +75,7 @@
     for (UITouch *i in touches) {
         CGPoint location = [self convertTouchToNodeSpace: i];
         if (CGRectContainsPoint(self.moveboard.boundingBox,location) ) {
-            float speed=5;
+            float speed=1;
             float dx=location.x-self.moveboard.position.x;
             float dy=location.y-self.moveboard.position.y;
             float dr=dx*dx+dy*dy;
@@ -78,7 +88,16 @@
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     self.character.speedx=0;
     self.character.speedy=0;
-    
+    for (UITouch *i in touches) {
+        CGPoint location = [self convertTouchToNodeSpace: i];
+        if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
+            [self.character attack1];
+        }else if (CGRectContainsPoint(self.attackboard2.boundingBox,location) ) {
+            [self.character attack2];
+        }else if (CGRectContainsPoint(self.attackboard3.boundingBox,location) ) {
+            [self.character attack3];
+        }
+    }
 }
 -(void)nextFrame:(float)dt{
     CCNode* child;

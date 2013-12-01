@@ -19,4 +19,8 @@
 @property BOOL movestagechangeable;
 
 @property (nonatomic,strong) CCSprite *image;
+
+-(void)attack1;
+-(void)attack2;
+-(void)attack3;
 @end
