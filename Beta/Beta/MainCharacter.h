@@ -12,6 +12,7 @@
 
 @property double positionx,positiony;
 @property double speedx,speedy;
+@property CGPoint direction;
 @property BOOL islookright;
 @property int movingstat;//0 move 1 attack 2 skill1 3 skill2 4skill3 5hurt 6 dying 7 die
 @property float countmoveable;
