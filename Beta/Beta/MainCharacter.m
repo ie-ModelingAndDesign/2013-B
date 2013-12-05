@@ -25,23 +25,32 @@
     self.positionx+=self.speedx;
     self.positiony+=self.speedy;
     self.position=ccp(self.positionx, self.positiony);
+    if (self.speedx!=0&&self.speedy) {
+        self.direction=ccp(self.speedx, self.speedy);
+    }
 }
 -(void)attack1{
     Attack *a=[[NSClassFromString([PlayerDocument getattack1]) alloc] init];
     a.position=self.position;
     a.startp=self.position;
+    a.speedx=self.direction.x;
+    a.speedy=self.direction.y;
     [self.parent addChild:a];
 }
 -(void)attack2{
     Attack *a=[[NSClassFromString([PlayerDocument getattack2]) alloc] init];
     a.position=self.position;
     a.startp=self.position;
+    a.speedx=self.direction.x;
+    a.speedy=self.direction.y;
     [self.parent addChild:a];
 }
 -(void)attack3{
     Attack *a=[[NSClassFromString([PlayerDocument getattack3]) alloc] init];
     a.position=self.position;
     a.startp=self.position;
+    a.speedx=self.direction.x;
+    a.speedy=self.direction.y;
     [self.parent addChild:a];
 }
 @end
