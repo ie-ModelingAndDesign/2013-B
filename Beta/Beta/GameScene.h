@@ -9,10 +9,13 @@
 #import "GameObject.h"
 #import "cocos2d.h"
 #import "MainCharacter.h"
-
+#import "Monster.h"
 
 @interface GameScene : CCLayer
 @property (nonatomic,strong) MainCharacter *character;
+
+@property(nonatomic, strong) CCSprite *Monster;
+
 
 //controller
 @property(nonatomic, strong) CCSprite *moveboard;

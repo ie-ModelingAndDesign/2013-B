@@ -7,7 +7,7 @@
 //
 
 #import "GameScene.h"
-
+#import "Monster.h"
 @implementation GameScene
 +(CCScene *) scene
 {
@@ -53,6 +53,12 @@
         
         self.isTouchEnabled = YES;
         [self schedule:@selector(nextFrame:)];
+        
+        self.Monster=[CCSprite spriteWithFile:@"M.png"];
+        [self addChild:self.Monster];
+//        CGSize size=[CCDirector sharedDirector].winSize;
+        self.Monster.position=ccp(size.width, size.height);
+        
     }
 	return self;
 }
@@ -110,6 +116,10 @@
             
             // Update all game objects
             [gameObject update];
+            if ([gameObject isKindOfClass:[Monster class]]) {
+                Monster *m=(Monster *)gameObject;
+                m.target=self.character.position;
+            }
             
         }
     }
