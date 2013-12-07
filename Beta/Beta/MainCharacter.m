@@ -15,8 +15,6 @@
         self.image=[CCSprite spriteWithFile:@"test.jpg"];
         //fortest only
         [self.image runAction:[CCScaleTo actionWithDuration:0.1 scaleX:0.1 scaleY:0.1]];
-        //CGSize size=[CCDirector sharedDirector].winSize;
-        //self.position=ccp(size.width/2, size.height/2);
         [self addChild:self.image];
     }
     return self;
@@ -25,7 +23,7 @@
     self.positionx+=self.speedx;
     self.positiony+=self.speedy;
     self.position=ccp(self.positionx, self.positiony);
-    if (self.speedx!=0&&self.speedy) {
+    if (self.speedx!=0 && self.speedy !=0) {
         self.direction=ccp(self.speedx, self.speedy);
     }
 }

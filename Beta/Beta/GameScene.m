@@ -54,7 +54,7 @@
         self.isTouchEnabled = YES;
         [self schedule:@selector(nextFrame:)];
         
-        self.Monster=[CCSprite spriteWithFile:@"M.png"];
+        self.Monster=[[Monster alloc]init];
         [self addChild:self.Monster];
 //        CGSize size=[CCDirector sharedDirector].winSize;
         self.Monster.position=ccp(size.width, size.height);
@@ -72,8 +72,10 @@
             float dy=location.y-self.moveboard.position.y;
             float dr=dx*dx+dy*dy;
             dr=sqrtf(dr);
-            self.character.speedx=dx/dr*speed;
-            self.character.speedy=dy/dr*speed;
+            if (dr!=0) {
+                self.character.speedx=dx/dr*speed;
+                self.character.speedy=dy/dr*speed;
+            }
         }
     }
 }
@@ -86,14 +88,14 @@
             float dy=location.y-self.moveboard.position.y;
             float dr=dx*dx+dy*dy;
             dr=sqrtf(dr);
-            self.character.speedx=dx/dr*speed;
-            self.character.speedy=dy/dr*speed;
+            if (dr!=0) {
+                self.character.speedx=dx/dr*speed;
+                self.character.speedy=dy/dr*speed;
+            }
         }
     }
 }
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    self.character.speedx=0;
-    self.character.speedy=0;
     for (UITouch *i in touches) {
         CGPoint location = [self convertTouchToNodeSpace: i];
         if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
@@ -104,6 +106,8 @@
             [self.character attack3];
         }
     }
+    self.character.speedx=0;
+    self.character.speedy=0;
 }
 -(void)nextFrame:(float)dt{
     CCNode* child;

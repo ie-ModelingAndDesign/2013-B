@@ -14,7 +14,7 @@
 @interface GameScene : CCLayer
 @property (nonatomic,strong) MainCharacter *character;
 
-@property(nonatomic, strong) CCSprite *Monster;
+@property(nonatomic, strong) Monster *Monster;
 
 
 //controller
