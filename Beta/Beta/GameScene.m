@@ -53,12 +53,16 @@
         
         self.isTouchEnabled = YES;
         [self schedule:@selector(nextFrame:)];
-        
-        self.Monster=[[Monster alloc]init];
-        [self addChild:self.Monster];
+
 //        CGSize size=[CCDirector sharedDirector].winSize;
-        self.Monster.position=ccp(size.width, size.height);
         
+        self.periodofmonster=2;
+        self.monstercounter=0;
+        self.levelmaxmonster=1;
+        self.levelmonsters=1;
+        self.maxmonsterinwave=1;
+        self.sentmonster=0;
+        self.killmonster=0;
     }
 	return self;
 }
@@ -110,7 +114,19 @@
     self.character.speedy=0;
 }
 -(void)nextFrame:(float)dt{
+    self.monstercounter+=dt;
+    //NSLog(@"%f",self.monstercounter);
+    if (self.monstercounter>self.periodofmonster) {
+        self.monstercounter=0;
+        
+        if (self.sentmonster<=self.maxmonsterinwave) {
+           self.sentmonster++;
+        [self createmonster];
+            NSLog(@"here");
+        }
+    }
     CCNode* child;
+    NSMutableArray *enemy=[NSMutableArray array];
     CCARRAY_FOREACH(self.children, child)
     {
         // Check if the child is a game object
@@ -119,14 +135,58 @@
             GameObject* gameObject = (GameObject*)child;
             
             // Update all game objects
+            //NSLog([gameObject description]);
             [gameObject update];
             if ([gameObject isKindOfClass:[Monster class]]) {
                 Monster *m=(Monster *)gameObject;
                 m.target=self.character.position;
+                [enemy addObject:m];
             }
             
         }
     }
+    NSMutableArray* gameObjectsToRemove = [NSMutableArray array];
+    CCARRAY_FOREACH(self.children, child)
+    {
+        if ([child isKindOfClass:[GameObject class]])
+        {
+            GameObject* gameObject = (GameObject*)child;
+            
+            if (gameObject.isScheduledForRemove)
+            {
+                [gameObjectsToRemove addObject:gameObject];
+            }
+        }
+    }
+    
+    for (GameObject* gameObject in gameObjectsToRemove)
+    {
+        if ([gameObject isKindOfClass:[Monster class]]) {
+            Monster *m=(Monster *)gameObject;
+            [enemy removeObject:m];
+            self.killmonster++;
+        }
+        [[CCTextureCache sharedTextureCache] removeUnusedTextures];
+        [self removeChild:gameObject cleanup:YES];
+        
+    }
+    [gameObjectsToRemove removeAllObjects];
+    
+    if (self.killmonster>=self.maxmonsterinwave) {
+        self.maxmonsterinwave+=self.maxmonsterinwave*1.5;
+        self.sentmonster=0;
+        self.killmonster=0;
+        if (self.levelmonsters< self.maxmonsterinwave) {
+            self.levelmonsters++;
+        }
+    }
+}
+
+-(void)createmonster{
+    CGSize size=[CCDirector sharedDirector].winSize;
+    Monster *m=[[Monster alloc]init];
+    m.position=ccp(size.width, size.height);
+    [self addChild:m];
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

@@ -14,7 +14,14 @@
 @interface GameScene : CCLayer
 @property (nonatomic,strong) MainCharacter *character;
 
-@property(nonatomic, strong) Monster *Monster;
+//@property(nonatomic, strong) Monster *Monster;
+@property float periodofmonster;//period of monsters appear in the same wave
+@property int maxmonsterinwave;//max of monster for this wave
+@property int levelmonsters;//type of monsters that appear
+@property int levelmaxmonster;
+@property int sentmonster;
+@property int killmonster;
+@property float monstercounter;
 
 
 //controller
