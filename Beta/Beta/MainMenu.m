@@ -14,6 +14,7 @@
 #import "CharacterDoc.h"
 #import "GameObject.h"
 #import "MainCharacter.h"
+#import "Score.h"
 
 @implementation MainMenu
 
@@ -39,26 +40,26 @@
     if( (self=[super init]) ) {
         self.back=[CCSprite spriteWithFile:@"back.png"]; //これで、.hで宣言したimage1=画像名　って感じ！！
         self.ready=[CCSprite spriteWithFile:@"ready.png"]; //これで、.hで宣言したimage1=画像名　って感じ！！
-        self.monster=[CCSprite spriteWithFile:@"Monster.png"];
+        //self.monster=[CCSprite spriteWithFile:@"Monster.png"];
         self.Score=[CCSprite spriteWithFile:@"Score.png"];
         self.setting=[CCSprite spriteWithFile:@"Setting.png"];
-        self.Howto=[CCSprite spriteWithFile:@"Howto.png"];
+        //self.Howto=[CCSprite spriteWithFile:@"Howto.png"];
         
         CGSize size=[CCDirector sharedDirector].winSize; //画面のサイズを取得しているそうです
         
         self.back.position=ccp(size.width/2,size.height/2);
         self.ready.position=ccp(225,140); //(横,縦)になってる。これはimage1の位置
-        self.monster.position=ccp(50,50);
+        //self.monster.position=ccp(50,50);
         self.Score.position=ccp(170,60);
         self.setting.position=ccp(300,60);
-        self.Howto.position=ccp(430,50);
+        //self.Howto.position=ccp(430,50);
         
         [self addChild: self.back];
         [self addChild: self.ready];
-        [self addChild: self.monster];
+        //[self addChild: self.monster];
         [self addChild: self.Score];
         [self addChild: self.setting];
-        [self addChild: self.Howto];
+        //[self addChild: self.Howto];
         
         self.isTouchEnabled=YES; //この一行でタッチに対応出来ました。でも処理はまだ入れていません！
         [self schedule:@selector(update:)]; //この命令で更新機能ができるらしい。0.03秒ごとに更新！！みたいな
@@ -88,7 +89,8 @@
         
         if (CGRectContainsPoint(self.Score.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            printf("Score");
+            [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Score scene] ]];
         }
         
         

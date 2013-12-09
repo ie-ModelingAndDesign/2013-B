@@ -62,7 +62,6 @@
 {
     [super onEnter];
     
-    [[CCDirector sharedDirector] setDisplayFPS:NO];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
 }
 @end

@@ -12,20 +12,10 @@
 
 #import "cocos2d.h"
 
-#import <AudioToolbox/AudioServices.h>
-
-#import <AVFoundation/AVFoundation.h>
-
 #import "SimpleAudioEngine.h"
 
 @interface MainMenu : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 
-
-{
-    AVAudioPlayer *audioPlayer; //BGMを入れるために
-}
-
-- (AVAudioPlayer*)getAVAudioPlayer:(NSString*)soudFileName; //BGMを入れるために
 
 @property(nonatomic,strong) CCSprite *back,*ready,*monster,*Score,*setting,*Howto;
 
