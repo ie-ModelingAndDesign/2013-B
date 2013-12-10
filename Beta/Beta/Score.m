@@ -59,9 +59,9 @@
         
         self.scoreback.position=ccp(size.width/2,size.height/2);
         self.no1.position=ccp(size.width/6-15,size.height - 50); //(横,縦)になってる。これはimage1の位置
-        self.no2.position=ccp(85,size.height/2);
-        self.no3.position=ccp(95,75);
-        self.scoreRe.position=ccp(426,53);
+        self.no2.position=ccp(size.width/5,size.height/2);
+        self.no3.position=ccp(size.width/4,75);
+        self.scoreRe.position=ccp(size.width-size.width/9,size.height/6);
         self.scoreubar.position=ccp(size.width/2-15,size.height/2);
         
         [self addChild: self.scoreback];
@@ -73,7 +73,7 @@
         
         self.isTouchEnabled=YES; //この一行でタッチに対応出来ました。でも処理はまだ入れていません！
         [self schedule:@selector(update:)]; //この命令で更新機能ができるらしい。0.03秒ごとに更新！！みたいな
-
+        
         
         _new = 0; //newの初期値
         _third = 0; //thirdの初期値
@@ -122,13 +122,13 @@
     _new = score;
     if (_new > _highScore) {
         _highScore = _new;
-        [_highScoreLabel setString:[NSString stringWithFormat:@"%d", _highScore]];
+        [_highScoreLabel setString:[NSString stringWithFormat:@"%07d", _highScore]];
     }else if(_new > _second){
         _second = _new;
-        [_secondLabel setString:[NSString stringWithFormat:@"%d", _second]];
+        [_secondLabel setString:[NSString stringWithFormat:@"%07d", _second]];
     }else if(_new > _third){
         _third = _new;
-        [_thirdLabel setString:[NSString stringWithFormat:@"%d", _third]];
+        [_thirdLabel setString:[NSString stringWithFormat:@"%07d", _third]];
     }
 }
 

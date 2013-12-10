@@ -15,6 +15,7 @@
 #import "GameObject.h"
 #import "MainCharacter.h"
 #import "Score.h"
+#import "setting.h"
 
 @implementation MainMenu
 
@@ -48,10 +49,10 @@
         CGSize size=[CCDirector sharedDirector].winSize; //画面のサイズを取得しているそうです
         
         self.back.position=ccp(size.width/2,size.height/2);
-        self.ready.position=ccp(225,140); //(横,縦)になってる。これはimage1の位置
+        self.ready.position=ccp(size.width/2-10,size.height/2-30); //(横,縦)になってる。これはimage1の位置
         //self.monster.position=ccp(50,50);
-        self.Score.position=ccp(170,60);
-        self.setting.position=ccp(300,60);
+        self.Score.position=ccp(size.width/2-75,size.height/2-100);
+        self.setting.position=ccp(size.width/2+55,size.height/2-100);
         //self.Howto.position=ccp(430,50);
         
         [self addChild: self.back];
@@ -96,7 +97,7 @@
         
         if (CGRectContainsPoint(self.setting.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            printf("Setup");
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[setting scene] ]];
         }
         
         

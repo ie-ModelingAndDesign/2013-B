@@ -147,6 +147,13 @@
 		EAA10FB518562853004188C0 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FB218562853004188C0 /* 3.png */; };
 		EAA10FB81856289A004188C0 /* howto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FB61856289A004188C0 /* howto.mp3 */; };
 		EAA10FB91856289A004188C0 /* score.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FB71856289A004188C0 /* score.mp3 */; };
+		EAA10FC91856D9FB004188C0 /* setting.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA10FC81856D9FB004188C0 /* setting.m */; };
+		EAA10FCD1856DAE0004188C0 /* SEoff.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FCA1856DAE0004188C0 /* SEoff.png */; };
+		EAA10FCE1856DAE0004188C0 /* SEon.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FCB1856DAE0004188C0 /* SEon.png */; };
+		EAA10FCF1856DAE0004188C0 /* settingback.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FCC1856DAE0004188C0 /* settingback.png */; };
+		EAA10FD21856DAF2004188C0 /* BGMoff.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FD01856DAF2004188C0 /* BGMoff.png */; };
+		EAA10FD31856DAF2004188C0 /* BGMon.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FD11856DAF2004188C0 /* BGMon.png */; };
+		EAA10FD51856DB01004188C0 /* scoreback2.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA10FD41856DB01004188C0 /* scoreback2.png */; };
 		EAC0AEF2184F9B6B00732887 /* attackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC0AED4184F9B6B00732887 /* attackboard.png */; };
 		EAC0AEF3184F9B6B00732887 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC0AED5184F9B6B00732887 /* back.png */; };
 		EAC0AEF4184F9B6B00732887 /* BGMop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EAC0AED6184F9B6B00732887 /* BGMop.mp3 */; };
@@ -471,6 +478,14 @@
 		EAA10FB218562853004188C0 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		EAA10FB61856289A004188C0 /* howto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = howto.mp3; sourceTree = "<group>"; };
 		EAA10FB71856289A004188C0 /* score.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = score.mp3; sourceTree = "<group>"; };
+		EAA10FC71856D9FB004188C0 /* setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setting.h; sourceTree = "<group>"; };
+		EAA10FC81856D9FB004188C0 /* setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setting.m; sourceTree = "<group>"; };
+		EAA10FCA1856DAE0004188C0 /* SEoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SEoff.png; sourceTree = "<group>"; };
+		EAA10FCB1856DAE0004188C0 /* SEon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SEon.png; sourceTree = "<group>"; };
+		EAA10FCC1856DAE0004188C0 /* settingback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingback.png; sourceTree = "<group>"; };
+		EAA10FD01856DAF2004188C0 /* BGMoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BGMoff.png; sourceTree = "<group>"; };
+		EAA10FD11856DAF2004188C0 /* BGMon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BGMon.png; sourceTree = "<group>"; };
+		EAA10FD41856DB01004188C0 /* scoreback2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreback2.png; sourceTree = "<group>"; };
 		EAC0AED4184F9B6B00732887 /* attackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = attackboard.png; path = Resources/attackboard.png; sourceTree = "<group>"; };
 		EAC0AED5184F9B6B00732887 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Resources/back.png; sourceTree = "<group>"; };
 		EAC0AED6184F9B6B00732887 /* BGMop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BGMop.mp3; path = Resources/BGMop.mp3; sourceTree = "<group>"; };
@@ -567,6 +582,8 @@
 				77C9619D184189D600A645F9 /* AppDelegate.m */,
 				EAA10FA4185626A0004188C0 /* Monster.h */,
 				EAA10FA5185626A0004188C0 /* Monster.m */,
+				EAA10FC71856D9FB004188C0 /* setting.h */,
+				EAA10FC81856D9FB004188C0 /* setting.m */,
 				EAA10FA6185626A0004188C0 /* Score.h */,
 				EAA10FA7185626A0004188C0 /* Score.m */,
 				77C961A2184189D600A645F9 /* IntroLayer.h */,
@@ -591,12 +608,18 @@
 		77C9600C184189D200A645F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EAA10FD01856DAF2004188C0 /* BGMoff.png */,
+				EAA10FD11856DAF2004188C0 /* BGMon.png */,
+				EAA10FCA1856DAE0004188C0 /* SEoff.png */,
+				EAA10FCB1856DAE0004188C0 /* SEon.png */,
+				EAA10FCC1856DAE0004188C0 /* settingback.png */,
 				EAA10FB61856289A004188C0 /* howto.mp3 */,
 				EAA10FB71856289A004188C0 /* score.mp3 */,
 				EAA10FB018562853004188C0 /* 1.png */,
 				EAA10FB118562853004188C0 /* 2.png */,
 				EAA10FB218562853004188C0 /* 3.png */,
 				EAA10FAA18562809004188C0 /* scoreback.png */,
+				EAA10FD41856DB01004188C0 /* scoreback2.png */,
 				EAA10FAB18562809004188C0 /* scoreRe.png */,
 				EAA10FAC18562809004188C0 /* scoreubar.png */,
 				EAC0AED4184F9B6B00732887 /* attackboard.png */,
@@ -1066,18 +1089,22 @@
 				EAC0AEF7184F9B6B00732887 /* Default-Landscape~ipad.png in Resources */,
 				EAC0AF06184F9B6B00732887 /* shot1-2.png in Resources */,
 				EAA10FAD18562809004188C0 /* scoreback.png in Resources */,
+				EAA10FD31856DAF2004188C0 /* BGMon.png in Resources */,
 				EAC0AEFE184F9B6B00732887 /* Icon-Small-50.png in Resources */,
 				EAC0AF08184F9B6B00732887 /* moveboard.png in Resources */,
+				EAA10FCF1856DAE0004188C0 /* settingback.png in Resources */,
 				EAC0AEF4184F9B6B00732887 /* BGMop.mp3 in Resources */,
 				EAC0AEFA184F9B6B00732887 /* fire.gif in Resources */,
 				EAA10FB418562853004188C0 /* 2.png in Resources */,
 				EAC0AEF5184F9B6B00732887 /* button.mp3 in Resources */,
 				EAC0AEFB184F9B6B00732887 /* Howto.png in Resources */,
 				EAC0AEF9184F9B6B00732887 /* Default@2x.png in Resources */,
+				EAA10FCD1856DAE0004188C0 /* SEoff.png in Resources */,
 				EAC0AEF8184F9B6B00732887 /* Default.png in Resources */,
 				EAC0AF0C184F9B6B00732887 /* shot1-1.png in Resources */,
 				EAC0AEFF184F9B6B00732887 /* Icon-Small.png in Resources */,
 				EAC0AF09184F9B6B00732887 /* ready.png in Resources */,
+				EAA10FD21856DAF2004188C0 /* BGMoff.png in Resources */,
 				EAC0AEF2184F9B6B00732887 /* attackboard.png in Resources */,
 				77C9617C184189D500A645F9 /* ChangeLog in Resources */,
 				EAC0AF07184F9B6B00732887 /* Monster.png in Resources */,
@@ -1085,12 +1112,14 @@
 				EAC0AEFD184F9B6B00732887 /* Icon-72.png in Resources */,
 				EAC0AEF3184F9B6B00732887 /* back.png in Resources */,
 				EAA10FB81856289A004188C0 /* howto.mp3 in Resources */,
+				EAA10FD51856DB01004188C0 /* scoreback2.png in Resources */,
 				EAC0AF0A184F9B6B00732887 /* Score.png in Resources */,
 				EAC0AF00184F9B6B00732887 /* Icon-Small@2x.png in Resources */,
 				EAA10FAE18562809004188C0 /* scoreRe.png in Resources */,
 				EAC0AF0D184F9B6B00732887 /* test.jpg in Resources */,
 				EAC0AEF6184F9B6B00732887 /* Default-568h@2x.png in Resources */,
 				EAC0AF0B184F9B6B00732887 /* Setting.png in Resources */,
+				EAA10FCE1856DAE0004188C0 /* SEon.png in Resources */,
 				EAA10FAF18562809004188C0 /* scoreubar.png in Resources */,
 				EAC0AEFC184F9B6B00732887 /* iceball.gif in Resources */,
 				EAA10FB318562853004188C0 /* 1.png in Resources */,
@@ -1154,6 +1183,7 @@
 				77C96184184189D500A645F9 /* mat3.c in Sources */,
 				EAA10FA9185626A0004188C0 /* Score.m in Sources */,
 				77C9619E184189D600A645F9 /* AppDelegate.m in Sources */,
+				EAA10FC91856D9FB004188C0 /* setting.m in Sources */,
 				77C9610E184189D500A645F9 /* CCES2Renderer.m in Sources */,
 				77C961B8184196AF00A645F9 /* GameScene.m in Sources */,
 				77C96080184189D300A645F9 /* CCLabelAtlas.m in Sources */,
