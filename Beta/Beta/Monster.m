@@ -7,7 +7,7 @@
 //
 
 #import "Monster.h"
-
+#import "Attack.h"
 @implementation Monster
 
 -(id)init{
@@ -15,21 +15,24 @@
         self.imageM=[CCSprite spriteWithFile:@"ghast.png"];
         [self addChild:self.imageM];
         CGSize size=[CCDirector sharedDirector].winSize;
-        self.position=ccp(size.width, size.height);
+//        self.position=ccp(size.width, size.height);
+        [self schedule:@selector(charge1) interval:3.0f];
     }
     return self;
 }
 
+float speed=1;
+float dx,dy,dr;
 
-/*
- float speed=1;
- float dx=self.position.x-;
- float dy=self.position.y;
- float dr=dx*dx+dy*dy;
- dr=sqrtf(dr);
- self.speedx=dx/dr*speed;
- self.speedy=dy/dr*speed;
- */
+
+float positionx;
+float positiony;
+
+
+
+// self.speedx=dx/dr*speed;
+// self.speedy=dy/dr*speed;
+
 
 -(void)update{
     float speed=1;
@@ -44,5 +47,24 @@
     self.position=ccp(self.positionx, self.positiony);
 }
 
+-(void)charge1{
+    
+    dx = self.target.x-self.position.x;
+    dy = self.target.y-self.position.y;
+    dr=dx*dx+dy*dy;
+    dr=sqrtf(dr);
+  
+    float Bspeed=5;
+    
+    if(dr<150){
+        Attack *a=[[Attack alloc] init];
+        a.position=ccp(self.position.x,self.position.y);
+        a.speedx=dx/dr*Bspeed;
+        a.speedy=dy/dr*Bspeed;
+        [self.parent addChild:a];
+//        printf("attack");
+    }
+}
 
 @end
+
