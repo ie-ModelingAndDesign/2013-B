@@ -21,30 +21,28 @@
     return self;
 }
 
+
 float speed=1;
 float dx,dy,dr;
-
-
 float positionx;
 float positiony;
 
 
-
-// self.speedx=dx/dr*speed;
-// self.speedy=dy/dr*speed;
-
-
 -(void)update{
     float speed=1;
-    float dx=-self.position.x+self.target.x;
-    float dy=-self.position.y+self.target.y;
+    float dx=self.target.x-self.position.x;
+    float dy=self.target.y-self.position.y;
     float dr=dx*dx+dy*dy;
     dr=sqrtf(dr);
-    self.speedx=dx/dr*speed;
-    self.speedy=dy/dr*speed;
-    self.positionx+=self.speedx*speed;
-    self.positiony+=self.speedy*speed;
+    
+    if (dr > 150) {
+
+    self.positionx+=dx/dr*speed;
+    self.positiony+=dy/dr*speed;
+    
     self.position=ccp(self.positionx, self.positiony);
+    }
+        
 }
 
 -(void)charge1{
@@ -62,7 +60,6 @@ float positiony;
         a.speedx=dx/dr*Bspeed;
         a.speedy=dy/dr*Bspeed;
         [self.parent addChild:a];
-//        printf("attack");
     }
 }
 
