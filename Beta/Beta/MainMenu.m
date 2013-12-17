@@ -16,6 +16,7 @@
 #import "MainCharacter.h"
 #import "Score.h"
 #import "setting.h"
+#import "Howto.h"
 
 @implementation MainMenu
 
@@ -44,7 +45,7 @@
         //self.monster=[CCSprite spriteWithFile:@"Monster.png"];
         self.Score=[CCSprite spriteWithFile:@"Score.png"];
         self.setting=[CCSprite spriteWithFile:@"Setting.png"];
-        //self.Howto=[CCSprite spriteWithFile:@"Howto.png"];
+        self.Howto=[CCSprite spriteWithFile:@"Howto.png"];
         
         CGSize size=[CCDirector sharedDirector].winSize; //画面のサイズを取得しているそうです
         
@@ -53,14 +54,14 @@
         //self.monster.position=ccp(50,50);
         self.Score.position=ccp(size.width/2-75,size.height/2-100);
         self.setting.position=ccp(size.width/2+55,size.height/2-100);
-        //self.Howto.position=ccp(430,50);
+        self.Howto.position=ccp(430,50);
         
         [self addChild: self.back];
         [self addChild: self.ready];
         //[self addChild: self.monster];
         [self addChild: self.Score];
         [self addChild: self.setting];
-        //[self addChild: self.Howto];
+        [self addChild: self.Howto];
         
         self.isTouchEnabled=YES; //この一行でタッチに対応出来ました。でも処理はまだ入れていません！
         [self schedule:@selector(update:)]; //この命令で更新機能ができるらしい。0.03秒ごとに更新！！みたいな
@@ -103,7 +104,7 @@
         
         if (CGRectContainsPoint(self.Howto.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            printf("Howto");
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Howto scene] ]];
         }
         
     }
