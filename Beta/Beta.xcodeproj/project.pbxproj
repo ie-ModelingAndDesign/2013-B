@@ -54,6 +54,8 @@
 		2955DB7F18595E2000269EF7 /* shot4-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2955DB6D18595E2000269EF7 /* shot4-3.png */; };
 		68582F4418604C940055DF4E /* MonsterThird.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4018604C940055DF4E /* MonsterThird.m */; };
 		68582F4518604C940055DF4E /* MonsterSecand.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4218604C940055DF4E /* MonsterSecand.m */; };
+		685830E3186064A50055DF4E /* Howtoplay.png in Resources */ = {isa = PBXBuildFile; fileRef = 68583083186064A50055DF4E /* Howtoplay.png */; };
+		685830E6186064D20055DF4E /* Howto.m in Sources */ = {isa = PBXBuildFile; fileRef = 685830E4186064D20055DF4E /* Howto.m */; };
 		77C95FF8184189D200A645F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF7184189D200A645F9 /* QuartzCore.framework */; };
 		77C95FFA184189D200A645F9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF9184189D200A645F9 /* OpenGLES.framework */; };
 		77C95FFC184189D200A645F9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FFB184189D200A645F9 /* OpenAL.framework */; };
@@ -279,6 +281,9 @@
 		68582F4118604C940055DF4E /* MonsterThird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterThird.h; sourceTree = "<group>"; };
 		68582F4218604C940055DF4E /* MonsterSecand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterSecand.m; sourceTree = "<group>"; };
 		68582F4318604C940055DF4E /* MonsterSecand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterSecand.h; sourceTree = "<group>"; };
+		68583083186064A50055DF4E /* Howtoplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Howtoplay.png; path = Resources/Howtoplay.png; sourceTree = "<group>"; };
+		685830E4186064D20055DF4E /* Howto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Howto.m; sourceTree = "<group>"; };
+		685830E5186064D20055DF4E /* Howto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Howto.h; sourceTree = "<group>"; };
 		77C95FF4184189D200A645F9 /* Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C95FF7184189D200A645F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		77C95FF9184189D200A645F9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -768,6 +773,8 @@
 		77C9600B184189D200A645F9 /* Beta */ = {
 			isa = PBXGroup;
 			children = (
+				685830E4186064D20055DF4E /* Howto.m */,
+				685830E5186064D20055DF4E /* Howto.h */,
 				2909B26F184AE92600A47312 /* Attack.h */,
 				2909B270184AE92600A47312 /* Attack.m */,
 				2909B271184AE92600A47312 /* Attackice.h */,
@@ -808,6 +815,7 @@
 		77C9600C184189D200A645F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				68583083186064A50055DF4E /* Howtoplay.png */,
 				EA569816185DBA770084B046 /* Logo */,
 				EA56981B185DBA770084B046 /* Icon */,
 				2955DB5518595E2000269EF7 /* monster */,
@@ -1383,6 +1391,7 @@
 				EAC0AEFC184F9B6B00732887 /* iceball.gif in Resources */,
 				2955DB7718595E2000269EF7 /* tank.png in Resources */,
 				EAA10FEF1856DDAC004188C0 /* scoreubar.png in Resources */,
+				685830E3186064A50055DF4E /* Howtoplay.png in Resources */,
 				EAA10FEA1856DDAC004188C0 /* 1.png in Resources */,
 				2955DB4718595DEB00269EF7 /* main2-G1.png in Resources */,
 			);
@@ -1418,6 +1427,7 @@
 				77C9614E184189D500A645F9 /* ZipUtils.m in Sources */,
 				77C96040184189D300A645F9 /* CCActionManager.m in Sources */,
 				77C960A8184189D400A645F9 /* CCParticleSystemQuad.m in Sources */,
+				685830E6186064D20055DF4E /* Howto.m in Sources */,
 				EA8BEC581847B24E00F6F8F7 /* MainMenu.m in Sources */,
 				77C9606B184189D300A645F9 /* CCDrawNode.m in Sources */,
 				77C960FD184189D400A645F9 /* CCTransitionPageTurn.m in Sources */,

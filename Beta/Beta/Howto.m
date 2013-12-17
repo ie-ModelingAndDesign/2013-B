@@ -30,20 +30,21 @@
 -(id)init{
     if (self=[super init]) {
         
+        CGSize size=[CCDirector sharedDirector].winSize;
+        
+        self.imageHowtoplay=[CCSprite spriteWithFile:@"Howtoplay.png"];
+        CGSize sizebg=[self.imageHowtoplay boundingBox].size;
+        self.imageHowtoplay.scaleX=size.width/ sizebg.width;
+        self.imageHowtoplay.scaleY=size.height/sizebg.height;
+        self.imageHowtoplay.position=ccp(size.width/2, size.height/2);
+        [self addChild: self.imageHowtoplay];
+        
         self.imageback=[CCSprite spriteWithFile:@"scoreRe.png"]; //returnbutton image
         self.imageback.scale=0.75f;
-        CGSize size=[CCDirector sharedDirector].winSize;
+
         self.imageback.position=ccp(size.width/2,size.height/5); //returnbutoon position
         [self addChild: self.imageback];
         
-        self.imagemove=[CCSprite spriteWithFile:@"imagemove.png"];
-        self.imagemove.position=ccp(size.width/2-size.width/4, size.height/2+size.height/4);
-        [self addChild: self.imagemove];
-        
-        self.imageattack=[CCSprite spriteWithFile:@"imageattack.png"];;
-        self.imageattack.position=ccp(size.width/2-size.width/4, size.height/2-size.height/4);
-        [self addChild: self.imageattack];
-
         self.isTouchEnabled=YES;
     }
     return self;
