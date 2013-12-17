@@ -26,7 +26,7 @@
 }
 -(void)update{
     self.lifetime-=0.03;
-    self.position=ccp(self.position.x+self.speedx,self.position.y);
+    self.position=ccp(self.position.x+self.speedx,self.position.y+self.speedy);
     if (self.lifetime<0) {
         self.isScheduledForRemove=YES;
     }
