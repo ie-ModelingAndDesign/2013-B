@@ -7,6 +7,7 @@
 //
 
 #import "GameObject.h"
+#import "Status.h"
 //#import "Attack.h"
 @interface MainCharacter : GameObject
 
@@ -19,6 +20,7 @@
 @property float freezestagetime;
 @property BOOL movestagechangeable;
 
+@property (nonatomic,strong) Status *status;
 @property (nonatomic,strong) CCSprite *image;
 
 -(void)attack1;

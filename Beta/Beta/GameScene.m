@@ -51,15 +51,17 @@
         self.character.positiony=self.character.position.y;
         [self addChild:self.character];
         
+        //show hp
+        CCLabelTTF *HPLabel=[[CCLabelTTF alloc] initWithString:@"HP" fontName:@"CourierNewPS-BoldItalicMT" fontSize:20];
+        HPLabel.position=ccp(30,size.height- 30);
         self.HPShower=[CCSprite spriteWithFile:@"hp.png"];
         [self.HPShower setAnchorPoint:ccp(0, 0.5)];
-        self.HPShower.position=ccp(20, size.height-30);
-        
+        self.HPShower.position=ccp(50, size.height-30);
         [self addChild:self.HPShower];
-        
+        [self addChild:HPLabel];
         self.isTouchEnabled = YES;
         [self schedule:@selector(nextFrame:)];
-
+    
 //        CGSize size=[CCDirector sharedDirector].winSize;
         
         self.periodofmonster=2;
