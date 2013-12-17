@@ -19,7 +19,8 @@
         //  self.image=[[CCSprite alloc] initWithFile:@"fire.gif"];
         self.image=[CCSprite spriteWithFile:@"iceball.gif"];
         [self addChild:self.image];
-        
+        CGSize sizeofimage=[self.image boundingBox].size;
+          self.radius=sqrt(sizeofimage.height*sizeofimage.height+sizeofimage.width*sizeofimage.width);
         self.lifetime=2;
     }
     return self;

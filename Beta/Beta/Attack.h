@@ -13,6 +13,7 @@
 @property float damage;
 @property float speedx,speedy;
 @property float lifetime;
+@property int target;
 @property CGPoint startp;
 
 @property (nonatomic,strong) CCSprite *image;

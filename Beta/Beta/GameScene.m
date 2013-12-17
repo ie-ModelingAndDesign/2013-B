@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "Monster.h"
+#import "Attack.h"
 @implementation GameScene
 +(CCScene *) scene
 {
@@ -48,8 +49,13 @@
         self.character.position=ccp(size.width/2, size.height/2);
         self.character.positionx=self.character.position.x;
         self.character.positiony=self.character.position.y;
-        
         [self addChild:self.character];
+        
+        self.HPShower=[CCSprite spriteWithFile:@"hp.png"];
+        [self.HPShower setAnchorPoint:ccp(0, 0.5)];
+        self.HPShower.position=ccp(20, size.height-30);
+        
+        [self addChild:self.HPShower];
         
         self.isTouchEnabled = YES;
         [self schedule:@selector(nextFrame:)];
@@ -141,6 +147,25 @@
                 Monster *m=(Monster *)gameObject;
                 m.target=self.character.position;
                 [enemy addObject:m];
+            }
+            if ([gameObject isKindOfClass:[Attack class]]) {
+                Attack* attack=(Attack*)gameObject;
+                // printf("attack target%d \n",attack.target);
+                if (attack.target==0) {
+                    //CCNode *attacked;
+                    for (Monster* m in enemy) {
+                        if (ccpDistance(attack.position, m.position)<attack.radius+m.radius) {
+                            [m handleCollisionWith:attack];
+                            [attack handleCollisionWith:m];
+                        }
+                    }
+                }else if (attack.target ==1){
+                    if (ccpDistance(attack.position, self.character.position)<attack.radius+self.character.radius) {
+                        [MainCharacter handleCollisionWith:attack];
+                        [attack handleCollisionWith:self.character];
+                    }
+                }
+            
             }
             
         }
