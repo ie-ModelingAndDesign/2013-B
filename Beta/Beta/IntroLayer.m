@@ -11,7 +11,7 @@
 #import "IntroLayer.h"
 #import "GameScene.h"
 #import "MainMenu.h"
-
+#import "Status.h"
 #pragma mark - IntroLayer
 
 // HelloWorldLayer implementation
@@ -53,6 +53,9 @@
         
         // add the label as a child to this Layer
         [self addChild: background];
+        
+        //init status;
+        Status *s=[[Status alloc]init];
     }
     
     return self;
