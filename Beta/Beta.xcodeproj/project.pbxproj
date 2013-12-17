@@ -52,6 +52,8 @@
 		2955DB7D18595E2000269EF7 /* senkan1-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2955DB6B18595E2000269EF7 /* senkan1-2.png */; };
 		2955DB7E18595E2000269EF7 /* shot4-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2955DB6C18595E2000269EF7 /* shot4-1.png */; };
 		2955DB7F18595E2000269EF7 /* shot4-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2955DB6D18595E2000269EF7 /* shot4-3.png */; };
+		68582F4418604C940055DF4E /* MonsterThird.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4018604C940055DF4E /* MonsterThird.m */; };
+		68582F4518604C940055DF4E /* MonsterSecand.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4218604C940055DF4E /* MonsterSecand.m */; };
 		77C95FF8184189D200A645F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF7184189D200A645F9 /* QuartzCore.framework */; };
 		77C95FFA184189D200A645F9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF9184189D200A645F9 /* OpenGLES.framework */; };
 		77C95FFC184189D200A645F9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FFB184189D200A645F9 /* OpenAL.framework */; };
@@ -273,6 +275,10 @@
 		2955DB6B18595E2000269EF7 /* senkan1-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "senkan1-2.png"; sourceTree = "<group>"; };
 		2955DB6C18595E2000269EF7 /* shot4-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shot4-1.png"; sourceTree = "<group>"; };
 		2955DB6D18595E2000269EF7 /* shot4-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shot4-3.png"; sourceTree = "<group>"; };
+		68582F4018604C940055DF4E /* MonsterThird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterThird.m; sourceTree = "<group>"; };
+		68582F4118604C940055DF4E /* MonsterThird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterThird.h; sourceTree = "<group>"; };
+		68582F4218604C940055DF4E /* MonsterSecand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterSecand.m; sourceTree = "<group>"; };
+		68582F4318604C940055DF4E /* MonsterSecand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterSecand.h; sourceTree = "<group>"; };
 		77C95FF4184189D200A645F9 /* Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C95FF7184189D200A645F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		77C95FF9184189D200A645F9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -772,6 +778,10 @@
 				77C9619D184189D600A645F9 /* AppDelegate.m */,
 				EAA10FA4185626A0004188C0 /* Monster.h */,
 				EAA10FA5185626A0004188C0 /* Monster.m */,
+				68582F4018604C940055DF4E /* MonsterThird.m */,
+				68582F4118604C940055DF4E /* MonsterThird.h */,
+				68582F4218604C940055DF4E /* MonsterSecand.m */,
+				68582F4318604C940055DF4E /* MonsterSecand.h */,
 				EAA10FC71856D9FB004188C0 /* setting.h */,
 				EAA10FC81856D9FB004188C0 /* setting.m */,
 				EAA10FA6185626A0004188C0 /* Score.h */,
@@ -1421,6 +1431,7 @@
 				77C9613C184189D500A645F9 /* CCVertex.m in Sources */,
 				77C96142184189D500A645F9 /* NSThread+performBlock.m in Sources */,
 				77C96049184189D300A645F9 /* CCActionTiledGrid.m in Sources */,
+				68582F4518604C940055DF4E /* MonsterSecand.m in Sources */,
 				EAA10FA8185626A0004188C0 /* Monster.m in Sources */,
 				77C96090184189D400A645F9 /* CCMenuItem.m in Sources */,
 				77C9602B184189D300A645F9 /* CCActionCamera.m in Sources */,
@@ -1505,6 +1516,7 @@
 				77C96052184189D300A645F9 /* CCAnimationCache.m in Sources */,
 				77C96074184189D300A645F9 /* CCGLProgram.m in Sources */,
 				77C96164184189D500A645F9 /* SimpleAudioEngine.m in Sources */,
+				68582F4418604C940055DF4E /* MonsterThird.m in Sources */,
 				77C96116184189D500A645F9 /* CCTouchDispatcher.m in Sources */,
 				77C96099184189D400A645F9 /* CCNode.m in Sources */,
 			);
