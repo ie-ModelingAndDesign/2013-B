@@ -32,13 +32,26 @@
         
         CGSize size=[CCDirector sharedDirector].winSize;
         
-        self.imageHowtoplay=[CCSprite spriteWithFile:@"Howtoplay.png"];
+        
+        self.imageHowtoplay=[CCSprite spriteWithFile:@"imageiOS.png"];
         CGSize sizebg=[self.imageHowtoplay boundingBox].size;
         self.imageHowtoplay.scaleX=size.width/ sizebg.width;
         self.imageHowtoplay.scaleY=size.height/sizebg.height;
         self.imageHowtoplay.position=ccp(size.width/2, size.height/2);
         [self addChild: self.imageHowtoplay];
         
+        self.Shooting=[CCSprite spriteWithFile:@"imageShooting.png"];
+        self.Shooting.position=ccp(size.width/2, size.height-50);
+        [self addChild: self.Shooting];
+        
+        self.MoveHandle=[CCSprite spriteWithFile:@"imageMoveHandle.png"];
+        self.MoveHandle.position=ccp(size.width/2-120, size.height/2-45);
+        [self addChild: self.MoveHandle];
+
+        self.AttackButton=[CCSprite spriteWithFile:@"imageAttackButton.png"];
+        self.AttackButton.position=ccp(size.width/2+140, size.height/2-50);
+        [self addChild: self.AttackButton];
+
         self.imageback=[CCSprite spriteWithFile:@"scoreRe.png"]; //returnbutton image
         self.imageback.scale=0.75f;
 
