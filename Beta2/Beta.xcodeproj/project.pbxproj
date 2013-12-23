@@ -252,6 +252,7 @@
 		EA2FAE4E1868E4470010D427 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA2FADDD1868E4470010D427 /* test.jpg */; };
 		EA2FAE511868E4670010D427 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FAE501868E4670010D427 /* Status.m */; };
 		EA8BEC581847B24E00F6F8F7 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8BEC571847B24E00F6F8F7 /* MainMenu.m */; };
+		EA93F7FF1868E9930074CCF6 /* CharacterSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = EA93F7FE1868E9930074CCF6 /* CharacterSetting.m */; };
 		EAA10FA8185626A0004188C0 /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA10FA5185626A0004188C0 /* Monster.m */; };
 		EAA10FA9185626A0004188C0 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA10FA7185626A0004188C0 /* Score.m */; };
 		EAA10FC91856D9FB004188C0 /* setting.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA10FC81856D9FB004188C0 /* setting.m */; };
@@ -660,6 +661,8 @@
 		EA2FAE501868E4670010D427 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		EA8BEC561847B24E00F6F8F7 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		EA8BEC571847B24E00F6F8F7 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
+		EA93F7FD1868E9890074CCF6 /* CharacterSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterSetting.h; sourceTree = "<group>"; };
+		EA93F7FE1868E9930074CCF6 /* CharacterSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterSetting.m; sourceTree = "<group>"; };
 		EAA10FA4185626A0004188C0 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
 		EAA10FA5185626A0004188C0 /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
 		EAA10FA6185626A0004188C0 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
@@ -726,8 +729,10 @@
 		77C9600B184189D200A645F9 /* Beta */ = {
 			isa = PBXGroup;
 			children = (
-				685830E4186064D20055DF4E /* Howto.m */,
+				EA93F7FD1868E9890074CCF6 /* CharacterSetting.h */,
+				EA93F7FE1868E9930074CCF6 /* CharacterSetting.m */,
 				685830E5186064D20055DF4E /* Howto.h */,
+				685830E4186064D20055DF4E /* Howto.m */,
 				2909B26F184AE92600A47312 /* Attack.h */,
 				2909B270184AE92600A47312 /* Attack.m */,
 				2909B271184AE92600A47312 /* Attackice.h */,
@@ -1591,6 +1596,7 @@
 				77C9602B184189D300A645F9 /* CCActionCamera.m in Sources */,
 				77C9615D184189D500A645F9 /* CDXPropertyModifierAction.m in Sources */,
 				2909B40A184AE92600A47312 /* PlayerDocument.m in Sources */,
+				EA93F7FF1868E9930074CCF6 /* CharacterSetting.m in Sources */,
 				77C9612D184189D500A645F9 /* CCArray.m in Sources */,
 				77C9618A184189D600A645F9 /* plane.c in Sources */,
 				77C96136184189D500A645F9 /* CCProfiling.m in Sources */,
