@@ -139,6 +139,7 @@
 		77C961AF18418EB400A645F9 /* MainCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961AE18418EB400A645F9 /* MainCharacter.m */; };
 		77C961B8184196AF00A645F9 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961B7184196AF00A645F9 /* GameScene.m */; };
 		77C961C118419E2800A645F9 /* CharacterDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961C018419E2800A645F9 /* CharacterDoc.m */; };
+		EA2F0DAB1878DD6200BAEBD7 /* GO.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2F0DAA1878DD6200BAEBD7 /* GO.png */; };
 		EA2FADDE1868E4470010D427 /* attackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2FAD5D1868E4470010D427 /* attackboard.png */; };
 		EA2FADDF1868E4470010D427 /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2FAD5E1868E4470010D427 /* button.mp3 */; };
 		EA2FADE01868E4470010D427 /* CharacterSetting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA2FAD601868E4470010D427 /* CharacterSetting.mp3 */; };
@@ -546,6 +547,7 @@
 		77C961B7184196AF00A645F9 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		77C961BF18419E2800A645F9 /* CharacterDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDoc.h; sourceTree = "<group>"; };
 		77C961C018419E2800A645F9 /* CharacterDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDoc.m; sourceTree = "<group>"; };
+		EA2F0DAA1878DD6200BAEBD7 /* GO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GO.png; sourceTree = "<group>"; };
 		EA2FAD5D1868E4470010D427 /* attackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attackboard.png; sourceTree = "<group>"; };
 		EA2FAD5E1868E4470010D427 /* button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button.mp3; sourceTree = "<group>"; };
 		EA2FAD601868E4470010D427 /* CharacterSetting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CharacterSetting.mp3; sourceTree = "<group>"; };
@@ -1162,6 +1164,7 @@
 		EA2FAD5F1868E4470010D427 /* charasettei */ = {
 			isa = PBXGroup;
 			children = (
+				EA2F0DAA1878DD6200BAEBD7 /* GO.png */,
 				EA2FAD601868E4470010D427 /* CharacterSetting.mp3 */,
 				EA2FAD611868E4470010D427 /* charactersettingback.png */,
 				EA2FAD621868E4470010D427 /* main1b.png */,
@@ -1436,6 +1439,7 @@
 				EA2FAE061868E4470010D427 /* Default-Landscape~ipad.png in Resources */,
 				EA2FADF71868E4470010D427 /* imageiOS.png in Resources */,
 				EA2FADDE1868E4470010D427 /* attackboard.png in Resources */,
+				EA2F0DAB1878DD6200BAEBD7 /* GO.png in Resources */,
 				EA2FADEF1868E4470010D427 /* main3r.png in Resources */,
 				EA2FAE0C1868E4470010D427 /* mainshot1.png in Resources */,
 				EA2FAE4E1868E4470010D427 /* test.jpg in Resources */,

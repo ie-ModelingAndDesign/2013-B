@@ -8,6 +8,7 @@
 
 #import "CharacterSetting.h"
 #import "MainMenu.h"
+#import "GameScene.h"
 
 @implementation CharacterSetting
 
@@ -32,6 +33,7 @@
     // Apple recommends to re-assign "self" with the "super's" return value
     if( (self=[super init]) ) {
         self.back=[CCSprite spriteWithFile:@"charactersettingback.png"];
+        self.go=[CCSprite spriteWithFile:@"GO.png"];
         self.main1bs=[CCSprite spriteWithFile:@"main1bs.png"];
         self.main2bs=[CCSprite spriteWithFile:@"main2bs.png"];
         self.main3bs=[CCSprite spriteWithFile:@"main3bs.png"];
@@ -41,6 +43,7 @@
         CGSize size=[CCDirector sharedDirector].winSize;
         
         self.back.position=ccp(size.width/2,size.height/2);
+        self.go.position=ccp(size.width - size.width/9,size.height - size.height/8);
         self.main1bs.position=ccp(size.width/7,size.height-size.height/3);
         self.main2bs.position=ccp(size.width/7,size.height/2-30);
         self.main3bs.position=ccp(size.width/7,size.height/7);
@@ -48,6 +51,7 @@
         self.status.position=ccp(size.width/2,size.height/7);
         
         [self addChild: self.back];
+        [self addChild: self.go];
         [self addChild: self.main1bs];
         [self addChild: self.main2bs];
         [self addChild: self.main3bs];
@@ -96,6 +100,12 @@
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
         }
 
+        if (CGRectContainsPoint(self.go.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene scene] ]];
+        }
+    
     }
 }
 

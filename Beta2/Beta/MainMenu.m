@@ -98,12 +98,14 @@
         
         if (CGRectContainsPoint(self.setting.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[setting scene] ]];
         }
         
         
         if (CGRectContainsPoint(self.Howto.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Howto scene] ]];
         }
         

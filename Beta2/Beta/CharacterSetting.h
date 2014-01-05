@@ -18,7 +18,7 @@
 
 @interface CharacterSetting : CCLayer
 
-@property(nonatomic,strong) CCSprite *back,*main1bs,*main1b,*main1g,*main1r,*main1y,*main2bs,*main2b,*main2g,*main2p,*main2y,*main3bs,*main3b,*main3g,*main3r,*main3y,*Return,*status;
+@property(nonatomic,strong) CCSprite *go,*back,*main1bs,*main1b,*main1g,*main1r,*main1y,*main2bs,*main2b,*main2g,*main2p,*main2y,*main3bs,*main3b,*main3g,*main3r,*main3y,*Return,*status;
 
 +(CCScene *) scene;
 
