@@ -22,5 +22,5 @@
 @property(nonatomic,strong) CCSprite *scoreback,*no1,*no2,*no3,*scoreRe,*scoreubar;
 
 +(CCScene *) scene;
-
++(CCScene *) scenewithscore:(int)score;
 @end

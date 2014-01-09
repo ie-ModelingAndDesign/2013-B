@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Status : NSObject
-@property float HP;
+@property float HP,MaxHP;
 @property float Attack,Speed,AttackSpeed;
 
 +(Status *)sharedStatus;

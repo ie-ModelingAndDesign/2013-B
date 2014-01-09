@@ -7,11 +7,12 @@
 //
 
 #import "GameObject.h"
-
+#import "Status.h"
 @interface Monster : GameObject
 
 @property (nonatomic ,strong) CCSprite *imageM;
 @property CGPoint target;
+@property (nonatomic,strong) Status *status;
 @property double positionx,positiony;
 @property double speedx,speedy;
 

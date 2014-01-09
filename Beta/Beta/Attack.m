@@ -20,8 +20,8 @@
         self.image=[CCSprite spriteWithFile:@"fire.gif"];
         [self addChild:self.image];
         CGSize sizeofimage=[self.image boundingBox].size;
-        self.radius=sqrt(sizeofimage.height*sizeofimage.height+sizeofimage.width*sizeofimage.width);
-        
+        //self.radius=sqrt(sizeofimage.height*sizeofimage.height+sizeofimage.width*sizeofimage.width);
+        self.radius=10;
         self.lifetime=2;
     }
     return self;
@@ -32,5 +32,8 @@
     if (self.lifetime<0) {
         self.isScheduledForRemove=YES;
     }
+}
+-(void)handleCollisionWith:(GameObject *)gameObject{
+    self.isScheduledForRemove=YES;
 }
 @end

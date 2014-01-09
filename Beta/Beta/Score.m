@@ -9,6 +9,7 @@
 #import "Score.h"
 #import "MainMenu.h"
 
+static Score *share;
 @implementation Score
 {
     unsigned int _new;
@@ -23,11 +24,7 @@
 
 + (Score*)sharedInfo
 {
-    static Score* sharedInstance = nil;
-    if (sharedInstance == nil) {
-        sharedInstance = [[self alloc] init];
-    }
-    return sharedInstance;
+    return share;
 }
 
 +(CCScene *) scene
@@ -44,10 +41,24 @@
     // return the scene
     return scene;
 }
-
++(CCScene *) scenewithscore:(int)score
+{
+    // 'scene' is an autorelease object.
+    CCScene *scene = [CCScene node];
+    
+    // 'layer' is an autorelease object.
+    Score *layer = [Score node];
+    [layer setScore:score];
+    // add layer as a child to scene
+    [scene addChild: layer];
+    
+    // return the scene
+    return scene;
+}
 - (id)init
 {
     if( (self=[super init]) ) {
+        
         self.scoreback=[CCSprite spriteWithFile:@"scoreback.png"];
         self.no1=[CCSprite spriteWithFile:@"1.png"];
         self.no2=[CCSprite spriteWithFile:@"2.png"];
@@ -74,11 +85,18 @@
         self.isTouchEnabled=YES; //この一行でタッチに対応出来ました。でも処理はまだ入れていません！
         [self schedule:@selector(update:)]; //この命令で更新機能ができるらしい。0.03秒ごとに更新！！みたいな
         
-        
-        _new = 0; //newの初期値
-        _third = 0; //thirdの初期値
-        _second = 0; //scoreの初期値
-        _highScore = 0; //highscoreの初期値
+        NSString *directory=[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+        NSString *filepayh=[directory stringByAppendingPathComponent:@"PlayerDoc.data"];
+        NSArray *array=[NSKeyedUnarchiver unarchiveObjectWithFile:filepayh];
+        if(array){
+            _highScore=[(NSNumber *)[array objectAtIndex:0] integerValue];
+            _second=[(NSNumber *)[array objectAtIndex:1] integerValue];
+            _third=[(NSNumber *)[array objectAtIndex:2] integerValue];
+        }else{
+            _highScore=0;
+            _second=0;
+            _third=0;
+        }
         NSString* thirdString = [NSString stringWithFormat:@"%d", _third];
         NSString* secondString = [NSString stringWithFormat:@"%d", _second];
         NSString* highScoreString = [NSString stringWithFormat:@"%d", _highScore];
@@ -101,8 +119,9 @@
         _thirdLabel.position = ccpAdd(bottom, thirdOffset);
         _secondLabel.position = ccpAdd(center, secondOffset);
         _highScoreLabel.position = ccpAdd(top, highScoreOffset);
-        
+
         [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"score.mp3" loop:YES];
+        share=self;
     }
     return self;
 }
@@ -129,6 +148,18 @@
     }else if(_new > _third){
         _third = _new;
         [_thirdLabel setString:[NSString stringWithFormat:@"%07d", _third]];
+    }
+    
+    NSString *directory=[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *d=[directory stringByAppendingPathComponent:@"PlayerDoc.data"];
+    NSArray *thedata=[NSArray arrayWithObjects:
+                      [NSNumber numberWithInt: _highScore ],
+                        [NSNumber numberWithInt: _second ],
+                        [NSNumber numberWithInt: _third ],
+                      nil];
+    BOOL succeed=[NSKeyedArchiver archiveRootObject:thedata toFile:d];
+    if (succeed) {
+        //        NSLog(@"save done");
     }
 }
 

@@ -23,6 +23,8 @@
 @property int killmonster;
 @property float monstercounter;
 
+@property int score;
+
 @property (nonatomic,strong) CCSprite *HPShower;
 //controller
 @property(nonatomic, strong) CCSprite *moveboard;

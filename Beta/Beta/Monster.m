@@ -15,8 +15,12 @@
         self.imageM=[CCSprite spriteWithFile:@"ghast.png"];
         [self addChild:self.imageM];
         CGSize size=[CCDirector sharedDirector].winSize;
+        float randx=random()%360/360*3.14;
+        self.position=ccp(sinf(randx)*size.width, randx*size.height);
 //        self.position=ccp(size.width, size.height);
         [self schedule:@selector(charge1) interval:3.0f];
+//        CGSize sizeofimage=[self.imageM boundingBox].size;
+        self.radius=10;
     }
     return self;
 }
@@ -41,6 +45,10 @@ float positiony;
     self.positiony+=dy/dr*speed;
     
     self.position=ccp(self.positionx, self.positiony);
+        
+    }
+    if (self.status.HP<=0) {
+        self.isScheduledForRemove=YES;
     }
         
 }
@@ -59,9 +67,16 @@ float positiony;
         a.position=ccp(self.position.x,self.position.y);
         a.speedx=dx/dr*Bspeed;
         a.speedy=dy/dr*Bspeed;
+        a.damage=10;
+        a.target=1;
         [self.parent addChild:a];
     }
 }
-
+-(void)handleCollisionWith:(GameObject *)gameObject{
+    if ([gameObject isKindOfClass:[Attack class]]) {
+        Attack *attack=(Attack *)gameObject;
+        self.status.HP-=attack.damage;
+    }
+}
 @end
 
