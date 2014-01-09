@@ -17,6 +17,7 @@
 #import "Score.h"
 #import "setting.h"
 #import "Howto.h"
+#import "CharacterSetting.h"
 
 @implementation MainMenu
 
@@ -80,7 +81,7 @@
         if (CGRectContainsPoint(self.ready.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
             [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene scene] ]];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[CharacterSetting scene] ]];
         }
         
         if (CGRectContainsPoint(self.monster.boundingBox, location)) {
