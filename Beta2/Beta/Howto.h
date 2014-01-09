@@ -18,7 +18,7 @@
 
 @interface Howto : CCLayer
 
-@property(nonatomic,strong) CCSprite *imageback,*imageHowtoplay,*Shooting,*MoveHandle,*AttackButton,*BG,*imageMove,*imageAttack;
+@property(nonatomic,strong) CCSprite *imageHow,*imageback,*imageMonster,*imageHowtoplay;
 
 +(CCScene *) scene;
 

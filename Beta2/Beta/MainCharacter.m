@@ -13,8 +13,30 @@
 -(id)init{
     if(self=[super init]){
         self.image=[CCSprite spriteWithFile:@"test.jpg"];
+        self.status =[[Status alloc]init];
+        self.status.MaxHP=100;
+        self.status.HP=self.status.MaxHP;
+        self.status.AttackSpeed=5;
+        self.status.Attack=100;
         //fortest only
         [self.image runAction:[CCScaleTo actionWithDuration:0.1 scaleX:0.1 scaleY:0.1]];
+//        CGSize sizeofimage=[self.image boundingBox].size;
+         self.radius=10;
+        [self addChild:self.image];
+        
+    }
+    return self;
+}
+-(id)initwithimage:(NSString *)name{
+    if(self=[super init]){
+        self.image=[CCSprite spriteWithFile:name];
+        self.status =[[Status alloc]init];
+        self.status.MaxHP=100;
+        self.status.HP=self.status.MaxHP;
+        //fortest only
+        [self.image runAction:[CCScaleTo actionWithDuration:0.1 scaleX:0.1 scaleY:0.1]];
+        CGSize sizeofimage=[self.image boundingBox].size;
+        self.radius=sizeofimage.height;
         [self addChild:self.image];
     }
     return self;
@@ -31,8 +53,10 @@
     Attack *a=[[NSClassFromString([PlayerDocument getattack1]) alloc] init];
     a.position=self.position;
     a.startp=self.position;
-    a.speedx=self.direction.x;
-    a.speedy=self.direction.y;
+    a.speedx=self.direction.x*self.status.AttackSpeed;
+    a.speedy=self.direction.y*self.status.AttackSpeed;
+    a.target=0;
+    
     [self.parent addChild:a];
 }
 -(void)attack2{
@@ -41,6 +65,7 @@
     a.startp=self.position;
     a.speedx=self.direction.x;
     a.speedy=self.direction.y;
+    a.target=0;
     [self.parent addChild:a];
 }
 -(void)attack3{
@@ -49,6 +74,13 @@
     a.startp=self.position;
     a.speedx=self.direction.x;
     a.speedy=self.direction.y;
+    a.target=0;
     [self.parent addChild:a];
+}
+-(void)handleCollisionWith:(GameObject *)gameObject{
+    if ([gameObject isKindOfClass:[Attack class]]) {
+        Attack *attack=(Attack *)gameObject;
+        self.status.HP-=attack.damage;
+    }
 }
 @end

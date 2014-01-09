@@ -23,9 +23,12 @@
 @property int killmonster;
 @property float monstercounter;
 
+@property int score;
+
 @property (nonatomic,strong) CCSprite *HPShower;
 //controller
 @property(nonatomic, strong) CCSprite *moveboard;
 @property(nonatomic, strong) CCSprite *attackboard1,*attackboard2,*attackboard3;
+@property(nonatomic,strong) NSArray *monsterlist;
 +(CCScene *) scene;
 @end

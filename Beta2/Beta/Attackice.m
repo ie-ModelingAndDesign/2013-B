@@ -20,7 +20,8 @@
         self.image=[CCSprite spriteWithFile:@"iceball.gif"];
         [self addChild:self.image];
         CGSize sizeofimage=[self.image boundingBox].size;
-          self.radius=sqrt(sizeofimage.height*sizeofimage.height+sizeofimage.width*sizeofimage.width);
+          self.radius=sqrt(sizeofimage.height*sizeofimage.height+sizeofimage.width*sizeofimage.width)/2;
+        //        self.radius=10;
         self.lifetime=2;
     }
     return self;

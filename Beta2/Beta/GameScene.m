@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "Monster.h"
 #import "Attack.h"
+#import "Score.h"
 @implementation GameScene
 +(CCScene *) scene
 {
@@ -35,6 +36,10 @@
         self.attackboard1=[CCSprite spriteWithFile:@"attackboard.png"];
         self.attackboard2=[CCSprite spriteWithFile:@"attackboard.png"];
         self.attackboard3=[CCSprite spriteWithFile:@"attackboard.png"];
+        self.moveboard.zOrder=1000;
+        self.attackboard1.zOrder=1000;
+        self.attackboard2.zOrder=1000;
+        self.attackboard3.zOrder=1000;
         self.moveboard.position=ccp(50, 50);
         CGSize size=[CCDirector sharedDirector].winSize;
         self.attackboard1.position=ccp(size.width-140, 50);
@@ -71,6 +76,11 @@
         self.maxmonsterinwave=1;
         self.sentmonster=0;
         self.killmonster=0;
+        NSString *d=[[NSBundle mainBundle] pathForResource:@"PlayerDataBase" ofType:@"plist"];
+        self.monsterlist=[NSArray arrayWithContentsOfFile:d];
+        
+        
+        self.score=101;
     }
 	return self;
 }
@@ -123,14 +133,12 @@
 }
 -(void)nextFrame:(float)dt{
     self.monstercounter+=dt;
-    //NSLog(@"%f",self.monstercounter);
     if (self.monstercounter>self.periodofmonster) {
         self.monstercounter=0;
         
         if (self.sentmonster<=self.maxmonsterinwave) {
            self.sentmonster++;
-        [self createmonster];
-            NSLog(@"here");
+            [self createmonster];
         }
     }
     CCNode* child;
@@ -163,7 +171,7 @@
                     }
                 }else if (attack.target ==1){
                     if (ccpDistance(attack.position, self.character.position)<attack.radius+self.character.radius) {
-                        [MainCharacter handleCollisionWith:attack];
+                        [self.character handleCollisionWith:attack];
                         [attack handleCollisionWith:self.character];
                     }
                 }
@@ -181,6 +189,10 @@
             
             if (gameObject.isScheduledForRemove)
             {
+                if ([gameObject isKindOfClass:[Monster class]]) {
+                    Monster *m=(Monster *)gameObject;
+                    self.score+=m.status.HP;
+                }
                 [gameObjectsToRemove addObject:gameObject];
             }
         }
@@ -207,12 +219,21 @@
             self.levelmonsters++;
         }
     }
+    //update character hp
+    self.HPShower.scaleX=(float)(self.character.status.HP/self.character.status.MaxHP);
+    //isgameove
+    if (self.character.status.HP<=0) {
+        [self GameOver];
+    }
+  //  NSLog(@"%f",self.HPShower);
 }
-
+-(void)GameOver{
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Score scenewithscore:self.score] ]];
+}
 -(void)createmonster{
-    CGSize size=[CCDirector sharedDirector].winSize;
+   // CGSize size=[CCDirector sharedDirector].winSize;
     Monster *m=[[Monster alloc]init];
-    m.position=ccp(size.width, size.height);
+   // m.position=ccp(size.width, size.height);
     [self addChild:m];
 }
 // on "dealloc" you need to release all your retained objects
@@ -226,5 +247,11 @@
 	[super dealloc];
 }
 
-
+-(void)onExit{
+    [self removeAllChildren];
+    [CCAnimationCache purgeSharedAnimationCache];
+    [[CCTextureCache sharedTextureCache] removeAllTextures];
+    [super cleanup];
+    [super onExit];
+}
 @end

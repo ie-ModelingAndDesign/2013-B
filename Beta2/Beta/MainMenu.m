@@ -17,7 +17,6 @@
 #import "Score.h"
 #import "setting.h"
 #import "Howto.h"
-#import "CharacterSetting.h"
 
 @implementation MainMenu
 
@@ -69,6 +68,7 @@
     }
     
     
+    
     [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"BGMop.mp3" loop:YES];
     
     return self;
@@ -80,7 +80,7 @@
         if (CGRectContainsPoint(self.ready.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
             [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
-            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[CharacterSetting scene] ]];
+            [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene scene] ]];
         }
         
         if (CGRectContainsPoint(self.monster.boundingBox, location)) {
@@ -98,14 +98,12 @@
         
         if (CGRectContainsPoint(self.setting.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[setting scene] ]];
         }
         
         
         if (CGRectContainsPoint(self.Howto.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Howto scene] ]];
         }
         
