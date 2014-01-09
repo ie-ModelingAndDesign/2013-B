@@ -82,6 +82,9 @@
         
         self.score=101;
     }
+    
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"gameBGM.mp3" loop:YES];
+    
 	return self;
 }
 

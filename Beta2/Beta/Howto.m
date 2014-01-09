@@ -41,12 +41,15 @@
         
         self.imageback=[CCSprite spriteWithFile:@"scoreRe.png"]; //returnbutton image
         self.imageback.scale=0.75f;
-
+        
         self.imageback.position=ccp(size.width/2,size.height/5); //returnbutoon position
         [self addChild: self.imageback];
         
         self.isTouchEnabled=YES;
     }
+    
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"Howto.mp3" loop:YES];
+    
     return self;
 }
 
