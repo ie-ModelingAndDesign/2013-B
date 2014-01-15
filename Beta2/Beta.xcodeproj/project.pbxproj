@@ -139,6 +139,15 @@
 		77C961AF18418EB400A645F9 /* MainCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961AE18418EB400A645F9 /* MainCharacter.m */; };
 		77C961B8184196AF00A645F9 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961B7184196AF00A645F9 /* GameScene.m */; };
 		77C961C118419E2800A645F9 /* CharacterDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961C018419E2800A645F9 /* CharacterDoc.m */; };
+		EA11578618864088006A0BF3 /* gameBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA11578518864088006A0BF3 /* gameBGM.mp3 */; };
+		EA115791188640B1006A0BF3 /* gameover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA115788188640B1006A0BF3 /* gameover.jpg */; };
+		EA115792188640B1006A0BF3 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA115789188640B1006A0BF3 /* gameover.mp3 */; };
+		EA115793188640B1006A0BF3 /* attack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA11578B188640B1006A0BF3 /* attack.mp3 */; };
+		EA115794188640B1006A0BF3 /* BossAlarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA11578C188640B1006A0BF3 /* BossAlarm.mp3 */; };
+		EA115795188640B1006A0BF3 /* button2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA11578D188640B1006A0BF3 /* button2.mp3 */; };
+		EA115796188640B1006A0BF3 /* CharacterSelect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA11578E188640B1006A0BF3 /* CharacterSelect.mp3 */; };
+		EA115797188640B1006A0BF3 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA11578F188640B1006A0BF3 /* explosion.mp3 */; };
+		EA115798188640B1006A0BF3 /* laser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA115790188640B1006A0BF3 /* laser.mp3 */; };
 		EA11CAE3187F412700B4CA50 /* bluebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = EA11CADE187F412700B4CA50 /* bluebutton.png */; };
 		EA11CAE4187F412700B4CA50 /* greenbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = EA11CADF187F412700B4CA50 /* greenbutton.png */; };
 		EA11CAE5187F412700B4CA50 /* purplebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = EA11CAE0187F412700B4CA50 /* purplebutton.png */; };
@@ -553,6 +562,15 @@
 		77C961B7184196AF00A645F9 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		77C961BF18419E2800A645F9 /* CharacterDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDoc.h; sourceTree = "<group>"; };
 		77C961C018419E2800A645F9 /* CharacterDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDoc.m; sourceTree = "<group>"; };
+		EA11578518864088006A0BF3 /* gameBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameBGM.mp3; sourceTree = "<group>"; };
+		EA115788188640B1006A0BF3 /* gameover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gameover.jpg; sourceTree = "<group>"; };
+		EA115789188640B1006A0BF3 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
+		EA11578B188640B1006A0BF3 /* attack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = attack.mp3; sourceTree = "<group>"; };
+		EA11578C188640B1006A0BF3 /* BossAlarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BossAlarm.mp3; sourceTree = "<group>"; };
+		EA11578D188640B1006A0BF3 /* button2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button2.mp3; sourceTree = "<group>"; };
+		EA11578E188640B1006A0BF3 /* CharacterSelect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CharacterSelect.mp3; sourceTree = "<group>"; };
+		EA11578F188640B1006A0BF3 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		EA115790188640B1006A0BF3 /* laser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laser.mp3; sourceTree = "<group>"; };
 		EA11CADE187F412700B4CA50 /* bluebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluebutton.png; sourceTree = "<group>"; };
 		EA11CADF187F412700B4CA50 /* greenbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbutton.png; sourceTree = "<group>"; };
 		EA11CAE0187F412700B4CA50 /* purplebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purplebutton.png; sourceTree = "<group>"; };
@@ -1148,9 +1166,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EA115787188640B1006A0BF3 /* gameover */ = {
+			isa = PBXGroup;
+			children = (
+				EA115788188640B1006A0BF3 /* gameover.jpg */,
+				EA115789188640B1006A0BF3 /* gameover.mp3 */,
+			);
+			path = gameover;
+			sourceTree = "<group>";
+		};
+		EA11578A188640B1006A0BF3 /* SoundEffect */ = {
+			isa = PBXGroup;
+			children = (
+				EA11578B188640B1006A0BF3 /* attack.mp3 */,
+				EA11578C188640B1006A0BF3 /* BossAlarm.mp3 */,
+				EA11578D188640B1006A0BF3 /* button2.mp3 */,
+				EA11578E188640B1006A0BF3 /* CharacterSelect.mp3 */,
+				EA11578F188640B1006A0BF3 /* explosion.mp3 */,
+				EA115790188640B1006A0BF3 /* laser.mp3 */,
+			);
+			path = SoundEffect;
+			sourceTree = "<group>";
+		};
 		EA2FAD5C1868E4470010D427 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EA115787188640B1006A0BF3 /* gameover */,
+				EA11578A188640B1006A0BF3 /* SoundEffect */,
+				EA11578518864088006A0BF3 /* gameBGM.mp3 */,
 				EA2FAD5D1868E4470010D427 /* attackboard.png */,
 				EA2FAD5E1868E4470010D427 /* button.mp3 */,
 				EA2FAD5F1868E4470010D427 /* charasettei */,
@@ -1455,6 +1498,7 @@
 				EA2FAE3B1868E4470010D427 /* shot4-1.png in Resources */,
 				EA2FAE391868E4470010D427 /* senkan1-1.png in Resources */,
 				EA2FAE061868E4470010D427 /* Default-Landscape~ipad.png in Resources */,
+				EA115794188640B1006A0BF3 /* BossAlarm.mp3 in Resources */,
 				EA2FADF71868E4470010D427 /* imageiOS.png in Resources */,
 				EA2FADDE1868E4470010D427 /* attackboard.png in Resources */,
 				EA2F0DAB1878DD6200BAEBD7 /* GO.png in Resources */,
@@ -1475,6 +1519,7 @@
 				EA2FADFF1868E4470010D427 /* Icon-Small.png in Resources */,
 				EA2FAE1C1868E4470010D427 /* main2-Y1.png in Resources */,
 				EA2FADF21868E4470010D427 /* Status.png in Resources */,
+				EA115796188640B1006A0BF3 /* CharacterSelect.mp3 in Resources */,
 				EA2FAE361868E4470010D427 /* laser1-2.png in Resources */,
 				EA2FAE471868E4470010D427 /* BGMoff.png in Resources */,
 				EA2FAE481868E4470010D427 /* BGMon.png in Resources */,
@@ -1488,11 +1533,14 @@
 				EA2FAE3E1868E4470010D427 /* 1.png in Resources */,
 				EA2FAE381868E4470010D427 /* laser1-4.png in Resources */,
 				EA2FADFE1868E4470010D427 /* Icon-Small-50.png in Resources */,
+				EA115792188640B1006A0BF3 /* gameover.mp3 in Resources */,
 				EA2FAE4C1868E4470010D427 /* settingback.png in Resources */,
+				EA115793188640B1006A0BF3 /* attack.mp3 in Resources */,
 				EA2FADF31868E4470010D427 /* fire.gif in Resources */,
 				EA2FADEC1868E4470010D427 /* main3b.png in Resources */,
 				EA2FAE081868E4470010D427 /* Default@2x.png in Resources */,
 				EA2FAE3F1868E4470010D427 /* 2.png in Resources */,
+				EA11578618864088006A0BF3 /* gameBGM.mp3 in Resources */,
 				EA2FAE021868E4470010D427 /* Icon@2x.png in Resources */,
 				EA2FADEE1868E4470010D427 /* main3g.png in Resources */,
 				EA2FAE421868E4470010D427 /* Score.png in Resources */,
@@ -1505,6 +1553,7 @@
 				EA2FAE2A1868E4470010D427 /* ready.png in Resources */,
 				EA2FAE1F1868E4470010D427 /* main3-B2.png in Resources */,
 				EA2FAE451868E4470010D427 /* scoreRe.png in Resources */,
+				EA115791188640B1006A0BF3 /* gameover.jpg in Resources */,
 				EA2FAE0D1868E4470010D427 /* mainshot2.png in Resources */,
 				EA2FAE491868E4470010D427 /* SEoff.png in Resources */,
 				EA2FAE1B1868E4470010D427 /* main2-P2.png in Resources */,
@@ -1518,6 +1567,7 @@
 				EA2FADE71868E4470010D427 /* main2b.png in Resources */,
 				EA2FADF41868E4470010D427 /* Howtoplay.png in Resources */,
 				EA11CAE7187F412700B4CA50 /* yellowbutton.png in Resources */,
+				EA115795188640B1006A0BF3 /* button2.mp3 in Resources */,
 				EA2FADE81868E4470010D427 /* main2bs.png in Resources */,
 				EA2FAE4D1868E4470010D427 /* shot1-1.png in Resources */,
 				EA2FAE101868E4470010D427 /* main1-G1.png in Resources */,
@@ -1539,6 +1589,7 @@
 				EA2FAE461868E4470010D427 /* scoreubar.png in Resources */,
 				EA2FAE141868E4470010D427 /* main1-Y1.png in Resources */,
 				EA2FAE331868E4470010D427 /* shot1-4.png in Resources */,
+				EA115798188640B1006A0BF3 /* laser.mp3 in Resources */,
 				EA11CAE3187F412700B4CA50 /* bluebutton.png in Resources */,
 				EA2FAE1E1868E4470010D427 /* main3-B1.png in Resources */,
 				EA2FAE071868E4470010D427 /* Default.png in Resources */,
@@ -1546,6 +1597,7 @@
 				EA2FAE291868E4470010D427 /* Monster.png in Resources */,
 				EA2FAE0E1868E4470010D427 /* main1-B1.png in Resources */,
 				EA2FADE61868E4470010D427 /* main1y.png in Resources */,
+				EA115797188640B1006A0BF3 /* explosion.mp3 in Resources */,
 				EA11CAE9187F413000B4CA50 /* Howto.mp3 in Resources */,
 				EA2FAE241868E4470010D427 /* main3-Y1.png in Resources */,
 				EA2FADFA1868E4470010D427 /* imageShooting.png in Resources */,

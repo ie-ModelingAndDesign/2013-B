@@ -63,188 +63,198 @@
         [self.selectedCharacter runAction:[CCRepeatForever actionWithAction:[CCRotateBy actionWithDuration:1 angle:20 ]]];
         [self addChild:self.selectedCharacter];
         
+        
+        self.selectbutton1=[CCSprite spriteWithFile:@"bluebutton1.png"];
+        self.selectbutton1.position=ccp(size.width - size.width/9,size.height - size.height/3);
+        [self addChild:self.selectbutton1];
+        
+        self.selectbutton2=[CCSprite spriteWithFile:@"redbutton1.png"];
+        self.selectbutton2.position=ccp(size.width - size.width/9,size.height/2);
+        [self addChild:self.selectbutton2];
+        
+        self.selectbutton3=[CCSprite spriteWithFile:@"greenbutton1.png"];
+        self.selectbutton3.position=ccp(size.width - size.width/9,size.height/3);
+        [self addChild:self.selectbutton3];
+        
+        self.selectbutton4=[CCSprite spriteWithFile:@"yellowbutton1.png"];
+        self.selectbutton4.position=ccp(size.width - size.width/9,size.height/6);
+        [self addChild:self.selectbutton4];
+        
         self.isTouchEnabled=YES;
         [self schedule:@selector(update:)];
+        
     }
     
+    self.machineNumber = 1;
     [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"CharacterSetting.mp3" loop:YES];
     
     return self;
+    
+    
 }
 
+
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{ //タッチするとこれが実行されます
+    
+    
+    
     for (UITouch *i in touches) {
         CGPoint location=[self convertTouchToNodeSpace:i];
         
         CGSize size=[CCDirector sharedDirector].winSize;
         
         if (CGRectContainsPoint(self.main1bs.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
             
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1b.png"];
             [self.selectedCharacter setTexture:texture];
             
-            self.bluebutton1=[CCSprite spriteWithFile:@"bluebutton.png"];
-            self.bluebutton1.position=ccp(size.width - size.width/9,size.height - size.height/3);
-            [self addChild: self.bluebutton1];
+            CCTexture2D *button1=[[CCTextureCache sharedTextureCache] addImage:@"bluebutton.png"];
+            [self.selectbutton1 setTexture:button1];
             
-            self.redbutton1=[CCSprite spriteWithFile:@"redbutton.png"];
-            self.redbutton1.position=ccp(size.width - size.width/9,size.height/2);
-            [self addChild: self.redbutton1];
+            CCTexture2D *button2=[[CCTextureCache sharedTextureCache] addImage:@"redbutton.png"];
+            [self.selectbutton2 setTexture:button2];
             
-            self.greenbutton1=[CCSprite spriteWithFile:@"greenbutton.png"];
-            self.greenbutton1.position=ccp(size.width - size.width/9,size.height/3);
-            [self addChild: self.greenbutton1];
+            CCTexture2D *button3=[[CCTextureCache sharedTextureCache] addImage:@"greenbutton.png"];
+            [self.selectbutton3 setTexture:button3];
             
-            self.yellowbutton1=[CCSprite spriteWithFile:@"yellowbutton.png"];
-            self.yellowbutton1.position=ccp(size.width - size.width/9,size.height/6);
-            [self addChild: self.yellowbutton1];
+            CCTexture2D *button4=[[CCTextureCache sharedTextureCache] addImage:@"yellowbutton.png"];
+            [self.selectbutton4 setTexture:button4];
+            
+            self.machineNumber = 1;
             
         }
         
         if (CGRectContainsPoint(self.main2bs.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
             
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main2b.png"];
             [self.selectedCharacter setTexture:texture];
             
-            self.bluebutton2=[CCSprite spriteWithFile:@"bluebutton.png"];
-            self.bluebutton2.position=ccp(size.width - size.width/9,size.height - size.height/3);
-            [self addChild: self.bluebutton2];
+            CCTexture2D *button1=[[CCTextureCache sharedTextureCache] addImage:@"bluebutton.png"];
+            [self.selectbutton1 setTexture:button1];
             
-            self.purplebutton2=[CCSprite spriteWithFile:@"purplebutton.png"];
-            self.purplebutton2.position=ccp(size.width - size.width/9,size.height/2);
-            [self addChild: self.purplebutton2];
+            CCTexture2D *button2=[[CCTextureCache sharedTextureCache] addImage:@"purplebutton.png"];
+            [self.selectbutton2 setTexture:button2];
             
-            self.greenbutton2=[CCSprite spriteWithFile:@"greenbutton.png"];
-            self.greenbutton2.position=ccp(size.width - size.width/9,size.height/3);
-            [self addChild: self.greenbutton2];
+            CCTexture2D *button3=[[CCTextureCache sharedTextureCache] addImage:@"greenbutton.png"];
+            [self.selectbutton3 setTexture:button3];
             
-            self.yellowbutton2=[CCSprite spriteWithFile:@"yellowbutton.png"];
-            self.yellowbutton2.position=ccp(size.width - size.width/9,size.height/6);
-            [self addChild: self.yellowbutton2];
+            CCTexture2D *button4=[[CCTextureCache sharedTextureCache] addImage:@"yellowbutton.png"];
+            [self.selectbutton4 setTexture:button4];
+            
+            self.machineNumber = 2;
             
         }
         
         if (CGRectContainsPoint(self.main3bs.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
             
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main3b.png"];
             [self.selectedCharacter setTexture:texture];
             
-            self.bluebutton3=[CCSprite spriteWithFile:@"bluebutton.png"];
-            self.bluebutton3.position=ccp(size.width - size.width/9,size.height - size.height/3);
-            [self addChild: self.bluebutton3];
+            CCTexture2D *button1=[[CCTextureCache sharedTextureCache] addImage:@"bluebutton.png"];
+            [self.selectbutton1 setTexture:button1];
             
-            self.redbutton3=[CCSprite spriteWithFile:@"redbutton.png"];
-            self.redbutton3.position=ccp(size.width - size.width/9,size.height/2);
-            [self addChild: self.redbutton3];
+            CCTexture2D *button2=[[CCTextureCache sharedTextureCache] addImage:@"redbutton.png"];
+            [self.selectbutton2 setTexture:button2];
             
-            self.greenbutton3=[CCSprite spriteWithFile:@"greenbutton.png"];
-            self.greenbutton3.position=ccp(size.width - size.width/9,size.height/3);
-            [self addChild: self.greenbutton3];
+            CCTexture2D *button3=[[CCTextureCache sharedTextureCache] addImage:@"greenbutton.png"];
+            [self.selectbutton3 setTexture:button3];
             
-            self.yellowbutton3=[CCSprite spriteWithFile:@"yellowbutton.png"];
-            self.yellowbutton3.position=ccp(size.width - size.width/9,size.height/6);
-            [self addChild: self.yellowbutton3];
+            CCTexture2D *button4=[[CCTextureCache sharedTextureCache] addImage:@"yellowbutton.png"];
+            [self.selectbutton4 setTexture:button4];
+            
+            self.machineNumber = 3;
             
         }
         
         
         //button Setting
-        //main1
-        if (CGRectContainsPoint(self.bluebutton1.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+        
+        
+        if (CGRectContainsPoint(self.selectbutton1.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            NSString *machineColor = @"null";
+            switch (self.machineNumber) {
+                case 1:
+                    machineColor = @"main1b.png";
+                    break;
+                case 2:
+                    machineColor = @"main2b.png";
+                    break;
+                case 3:
+                    machineColor = @"main3b.png";
+                    break;
+                    
+            }
             
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1b.png"];
+            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:machineColor];
             [self.selectedCharacter setTexture:texture];
+            
             
         }
         
-        if (CGRectContainsPoint(self.redbutton1.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+        if (CGRectContainsPoint(self.selectbutton2.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
             
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1r.png"];
+            NSString *machineColor = @"null";
+            switch (self.machineNumber) {
+                case 1:
+                    machineColor = @"main1r.png";
+                    break;
+                case 2:
+                    machineColor = @"main2p.png";
+                    break;
+                case 3:
+                    machineColor = @"main3r.png";
+                    break;
+                    
+            }
+            
+            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:machineColor];
             [self.selectedCharacter setTexture:texture];
         }
         
-        if (CGRectContainsPoint(self.greenbutton1.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+        if (CGRectContainsPoint(self.selectbutton3.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
             
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1g.png"];
+            NSString *machineColor = @"null";
+            switch (self.machineNumber) {
+                case 1:
+                    machineColor = @"main1g.png";
+                    break;
+                case 2:
+                    machineColor = @"main2g.png";
+                    break;
+                case 3:
+                    machineColor = @"main3g.png";
+                    break;
+                    
+            }
+            
+            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:machineColor];
             [self.selectedCharacter setTexture:texture];
         }
         
-        if (CGRectContainsPoint(self.yellowbutton1.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+        if (CGRectContainsPoint(self.selectbutton4.boundingBox, location)) {
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
             
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1y.png"];
-            [self.selectedCharacter setTexture:texture];
-        }
-        
-        
-        //button Setting
-        //main2
-        
-        if (CGRectContainsPoint(self.bluebutton2.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            NSString *machineColor = @"null";
+            switch (self.machineNumber) {
+                case 1:
+                    machineColor = @"main1y.png";
+                    break;
+                case 2:
+                    machineColor = @"main2y.png";
+                    break;
+                case 3:
+                    machineColor = @"main3y.png";
+                    break;
+                    
+            }
             
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main2b.png"];
-            [self.selectedCharacter setTexture:texture];
-            
-        }
-        
-        if (CGRectContainsPoint(self.purplebutton2.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main2p.png"];
-            [self.selectedCharacter setTexture:texture];
-        }
-        
-        if (CGRectContainsPoint(self.greenbutton2.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main2g.png"];
-            [self.selectedCharacter setTexture:texture];
-        }
-        
-        if (CGRectContainsPoint(self.yellowbutton2.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main2y.png"];
-            [self.selectedCharacter setTexture:texture];
-        }
-        
-        
-        //button Setting
-        //main3
-        
-        if (CGRectContainsPoint(self.bluebutton3.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main3b.png"];
-            [self.selectedCharacter setTexture:texture];
-            
-        }
-        
-        if (CGRectContainsPoint(self.redbutton3.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main3r.png"];
-            [self.selectedCharacter setTexture:texture];
-        }
-        
-        if (CGRectContainsPoint(self.greenbutton3.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main3g.png"];
-            [self.selectedCharacter setTexture:texture];
-        }
-        
-        if (CGRectContainsPoint(self.yellowbutton3.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
-            
-            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main3y.png"];
+            CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:machineColor];
             [self.selectedCharacter setTexture:texture];
         }
         
@@ -268,3 +278,4 @@
 
 
 @end
+
