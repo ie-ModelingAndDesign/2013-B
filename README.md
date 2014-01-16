@@ -1,4 +1,4 @@
 2013-B
 ======
 
-Application name : Jet Buster
+Application name : Jet Busters
