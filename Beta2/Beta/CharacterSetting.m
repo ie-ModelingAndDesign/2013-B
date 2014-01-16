@@ -105,6 +105,7 @@
         
         if (CGRectContainsPoint(self.main1bs.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            [[SimpleAudioEngine sharedEngine]stopPlayEffect];
             
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1b.png"];
             [self.selectedCharacter setTexture:texture];
