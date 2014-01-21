@@ -86,7 +86,7 @@
     }
     
     self.machineNumber = 1;
-    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"CharacterSetting.caf" loop:YES];
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"CharacterSetting.mp3" loop:YES];
     
     return self;
     

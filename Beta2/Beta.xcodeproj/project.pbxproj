@@ -23,6 +23,7 @@
 		7782EA2C188E7272001DE5B0 /* expB4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA24188E7272001DE5B0 /* expB4.png */; };
 		7782EA2E188E76AE001DE5B0 /* button.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA2D188E76AE001DE5B0 /* button.caf */; };
 		7782EA30188E7756001DE5B0 /* CharacterSetting.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA2F188E7756001DE5B0 /* CharacterSetting.caf */; };
+		7782EA32188E7A4F001DE5B0 /* CharacterSelect.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA31188E7A4F001DE5B0 /* CharacterSelect.caf */; };
 		77C95FF8184189D200A645F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF7184189D200A645F9 /* QuartzCore.framework */; };
 		77C95FFA184189D200A645F9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF9184189D200A645F9 /* OpenGLES.framework */; };
 		77C95FFC184189D200A645F9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FFB184189D200A645F9 /* OpenAL.framework */; };
@@ -307,6 +308,7 @@
 		7782EA24188E7272001DE5B0 /* expB4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expB4.png; sourceTree = "<group>"; };
 		7782EA2D188E76AE001DE5B0 /* button.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.caf; sourceTree = "<group>"; };
 		7782EA2F188E7756001DE5B0 /* CharacterSetting.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharacterSetting.caf; sourceTree = "<group>"; };
+		7782EA31188E7A4F001DE5B0 /* CharacterSelect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharacterSelect.caf; sourceTree = "<group>"; };
 		77C95FF4184189D200A645F9 /* Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C95FF7184189D200A645F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		77C95FF9184189D200A645F9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1213,6 +1215,7 @@
 		EA11578A188640B1006A0BF3 /* SoundEffect */ = {
 			isa = PBXGroup;
 			children = (
+				7782EA31188E7A4F001DE5B0 /* CharacterSelect.caf */,
 				EA11578B188640B1006A0BF3 /* attack.mp3 */,
 				EA11578C188640B1006A0BF3 /* BossAlarm.mp3 */,
 				EA11578D188640B1006A0BF3 /* button2.mp3 */,
@@ -1545,6 +1548,7 @@
 				EA2FAE4E1868E4470010D427 /* test.jpg in Resources */,
 				EA2FAE281868E4470010D427 /* Howto.png in Resources */,
 				EA2FADEB1868E4470010D427 /* main2y.png in Resources */,
+				7782EA32188E7A4F001DE5B0 /* CharacterSelect.caf in Resources */,
 				EA2FADE31868E4470010D427 /* main1bs.png in Resources */,
 				EA2FADE41868E4470010D427 /* main1g.png in Resources */,
 				EA2FAE271868E4470010D427 /* BGMop.mp3 in Resources */,
