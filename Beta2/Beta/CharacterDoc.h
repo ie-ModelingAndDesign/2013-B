@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface CharacterDoc : NSObject
-+(void)setcharacternum:(int)num;
-+(int)getcharacternum;
-
+@property (nonatomic, strong) NSString *Name;
++(CharacterDoc *)share;
 @end

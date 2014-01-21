@@ -7,7 +7,16 @@
 //
 
 #import "CharacterDoc.h"
-
+static CharacterDoc *share;
 @implementation CharacterDoc
-
+-(id)init {
+    if (self = [super init]) {
+        self.Name = @"main1-B";
+        share = self;
+    }
+    return self;
+}
++(CharacterDoc *)share {
+    return share;
+}
 @end

@@ -9,7 +9,7 @@
 #import "CharacterSetting.h"
 #import "MainMenu.h"
 #import "GameScene.h"
-
+#import "CharacterDoc.h"
 @implementation CharacterSetting
 
 +(CCScene *) scene
@@ -64,19 +64,19 @@
         [self addChild:self.selectedCharacter];
         
         
-        self.selectbutton1=[CCSprite spriteWithFile:@"bluebutton1.png"];
+        self.selectbutton1=[CCSprite spriteWithFile:@"bluebutton.png"];
         self.selectbutton1.position=ccp(size.width - size.width/9,size.height - size.height/3);
         [self addChild:self.selectbutton1];
         
-        self.selectbutton2=[CCSprite spriteWithFile:@"redbutton1.png"];
+        self.selectbutton2=[CCSprite spriteWithFile:@"redbutton.png"];
         self.selectbutton2.position=ccp(size.width - size.width/9,size.height/2);
         [self addChild:self.selectbutton2];
         
-        self.selectbutton3=[CCSprite spriteWithFile:@"greenbutton1.png"];
+        self.selectbutton3=[CCSprite spriteWithFile:@"greenbutton.png"];
         self.selectbutton3.position=ccp(size.width - size.width/9,size.height/3);
         [self addChild:self.selectbutton3];
         
-        self.selectbutton4=[CCSprite spriteWithFile:@"yellowbutton1.png"];
+        self.selectbutton4=[CCSprite spriteWithFile:@"yellowbutton.png"];
         self.selectbutton4.position=ccp(size.width - size.width/9,size.height/6);
         [self addChild:self.selectbutton4];
         
@@ -105,8 +105,7 @@
         
         if (CGRectContainsPoint(self.main1bs.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
-            [[SimpleAudioEngine sharedEngine]stopPlayEffect];
-            
+            [CharacterDoc share].Name = @"main1-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1b.png"];
             [self.selectedCharacter setTexture:texture];
             
@@ -121,14 +120,12 @@
             
             CCTexture2D *button4=[[CCTextureCache sharedTextureCache] addImage:@"yellowbutton.png"];
             [self.selectbutton4 setTexture:button4];
-            
             self.machineNumber = 1;
-            
         }
         
         if (CGRectContainsPoint(self.main2bs.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
-            
+            [CharacterDoc share].Name = @"main2-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main2b.png"];
             [self.selectedCharacter setTexture:texture];
             
@@ -150,7 +147,7 @@
         
         if (CGRectContainsPoint(self.main3bs.boundingBox, location)) {
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
-            
+            [CharacterDoc share].Name = @"main3-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main3b.png"];
             [self.selectedCharacter setTexture:texture];
             
@@ -179,12 +176,15 @@
             NSString *machineColor = @"null";
             switch (self.machineNumber) {
                 case 1:
+                    [CharacterDoc share].Name = @"main1-B";
                     machineColor = @"main1b.png";
                     break;
                 case 2:
+                    [CharacterDoc share].Name = @"main2-B";
                     machineColor = @"main2b.png";
                     break;
                 case 3:
+                    [CharacterDoc share].Name = @"main3-B";
                     machineColor = @"main3b.png";
                     break;
                     
@@ -202,12 +202,15 @@
             NSString *machineColor = @"null";
             switch (self.machineNumber) {
                 case 1:
+                    [CharacterDoc share].Name = @"main1-R";
                     machineColor = @"main1r.png";
                     break;
                 case 2:
+                    [CharacterDoc share].Name = @"main2-P";
                     machineColor = @"main2p.png";
                     break;
                 case 3:
+                    [CharacterDoc share].Name = @"main3-R";
                     machineColor = @"main3r.png";
                     break;
                     
@@ -223,12 +226,15 @@
             NSString *machineColor = @"null";
             switch (self.machineNumber) {
                 case 1:
+                    [CharacterDoc share].Name = @"main1-G";
                     machineColor = @"main1g.png";
                     break;
                 case 2:
+                    [CharacterDoc share].Name = @"main2-G";
                     machineColor = @"main2g.png";
                     break;
                 case 3:
+                    [CharacterDoc share].Name = @"main3-G";
                     machineColor = @"main3g.png";
                     break;
                     
@@ -244,12 +250,15 @@
             NSString *machineColor = @"null";
             switch (self.machineNumber) {
                 case 1:
+                    [CharacterDoc share].Name = @"main1-Y";
                     machineColor = @"main1y.png";
                     break;
                 case 2:
+                    [CharacterDoc share].Name = @"main2-Y";
                     machineColor = @"main2y.png";
                     break;
                 case 3:
+                    [CharacterDoc share].Name = @"main3-Y";
                     machineColor = @"main3y.png";
                     break;
                     

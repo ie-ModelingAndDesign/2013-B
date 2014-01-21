@@ -26,5 +26,4 @@
 -(void)attack1;
 -(void)attack2;
 -(void)attack3;
--(id)initwithimage:(NSString *)name;
 @end
