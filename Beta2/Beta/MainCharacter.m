@@ -54,6 +54,11 @@
         self.direction=ccp(self.speedx, self.speedy);
     }
     self.rotation=atan2f(self.direction.x, self.direction.y)*180/3.14-90;
+    CGSize winsize = [CCDirector sharedDirector].winSize;
+    float x = max(0, self.positionx);
+    self.positionx  = min(winsize.width, self.positionx);
+    self.positiony = min(winsize.height, max(0, self.positiony));
+    self.position = ccp(self.positionx, self.positiony);
 }
 -(void)attack1{
     Attack *a=[[NSClassFromString([PlayerDocument getattack1]) alloc] init];

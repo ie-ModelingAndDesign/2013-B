@@ -7,7 +7,7 @@
 //
 
 #import "GameScene.h"
-#import "Monster.h"
+#import "Monster1.h"
 #import "Attack.h"
 #import "Score.h"
 @implementation GameScene
@@ -40,7 +40,8 @@
         self.attackboard1.zOrder=1000;
         self.attackboard2.zOrder=1000;
         self.attackboard3.zOrder=1000;
-        self.moveboard.position=ccp(50, 50);
+        self.moveboard.position=ccp(70, 70);
+        self.moveboard.scale = 2;
         CGSize size=[CCDirector sharedDirector].winSize;
         self.attackboard1.position=ccp(size.width-140, 50);
         self.attackboard2.position=ccp(size.width-100, 50);
@@ -56,7 +57,6 @@
         self.character.positiony=self.character.position.y;
         [self addChild:self.character];
         
-        //show hp
         CCLabelTTF *HPLabel=[[CCLabelTTF alloc] initWithString:@"HP" fontName:@"CourierNewPS-BoldItalicMT" fontSize:20];
         HPLabel.position=ccp(30,size.height- 30);
         self.HPShower=[CCSprite spriteWithFile:@"hp.png"];
@@ -156,8 +156,8 @@
             // Update all game objects
             //NSLog([gameObject description]);
             [gameObject update];
-            if ([gameObject isKindOfClass:[Monster class]]) {
-                Monster *m=(Monster *)gameObject;
+            if ([gameObject isKindOfClass:[Monster1 class]]) {
+                Monster1 *m=(Monster1 *)gameObject;
                 m.target=self.character.position;
                 [enemy addObject:m];
             }
@@ -166,7 +166,7 @@
                 // printf("attack target%d \n",attack.target);
                 if (attack.target==0) {
                     //CCNode *attacked;
-                    for (Monster* m in enemy) {
+                    for (Monster1* m in enemy) {
                         if (ccpDistance(attack.position, m.position)<attack.radius+m.radius) {
                             [m handleCollisionWith:attack];
                             [attack handleCollisionWith:m];
@@ -192,8 +192,8 @@
             
             if (gameObject.isScheduledForRemove)
             {
-                if ([gameObject isKindOfClass:[Monster class]]) {
-                    Monster *m=(Monster *)gameObject;
+                if ([gameObject isKindOfClass:[Monster1 class]]) {
+                    Monster1 *m=(Monster1 *)gameObject;
                     self.score+=m.status.HP;
                 }
                 [gameObjectsToRemove addObject:gameObject];
@@ -203,8 +203,8 @@
     
     for (GameObject* gameObject in gameObjectsToRemove)
     {
-        if ([gameObject isKindOfClass:[Monster class]]) {
-            Monster *m=(Monster *)gameObject;
+        if ([gameObject isKindOfClass:[Monster1 class]]) {
+            Monster1 *m=(Monster1 *)gameObject;
             [enemy removeObject:m];
             self.killmonster++;
         }
@@ -235,7 +235,7 @@
 }
 -(void)createmonster{
    // CGSize size=[CCDirector sharedDirector].winSize;
-    Monster *m=[[Monster alloc]init];
+    Monster1 *m=[[Monster1 alloc]init];
    // m.position=ccp(size.width, size.height);
     [self addChild:m];
 }

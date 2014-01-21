@@ -86,7 +86,7 @@
     }
     
     self.machineNumber = 1;
-    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"CharacterSetting.mp3" loop:YES];
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"CharacterSetting.caf" loop:YES];
     
     return self;
     
@@ -104,7 +104,7 @@
         CGSize size=[CCDirector sharedDirector].winSize;
         
         if (CGRectContainsPoint(self.main1bs.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             [CharacterDoc share].Name = @"main1-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1b.png"];
             [self.selectedCharacter setTexture:texture];
@@ -124,7 +124,7 @@
         }
         
         if (CGRectContainsPoint(self.main2bs.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             [CharacterDoc share].Name = @"main2-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main2b.png"];
             [self.selectedCharacter setTexture:texture];
@@ -146,7 +146,7 @@
         }
         
         if (CGRectContainsPoint(self.main3bs.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             [CharacterDoc share].Name = @"main3-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main3b.png"];
             [self.selectedCharacter setTexture:texture];
@@ -172,7 +172,7 @@
         
         
         if (CGRectContainsPoint(self.selectbutton1.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             NSString *machineColor = @"null";
             switch (self.machineNumber) {
                 case 1:
@@ -197,7 +197,7 @@
         }
         
         if (CGRectContainsPoint(self.selectbutton2.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             
             NSString *machineColor = @"null";
             switch (self.machineNumber) {
@@ -221,7 +221,7 @@
         }
         
         if (CGRectContainsPoint(self.selectbutton3.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             
             NSString *machineColor = @"null";
             switch (self.machineNumber) {
@@ -245,7 +245,7 @@
         }
         
         if (CGRectContainsPoint(self.selectbutton4.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             
             NSString *machineColor = @"null";
             switch (self.machineNumber) {
@@ -271,12 +271,12 @@
         
         
         if (CGRectContainsPoint(self.Return.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
         }
         
         if (CGRectContainsPoint(self.go.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene scene] ]];
         }

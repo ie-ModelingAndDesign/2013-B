@@ -79,32 +79,32 @@
     for (UITouch *i in touches) {
         CGPoint location=[self convertTouchToNodeSpace:i];
         if (CGRectContainsPoint(self.ready.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[CharacterSetting scene] ]];
         }
         
         if (CGRectContainsPoint(self.monster.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             printf("monster");
         }
         
         
         if (CGRectContainsPoint(self.Score.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Score scene] ]];
         }
         
         
         if (CGRectContainsPoint(self.setting.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[setting scene] ]];
         }
         
         
         if (CGRectContainsPoint(self.Howto.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[Howto scene] ]];
         }
         

@@ -68,7 +68,7 @@
     for (UITouch *i in touches) {
         CGPoint location=[self convertTouchToNodeSpace:i];
         if (CGRectContainsPoint(self.scoreRe.boundingBox, location)) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
+            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
         }
     }

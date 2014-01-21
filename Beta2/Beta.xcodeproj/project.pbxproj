@@ -10,9 +10,19 @@
 		2909B396184AE92600A47312 /* Attack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909B270184AE92600A47312 /* Attack.m */; };
 		2909B397184AE92600A47312 /* Attackice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909B272184AE92600A47312 /* Attackice.m */; };
 		2909B40A184AE92600A47312 /* PlayerDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909B37B184AE92600A47312 /* PlayerDocument.m */; };
-		68582F4418604C940055DF4E /* MonsterThird.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4018604C940055DF4E /* MonsterThird.m */; };
-		68582F4518604C940055DF4E /* MonsterSecand.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4218604C940055DF4E /* MonsterSecand.m */; };
+		68582F4418604C940055DF4E /* Monster2.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4018604C940055DF4E /* Monster2.m */; };
+		68582F4518604C940055DF4E /* Monster3.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4218604C940055DF4E /* Monster3.m */; };
 		685830E6186064D20055DF4E /* Howto.m in Sources */ = {isa = PBXBuildFile; fileRef = 685830E4186064D20055DF4E /* Howto.m */; };
+		7782EA25188E7272001DE5B0 /* exp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA1D188E7272001DE5B0 /* exp1.png */; };
+		7782EA26188E7272001DE5B0 /* exp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA1E188E7272001DE5B0 /* exp2.png */; };
+		7782EA27188E7272001DE5B0 /* exp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA1F188E7272001DE5B0 /* exp3.png */; };
+		7782EA28188E7272001DE5B0 /* exp4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA20188E7272001DE5B0 /* exp4.png */; };
+		7782EA29188E7272001DE5B0 /* expB1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA21188E7272001DE5B0 /* expB1.png */; };
+		7782EA2A188E7272001DE5B0 /* expB2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA22188E7272001DE5B0 /* expB2.png */; };
+		7782EA2B188E7272001DE5B0 /* expB3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA23188E7272001DE5B0 /* expB3.png */; };
+		7782EA2C188E7272001DE5B0 /* expB4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA24188E7272001DE5B0 /* expB4.png */; };
+		7782EA2E188E76AE001DE5B0 /* button.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA2D188E76AE001DE5B0 /* button.caf */; };
+		7782EA30188E7756001DE5B0 /* CharacterSetting.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA2F188E7756001DE5B0 /* CharacterSetting.caf */; };
 		77C95FF8184189D200A645F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF7184189D200A645F9 /* QuartzCore.framework */; };
 		77C95FFA184189D200A645F9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF9184189D200A645F9 /* OpenGLES.framework */; };
 		77C95FFC184189D200A645F9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FFB184189D200A645F9 /* OpenAL.framework */; };
@@ -269,7 +279,7 @@
 		EA2FAE511868E4670010D427 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FAE501868E4670010D427 /* Status.m */; };
 		EA8BEC581847B24E00F6F8F7 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8BEC571847B24E00F6F8F7 /* MainMenu.m */; };
 		EA93F7FF1868E9930074CCF6 /* CharacterSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = EA93F7FE1868E9930074CCF6 /* CharacterSetting.m */; };
-		EAA10FA8185626A0004188C0 /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA10FA5185626A0004188C0 /* Monster.m */; };
+		EAA10FA8185626A0004188C0 /* Monster1.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA10FA5185626A0004188C0 /* Monster1.m */; };
 		EAA10FA9185626A0004188C0 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA10FA7185626A0004188C0 /* Score.m */; };
 		EAA10FC91856D9FB004188C0 /* setting.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA10FC81856D9FB004188C0 /* setting.m */; };
 /* End PBXBuildFile section */
@@ -281,12 +291,22 @@
 		2909B272184AE92600A47312 /* Attackice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attackice.m; sourceTree = "<group>"; };
 		2909B37A184AE92600A47312 /* PlayerDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDocument.h; sourceTree = "<group>"; };
 		2909B37B184AE92600A47312 /* PlayerDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDocument.m; sourceTree = "<group>"; };
-		68582F4018604C940055DF4E /* MonsterThird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterThird.m; sourceTree = "<group>"; };
-		68582F4118604C940055DF4E /* MonsterThird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterThird.h; sourceTree = "<group>"; };
-		68582F4218604C940055DF4E /* MonsterSecand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterSecand.m; sourceTree = "<group>"; };
-		68582F4318604C940055DF4E /* MonsterSecand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonsterSecand.h; sourceTree = "<group>"; };
+		68582F4018604C940055DF4E /* Monster2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster2.m; sourceTree = "<group>"; };
+		68582F4118604C940055DF4E /* Monster2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster2.h; sourceTree = "<group>"; };
+		68582F4218604C940055DF4E /* Monster3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster3.m; sourceTree = "<group>"; };
+		68582F4318604C940055DF4E /* Monster3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster3.h; sourceTree = "<group>"; };
 		685830E4186064D20055DF4E /* Howto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Howto.m; sourceTree = "<group>"; };
 		685830E5186064D20055DF4E /* Howto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Howto.h; sourceTree = "<group>"; };
+		7782EA1D188E7272001DE5B0 /* exp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exp1.png; sourceTree = "<group>"; };
+		7782EA1E188E7272001DE5B0 /* exp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exp2.png; sourceTree = "<group>"; };
+		7782EA1F188E7272001DE5B0 /* exp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exp3.png; sourceTree = "<group>"; };
+		7782EA20188E7272001DE5B0 /* exp4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exp4.png; sourceTree = "<group>"; };
+		7782EA21188E7272001DE5B0 /* expB1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expB1.png; sourceTree = "<group>"; };
+		7782EA22188E7272001DE5B0 /* expB2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expB2.png; sourceTree = "<group>"; };
+		7782EA23188E7272001DE5B0 /* expB3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expB3.png; sourceTree = "<group>"; };
+		7782EA24188E7272001DE5B0 /* expB4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expB4.png; sourceTree = "<group>"; };
+		7782EA2D188E76AE001DE5B0 /* button.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.caf; sourceTree = "<group>"; };
+		7782EA2F188E7756001DE5B0 /* CharacterSetting.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharacterSetting.caf; sourceTree = "<group>"; };
 		77C95FF4184189D200A645F9 /* Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C95FF7184189D200A645F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		77C95FF9184189D200A645F9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -695,8 +715,8 @@
 		EA8BEC571847B24E00F6F8F7 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu.m; sourceTree = "<group>"; };
 		EA93F7FD1868E9890074CCF6 /* CharacterSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterSetting.h; sourceTree = "<group>"; };
 		EA93F7FE1868E9930074CCF6 /* CharacterSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterSetting.m; sourceTree = "<group>"; };
-		EAA10FA4185626A0004188C0 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
-		EAA10FA5185626A0004188C0 /* Monster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
+		EAA10FA4185626A0004188C0 /* Monster1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster1.h; sourceTree = "<group>"; };
+		EAA10FA5185626A0004188C0 /* Monster1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster1.m; sourceTree = "<group>"; };
 		EAA10FA6185626A0004188C0 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		EAA10FA7185626A0004188C0 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		EAA10FC71856D9FB004188C0 /* setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setting.h; sourceTree = "<group>"; };
@@ -724,6 +744,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7782EA1C188E7272001DE5B0 /* Explosion */ = {
+			isa = PBXGroup;
+			children = (
+				7782EA1D188E7272001DE5B0 /* exp1.png */,
+				7782EA1E188E7272001DE5B0 /* exp2.png */,
+				7782EA1F188E7272001DE5B0 /* exp3.png */,
+				7782EA20188E7272001DE5B0 /* exp4.png */,
+				7782EA21188E7272001DE5B0 /* expB1.png */,
+				7782EA22188E7272001DE5B0 /* expB2.png */,
+				7782EA23188E7272001DE5B0 /* expB3.png */,
+				7782EA24188E7272001DE5B0 /* expB4.png */,
+			);
+			path = Explosion;
+			sourceTree = "<group>";
+		};
 		77C95FEB184189D200A645F9 = {
 			isa = PBXGroup;
 			children = (
@@ -773,12 +808,12 @@
 				2909B37B184AE92600A47312 /* PlayerDocument.m */,
 				77C9619C184189D600A645F9 /* AppDelegate.h */,
 				77C9619D184189D600A645F9 /* AppDelegate.m */,
-				EAA10FA4185626A0004188C0 /* Monster.h */,
-				EAA10FA5185626A0004188C0 /* Monster.m */,
-				68582F4018604C940055DF4E /* MonsterThird.m */,
-				68582F4118604C940055DF4E /* MonsterThird.h */,
-				68582F4218604C940055DF4E /* MonsterSecand.m */,
-				68582F4318604C940055DF4E /* MonsterSecand.h */,
+				EAA10FA4185626A0004188C0 /* Monster1.h */,
+				EAA10FA5185626A0004188C0 /* Monster1.m */,
+				68582F4018604C940055DF4E /* Monster2.m */,
+				68582F4118604C940055DF4E /* Monster2.h */,
+				68582F4218604C940055DF4E /* Monster3.m */,
+				68582F4318604C940055DF4E /* Monster3.h */,
 				EAA10FC71856D9FB004188C0 /* setting.h */,
 				EAA10FC81856D9FB004188C0 /* setting.m */,
 				EAA10FA6185626A0004188C0 /* Score.h */,
@@ -1191,6 +1226,8 @@
 		EA2FAD5C1868E4470010D427 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7782EA2D188E76AE001DE5B0 /* button.caf */,
+				7782EA1C188E7272001DE5B0 /* Explosion */,
 				EA115787188640B1006A0BF3 /* gameover */,
 				EA11578A188640B1006A0BF3 /* SoundEffect */,
 				EA11578518864088006A0BF3 /* gameBGM.mp3 */,
@@ -1219,6 +1256,7 @@
 		EA2FAD5F1868E4470010D427 /* charasettei */ = {
 			isa = PBXGroup;
 			children = (
+				7782EA2F188E7756001DE5B0 /* CharacterSetting.caf */,
 				EA11CADE187F412700B4CA50 /* bluebutton.png */,
 				EA11CADF187F412700B4CA50 /* greenbutton.png */,
 				EA11CAE0187F412700B4CA50 /* purplebutton.png */,
@@ -1516,11 +1554,13 @@
 				EA2FAE121868E4470010D427 /* main1-R1.png in Resources */,
 				EA2FAE3C1868E4470010D427 /* shot4-3.png in Resources */,
 				EA2FADF01868E4470010D427 /* main3y.png in Resources */,
+				7782EA30188E7756001DE5B0 /* CharacterSetting.caf in Resources */,
 				EA2FADFF1868E4470010D427 /* Icon-Small.png in Resources */,
 				EA2FAE1C1868E4470010D427 /* main2-Y1.png in Resources */,
 				EA2FADF21868E4470010D427 /* Status.png in Resources */,
 				EA115796188640B1006A0BF3 /* CharacterSelect.mp3 in Resources */,
 				EA2FAE361868E4470010D427 /* laser1-2.png in Resources */,
+				7782EA26188E7272001DE5B0 /* exp2.png in Resources */,
 				EA2FAE471868E4470010D427 /* BGMoff.png in Resources */,
 				EA2FAE481868E4470010D427 /* BGMon.png in Resources */,
 				EA2FADEA1868E4470010D427 /* main2p.png in Resources */,
@@ -1530,6 +1570,7 @@
 				EA2FADE51868E4470010D427 /* main1r.png in Resources */,
 				EA11CAE5187F412700B4CA50 /* purplebutton.png in Resources */,
 				EA2FAE181868E4470010D427 /* main2-G1.png in Resources */,
+				7782EA2E188E76AE001DE5B0 /* button.caf in Resources */,
 				EA2FAE3E1868E4470010D427 /* 1.png in Resources */,
 				EA2FAE381868E4470010D427 /* laser1-4.png in Resources */,
 				EA2FADFE1868E4470010D427 /* Icon-Small-50.png in Resources */,
@@ -1538,6 +1579,7 @@
 				EA115793188640B1006A0BF3 /* attack.mp3 in Resources */,
 				EA2FADF31868E4470010D427 /* fire.gif in Resources */,
 				EA2FADEC1868E4470010D427 /* main3b.png in Resources */,
+				7782EA29188E7272001DE5B0 /* expB1.png in Resources */,
 				EA2FAE081868E4470010D427 /* Default@2x.png in Resources */,
 				EA2FAE3F1868E4470010D427 /* 2.png in Resources */,
 				EA11578618864088006A0BF3 /* gameBGM.mp3 in Resources */,
@@ -1550,9 +1592,11 @@
 				EA2FAE171868E4470010D427 /* main2-B2.png in Resources */,
 				EA2FAE4B1868E4470010D427 /* Setting.png in Resources */,
 				EA2FAE231868E4470010D427 /* main3-R2.png in Resources */,
+				7782EA28188E7272001DE5B0 /* exp4.png in Resources */,
 				EA2FAE2A1868E4470010D427 /* ready.png in Resources */,
 				EA2FAE1F1868E4470010D427 /* main3-B2.png in Resources */,
 				EA2FAE451868E4470010D427 /* scoreRe.png in Resources */,
+				7782EA2B188E7272001DE5B0 /* expB3.png in Resources */,
 				EA115791188640B1006A0BF3 /* gameover.jpg in Resources */,
 				EA2FAE0D1868E4470010D427 /* mainshot2.png in Resources */,
 				EA2FAE491868E4470010D427 /* SEoff.png in Resources */,
@@ -1560,6 +1604,7 @@
 				EA2FAE2F1868E4470010D427 /* ghost_white.png in Resources */,
 				EA2FAE251868E4470010D427 /* main3-Y2.png in Resources */,
 				EA2FADF11868E4470010D427 /* return.png in Resources */,
+				7782EA25188E7272001DE5B0 /* exp1.png in Resources */,
 				EA11CAE4187F412700B4CA50 /* greenbutton.png in Resources */,
 				EA2FAE2D1868E4470010D427 /* daruma.png in Resources */,
 				EA2FAE2E1868E4470010D427 /* shot1-1.png in Resources */,
@@ -1578,6 +1623,7 @@
 				EA2FAE131868E4470010D427 /* main1-R2.png in Resources */,
 				EA2FAE011868E4470010D427 /* Icon.png in Resources */,
 				EA2FAE051868E4470010D427 /* Default-568h@2x.png in Resources */,
+				7782EA2A188E7272001DE5B0 /* expB2.png in Resources */,
 				EA2FAE151868E4470010D427 /* main1-Y2.png in Resources */,
 				EA2FAE411868E4470010D427 /* score.mp3 in Resources */,
 				EA2FAE351868E4470010D427 /* laser1-1.png in Resources */,
@@ -1597,8 +1643,10 @@
 				EA2FAE291868E4470010D427 /* Monster.png in Resources */,
 				EA2FAE0E1868E4470010D427 /* main1-B1.png in Resources */,
 				EA2FADE61868E4470010D427 /* main1y.png in Resources */,
+				7782EA27188E7272001DE5B0 /* exp3.png in Resources */,
 				EA115797188640B1006A0BF3 /* explosion.mp3 in Resources */,
 				EA11CAE9187F413000B4CA50 /* Howto.mp3 in Resources */,
+				7782EA2C188E7272001DE5B0 /* expB4.png in Resources */,
 				EA2FAE241868E4470010D427 /* main3-Y1.png in Resources */,
 				EA2FADFA1868E4470010D427 /* imageShooting.png in Resources */,
 				EA2FAE311868E4470010D427 /* mask.png in Resources */,
@@ -1670,8 +1718,8 @@
 				77C9613C184189D500A645F9 /* CCVertex.m in Sources */,
 				77C96142184189D500A645F9 /* NSThread+performBlock.m in Sources */,
 				77C96049184189D300A645F9 /* CCActionTiledGrid.m in Sources */,
-				68582F4518604C940055DF4E /* MonsterSecand.m in Sources */,
-				EAA10FA8185626A0004188C0 /* Monster.m in Sources */,
+				68582F4518604C940055DF4E /* Monster3.m in Sources */,
+				EAA10FA8185626A0004188C0 /* Monster1.m in Sources */,
 				77C96090184189D400A645F9 /* CCMenuItem.m in Sources */,
 				77C9602B184189D300A645F9 /* CCActionCamera.m in Sources */,
 				77C9615D184189D500A645F9 /* CDXPropertyModifierAction.m in Sources */,
@@ -1757,7 +1805,7 @@
 				77C96052184189D300A645F9 /* CCAnimationCache.m in Sources */,
 				77C96074184189D300A645F9 /* CCGLProgram.m in Sources */,
 				77C96164184189D500A645F9 /* SimpleAudioEngine.m in Sources */,
-				68582F4418604C940055DF4E /* MonsterThird.m in Sources */,
+				68582F4418604C940055DF4E /* Monster2.m in Sources */,
 				77C96116184189D500A645F9 /* CCTouchDispatcher.m in Sources */,
 				77C96099184189D400A645F9 /* CCNode.m in Sources */,
 			);

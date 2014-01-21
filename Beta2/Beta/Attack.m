@@ -9,6 +9,7 @@
 #import "Attack.h"
 
 @implementation Attack
+
 -(id)init{
     if (self=[super init]) {
         self.speedx=10;
@@ -26,6 +27,7 @@
     }
     return self;
 }
+
 -(id)initwithAttackname:(NSString *)name{
     if (self=[super init]) {
         self.speedx=10;
@@ -37,7 +39,6 @@
         self.image=[CCSprite spriteWithFile:name];
         [self addChild:self.image];
         CGSize sizeofimage=[self.image boundingBox].size;
-        //self.radius=sizeofimage.height;
         self.radius=10;
         self.lifetime=2;
     }
