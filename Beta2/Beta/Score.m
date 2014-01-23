@@ -8,7 +8,7 @@
 
 #import "Score.h"
 #import "MainMenu.h"
-
+#import "settingDoc.h"
 static Score *share;
 @implementation Score
 {
@@ -119,7 +119,7 @@ static Score *share;
         _thirdLabel.position = ccpAdd(bottom, thirdOffset);
         _secondLabel.position = ccpAdd(center, secondOffset);
         _highScoreLabel.position = ccpAdd(top, highScoreOffset);
-
+        if([settingDoc share].isBGM);
         [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"score.mp3" loop:YES];
         share=self;
     }
@@ -130,6 +130,7 @@ static Score *share;
     for (UITouch *i in touches) {
         CGPoint location=[self convertTouchToNodeSpace:i];
         if (CGRectContainsPoint(self.scoreRe.boundingBox, location)) {
+            if([settingDoc share].isEffectSund);
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.mp3"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
         }

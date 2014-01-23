@@ -20,7 +20,6 @@
 
 @property(nonatomic,strong) CCSprite *back,*BGMon,*BGMoff,*SEon,*SEoff,*scoreRe;
 
-@property BOOL isBGM,isEffectSund;
 +(CCScene *) scene;
 +(setting *) shared;
 @end

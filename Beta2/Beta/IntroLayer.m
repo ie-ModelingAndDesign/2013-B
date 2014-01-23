@@ -13,6 +13,7 @@
 #import "MainMenu.h"
 #import "Status.h"
 #import "CharacterDoc.h"
+#import "settingDoc.h"
 #pragma mark - IntroLayer
 
 // HelloWorldLayer implementation
@@ -58,6 +59,7 @@
         //init status;
         Status *s=[[Status alloc]init];
         [[CharacterDoc alloc] init];
+        [[settingDoc alloc] init];
     }
     
     return self;

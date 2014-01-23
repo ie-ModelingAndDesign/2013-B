@@ -10,6 +10,7 @@
 #import "MainMenu.h"
 #import "GameScene.h"
 #import "CharacterDoc.h"
+#import "settingDoc.h"
 @implementation CharacterSetting
 
 +(CCScene *) scene
@@ -86,6 +87,7 @@
     }
     
     self.machineNumber = 1;
+    if([settingDoc share].isBGM)
     [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"CharacterSetting.mp3" loop:YES];
     
     return self;
@@ -104,6 +106,7 @@
         CGSize size=[CCDirector sharedDirector].winSize;
         
         if (CGRectContainsPoint(self.main1bs.boundingBox, location)) {
+            if([settingDoc share].isEffectSund)
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             [CharacterDoc share].Name = @"main1-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main1b.png"];
@@ -124,6 +127,7 @@
         }
         
         if (CGRectContainsPoint(self.main2bs.boundingBox, location)) {
+            if([settingDoc share].isEffectSund)
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             [CharacterDoc share].Name = @"main2-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main2b.png"];
@@ -146,6 +150,7 @@
         }
         
         if (CGRectContainsPoint(self.main3bs.boundingBox, location)) {
+            if([settingDoc share].isEffectSund)
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             [CharacterDoc share].Name = @"main3-B";
             CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:@"main3b.png"];
@@ -197,6 +202,7 @@
         }
         
         if (CGRectContainsPoint(self.selectbutton2.boundingBox, location)) {
+            if([settingDoc share].isEffectSund)
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             
             NSString *machineColor = @"null";
@@ -221,6 +227,7 @@
         }
         
         if (CGRectContainsPoint(self.selectbutton3.boundingBox, location)) {
+            if([settingDoc share].isEffectSund)
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             
             NSString *machineColor = @"null";
@@ -245,6 +252,7 @@
         }
         
         if (CGRectContainsPoint(self.selectbutton4.boundingBox, location)) {
+            if([settingDoc share].isEffectSund)
             [[SimpleAudioEngine sharedEngine]playEffect:@"CharacterSelect.caf"];
             
             NSString *machineColor = @"null";
@@ -271,11 +279,13 @@
         
         
         if (CGRectContainsPoint(self.Return.boundingBox, location)) {
+            if([settingDoc share].isEffectSund)
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
         }
         
         if (CGRectContainsPoint(self.go.boundingBox, location)) {
+            if([settingDoc share].isEffectSund)
             [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[GameScene scene] ]];
@@ -285,7 +295,13 @@
     
 }
 
-
+-(void)onExitTransitionDidStart{
+    [self removeAllChildren];
+    [CCAnimationCache purgeSharedAnimationCache];
+    [[CCTextureCache sharedTextureCache] removeAllTextures];
+    [super cleanup];
+    [super onExit];
+}
 
 @end
 

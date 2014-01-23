@@ -10,6 +10,7 @@
 #import "Monster1.h"
 #import "Attack.h"
 #import "Score.h"
+#import "settingDoc.h"
 @implementation GameScene
 +(CCScene *) scene
 {
@@ -80,7 +81,7 @@
         self.scoreShower.position = ccp(size.width/2, size.height-30);
         [self addChild:self.scoreShower];
     }
-    
+    if([settingDoc share].isBGM)
     [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"gameBGM.mp3" loop:YES];
     
 	return self;
@@ -240,16 +241,6 @@
     Monster1 *m=[[Monster1 alloc]init];
    // m.position=ccp(size.width, size.height);
     [self addChild:m];
-}
-// on "dealloc" you need to release all your retained objects
-- (void) dealloc
-{
-	// in case you have something to dealloc, do it in this method
-	// in this particular example nothing needs to be released.
-	// cocos2d will automatically release all the children (Label)
-	
-	// don't forget to call "super dealloc"
-	[super dealloc];
 }
 
 -(void)onExitTransitionDidStart{

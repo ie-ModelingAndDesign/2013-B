@@ -8,7 +8,7 @@
 
 #import "setting.h"
 #import "MainMenu.h"
-
+#import "settingDoc.h"
 static setting *share;
 @implementation setting
 +(setting *) shared {
@@ -63,29 +63,27 @@ static setting *share;
 
         self.isTouchEnabled=YES; //この一行でタッチに対応出来ました。でも処理はまだ入れていません！
         [self schedule:@selector(update:)]; //この命令で更新機能ができるらしい。0.03秒ごとに更新！！みたいな
-        if (!share) {
-            self.isBGM =YES;
-            self.isEffectSund = YES;
-        }
         share = self;
         [self updateSprite];
     }
     
-    //[[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"BGMop.mp3" loop:YES];
+   // [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"BGMop.mp3" loop:YES];
     
     return self;
 }
 
 -(void)updateSprite {
-    if (self.isBGM) {
+    if ([settingDoc share].isBGM) {
         self.BGMon.zOrder =10;
         self.BGMoff.zOrder =1;
+        [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"BGMop.mp3" loop:YES];
     }else {
         self.BGMon.zOrder =1;
         self.BGMoff.zOrder =10;
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     }
     
-    if (self.isEffectSund) {
+    if ([settingDoc share].isEffectSund) {
         self.SEon.zOrder = 10;
         self.SEoff.zOrder =1;
     }else {
@@ -98,24 +96,27 @@ static setting *share;
     for (UITouch *i in touches) {
         CGPoint location=[self convertTouchToNodeSpace:i];
         if (CGRectContainsPoint(self.scoreRe.boundingBox, location)) {
-            if (self.isEffectSund) {
-            [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
+            if ([settingDoc share].isEffectSund) {
+                [[SimpleAudioEngine sharedEngine]playEffect:@"button.caf"];
             }
             [[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[MainMenu scene] ]];
         }
         if (CGRectContainsPoint(self.SEon.boundingBox, location)) {
-            self.isEffectSund=!self.isEffectSund;
+            [settingDoc share].isEffectSund = ![settingDoc share].isEffectSund;
         }
         if (CGRectContainsPoint(self.BGMon.boundingBox, location)) {
-            self.isBGM = !self.isBGM;
+            [settingDoc share].isBGM = ![settingDoc share].isBGM;
         }
     }
-    
     
     [self updateSprite];
 }
 
--(void)onExit {
-    
+-(void)onExitTransitionDidStart{
+    [self removeAllChildren];
+    [CCAnimationCache purgeSharedAnimationCache];
+    [[CCTextureCache sharedTextureCache] removeAllTextures];
+    [super cleanup];
+    [super onExit];
 }
 @end
