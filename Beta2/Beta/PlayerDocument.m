@@ -9,16 +9,8 @@
 #import "PlayerDocument.h"
 
 static NSString *attack1=@"Attack";
-static NSString *attack2=@"Attackice";
-static NSString *attack3=@"Attack";
 @implementation PlayerDocument
 +(NSString *)getattack1{
     return attack1;
-}
-+(NSString *)getattack2{
-    return attack2;
-}
-+(NSString *)getattack3{
-    return attack3;
 }
 @end

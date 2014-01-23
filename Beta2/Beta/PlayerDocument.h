@@ -10,6 +10,4 @@
 
 @interface PlayerDocument : GameObject
 +(NSString *)getattack1;
-+(NSString *)getattack2;
-+(NSString *)getattack3;
 @end
