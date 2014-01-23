@@ -40,9 +40,11 @@
         //fortest only
         self.speedx =0;
         self.speedy =0;
+        self.direction = ccp(0, 1);
 //        CGSize sizeofimage=[self.image boundingBox].size;
          self.radius=10;
         
+        self.weapon = noraml;
     }
     return self;
 }
@@ -60,34 +62,19 @@
     self.positiony = min(winsize.height, max(0, self.positiony));
     self.position = ccp(self.positionx, self.positiony);
 }
+
 -(void)attack1{
     Attack *a=[[NSClassFromString([PlayerDocument getattack1]) alloc] init];
     a.position=self.position;
     a.startp=self.position;
+    a.damage= self.status.Attack;
     a.speedx=self.direction.x*self.status.AttackSpeed;
     a.speedy=self.direction.y*self.status.AttackSpeed;
     a.target=0;
     
     [self.parent addChild:a];
 }
--(void)attack2{
-    Attack *a=[[NSClassFromString([PlayerDocument getattack2]) alloc] init];
-    a.position=self.position;
-    a.startp=self.position;
-    a.speedx=self.direction.x;
-    a.speedy=self.direction.y;
-    a.target=0;
-    [self.parent addChild:a];
-}
--(void)attack3{
-    Attack *a=[[NSClassFromString([PlayerDocument getattack3]) alloc] init];
-    a.position=self.position;
-    a.startp=self.position;
-    a.speedx=self.direction.x;
-    a.speedy=self.direction.y;
-    a.target=0;
-    [self.parent addChild:a];
-}
+
 -(void)handleCollisionWith:(GameObject *)gameObject{
     if ([gameObject isKindOfClass:[Attack class]]) {
         Attack *attack=(Attack *)gameObject;

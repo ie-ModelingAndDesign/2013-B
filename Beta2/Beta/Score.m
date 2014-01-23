@@ -140,11 +140,17 @@ static Score *share;
 {
     _new = score;
     if (_new >= _highScore) {
+        _third = _second;
+        _second = _highScore;
         _highScore = _new;
         [_highScoreLabel setString:[NSString stringWithFormat:@"%7d", _highScore]];
+        [_secondLabel setString:[NSString stringWithFormat:@"%7d", _second]];
+        [_thirdLabel setString:[NSString stringWithFormat:@"%7d", _third]];
     }else if(_new >= _second){
+        _third = _second;
         _second = _new;
         [_secondLabel setString:[NSString stringWithFormat:@"%7d", _second]];
+        [_thirdLabel setString:[NSString stringWithFormat:@"%7d", _third]];
     }else if(_new >= _third){
         _third = _new;
         [_thirdLabel setString:[NSString stringWithFormat:@"%7d", _third]];
@@ -158,9 +164,6 @@ static Score *share;
                         [NSNumber numberWithInt: _third ],
                       nil];
     BOOL succeed=[NSKeyedArchiver archiveRootObject:thedata toFile:d];
-    if (succeed) {
-        //        NSLog(@"save done");
-    }
 }
 
 @end

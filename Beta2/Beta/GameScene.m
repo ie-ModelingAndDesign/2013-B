@@ -34,22 +34,15 @@
 	if( (self=[super init]) ) {
 		self.moveboard=[CCSprite spriteWithFile:@"moveboard.png"];
         self.attackboard1=[CCSprite spriteWithFile:@"attackboard.png"];
-        self.attackboard2=[CCSprite spriteWithFile:@"attackboard.png"];
-        self.attackboard3=[CCSprite spriteWithFile:@"attackboard.png"];
         self.moveboard.zOrder=1000;
         self.attackboard1.zOrder=1000;
-        self.attackboard2.zOrder=1000;
-        self.attackboard3.zOrder=1000;
         self.moveboard.position=ccp(70, 70);
         self.moveboard.scale = 2;
         CGSize size=[CCDirector sharedDirector].winSize;
-        self.attackboard1.position=ccp(size.width-140, 50);
-        self.attackboard2.position=ccp(size.width-100, 50);
-        self.attackboard3.position=ccp(size.width-60, 50);
+        self.attackboard1.position=ccp(size.width-70, 70);
+        self.attackboard1.scale   = 2;
         [self addChild:self.moveboard];
         [self addChild:self.attackboard1];
-        [self addChild:self.attackboard2];
-        [self addChild:self.attackboard3];
         
         self.character=[[MainCharacter alloc]init];
         self.character.position=ccp(size.width/2, size.height/2);
@@ -80,7 +73,12 @@
         self.monsterlist=[NSArray arrayWithContentsOfFile:d];
         
         
-        self.score=101;
+        self.score=0;
+        NSString * text = [NSString stringWithFormat:@"Score : %d",self.score];
+        self.scoreShower = [CCLabelTTF labelWithString:text fontName:@"arial" fontSize:25];
+        self.scoreShower.anchorPoint = ccp(0, 0.5f);
+        self.scoreShower.position = ccp(size.width/2, size.height-30);
+        [self addChild:self.scoreShower];
     }
     
     [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"gameBGM.mp3" loop:YES];
@@ -101,6 +99,9 @@
                 self.character.speedx=dx/dr*speed;
                 self.character.speedy=dy/dr*speed;
             }
+            if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
+                [self.character attack1];
+            }
         }
     }
 }
@@ -117,6 +118,9 @@
                 self.character.speedx=dx/dr*speed;
                 self.character.speedy=dy/dr*speed;
             }
+            if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
+                [self.character attack1];
+            }
         }
     }
 }
@@ -125,10 +129,6 @@
         CGPoint location = [self convertTouchToNodeSpace: i];
         if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
             [self.character attack1];
-        }else if (CGRectContainsPoint(self.attackboard2.boundingBox,location) ) {
-            [self.character attack2];
-        }else if (CGRectContainsPoint(self.attackboard3.boundingBox,location) ) {
-            [self.character attack3];
         }
     }
     self.character.speedx=0;
@@ -194,7 +194,7 @@
             {
                 if ([gameObject isKindOfClass:[Monster1 class]]) {
                     Monster1 *m=(Monster1 *)gameObject;
-                    self.score+=m.status.HP;
+                    self.score+=m.status.MaxHP;
                 }
                 [gameObjectsToRemove addObject:gameObject];
             }
@@ -228,6 +228,8 @@
     if (self.character.status.HP<=0) {
         [self GameOver];
     }
+    NSString * text = [NSString stringWithFormat:@"Score : %d",self.score];
+    [self.scoreShower setString:text];
   //  NSLog(@"%f",self.HPShower);
 }
 -(void)GameOver{
@@ -250,7 +252,7 @@
 	[super dealloc];
 }
 
--(void)onExit{
+-(void)onExitTransitionDidStart{
     [self removeAllChildren];
     [CCAnimationCache purgeSharedAnimationCache];
     [[CCTextureCache sharedTextureCache] removeAllTextures];

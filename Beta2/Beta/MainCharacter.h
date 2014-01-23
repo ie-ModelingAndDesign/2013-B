@@ -9,6 +9,12 @@
 #import "GameObject.h"
 #import "Status.h"
 //#import "Attack.h"
+typedef enum {
+    noraml,
+    special,
+    laser
+}WeaponStatus;
+
 @interface MainCharacter : GameObject
 
 @property double positionx,positiony;
@@ -20,10 +26,9 @@
 @property float freezestagetime;
 @property BOOL movestagechangeable;
 
+@property WeaponStatus weapon;
 @property (nonatomic,strong) Status *status;
 @property (nonatomic,strong) CCSprite *image;
 
 -(void)attack1;
--(void)attack2;
--(void)attack3;
 @end
