@@ -7,7 +7,9 @@
 //
 
 #import "Attack.h"
-
+#import "settingDoc.h"
+#import "SimpleAudioEngine.h"
+#import "BoomEffect.h"
 @implementation Attack
 
 -(id)init{
@@ -24,6 +26,9 @@
         //self.radius=sizeofimage.height;
         self.radius=10;
         self.lifetime=2;
+        if ([settingDoc share].isEffectSund) {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"attack.caf"];
+        }
     }
     return self;
 }
@@ -57,5 +62,7 @@
 }
 -(void)handleCollisionWith:(GameObject *)gameObject{
     self.isScheduledForRemove=YES;
+    BoomEffect *bomm = [[BoomEffect alloc]initWithPoistion:self.position];
+    [self.parent addChild:bomm];
 }
 @end

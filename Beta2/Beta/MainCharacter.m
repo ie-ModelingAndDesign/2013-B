@@ -17,9 +17,6 @@
     //    NSLog(@"character name : %@",[CharacterDoc share].Name);
         NSString *name =[[CharacterDoc share].Name stringByAppendingString:@"1.png"];
         NSString *name2 =[[CharacterDoc share].Name stringByAppendingString:@"2.png"];
-/*        NSMutableArray *animation = [NSMutableArray array];
-        [animation addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:name]];
-        [animation addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:name2]];*/
         CCAnimation *characteranimation =[[CCAnimation alloc] init];
         [characteranimation addSpriteFrameWithFilename:name];
         [characteranimation addSpriteFrameWithFilename:name2];
