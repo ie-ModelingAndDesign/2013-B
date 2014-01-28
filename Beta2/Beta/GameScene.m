@@ -105,9 +105,6 @@
             }
 
         }
-        if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
-            [self.character attack1];
-        }
     }
 }
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -130,10 +127,11 @@
         CGPoint location = [self convertTouchToNodeSpace: i];
         if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
             [self.character attack1];
+        } else {            
+            self.character.speedx=0;
+            self.character.speedy=0;
         }
     }
-    self.character.speedx=0;
-    self.character.speedy=0;
 }
 -(void)nextFrame:(float)dt{
     self.monstercounter+=dt;
