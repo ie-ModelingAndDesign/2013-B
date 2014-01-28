@@ -35,6 +35,8 @@
 	if( (self=[super init]) ) {
 		self.moveboard=[CCSprite spriteWithFile:@"moveboard.png"];
         self.attackboard1=[CCSprite spriteWithFile:@"attackboard.png"];
+        self.moveboard.opacity = 100;
+        self.attackboard1.opacity = 100;
         self.moveboard.zOrder=1000;
         self.attackboard1.zOrder=1000;
         self.moveboard.position=ccp(70, 70);
@@ -60,12 +62,14 @@
         [self addChild:HPLabel];
         self.isTouchEnabled = YES;
         [self schedule:@selector(nextFrame:)];
+        
+        
     
 //        CGSize size=[CCDirector sharedDirector].winSize;
         
         self.periodofmonster=2;
         self.monstercounter=0;
-        self.levelmaxmonster=1;
+        self.levelmaxmonster=3;
         self.levelmonsters=1;
         self.maxmonsterinwave=1;
         self.sentmonster=0;
@@ -91,18 +95,18 @@
     for (UITouch *i in touches) {
         CGPoint location = [self convertTouchToNodeSpace: i];
         if (CGRectContainsPoint(self.moveboard.boundingBox,location) ) {
-            float speed=1;
             float dx=location.x-self.moveboard.position.x;
             float dy=location.y-self.moveboard.position.y;
             float dr=dx*dx+dy*dy;
             dr=sqrtf(dr);
             if (dr!=0) {
-                self.character.speedx=dx/dr*speed;
-                self.character.speedy=dy/dr*speed;
+                self.character.speedx=dx/dr*self.character.status.Speed;
+                self.character.speedy=dy/dr*self.character.status.Speed;
             }
-            if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
-                [self.character attack1];
-            }
+
+        }
+        if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
+            [self.character attack1];
         }
     }
 }
@@ -110,17 +114,13 @@
     for (UITouch *i in touches) {
         CGPoint location = [self convertTouchToNodeSpace: i];
         if (CGRectContainsPoint(self.moveboard.boundingBox,location) ) {
-            float speed=1;
             float dx=location.x-self.moveboard.position.x;
             float dy=location.y-self.moveboard.position.y;
             float dr=dx*dx+dy*dy;
             dr=sqrtf(dr);
             if (dr!=0) {
-                self.character.speedx=dx/dr*speed;
-                self.character.speedy=dy/dr*speed;
-            }
-            if (CGRectContainsPoint(self.attackboard1.boundingBox,location) ) {
-                [self.character attack1];
+                self.character.speedx=dx/dr*self.character.status.Speed;
+                self.character.speedy=dy/dr*self.character.status.Speed;
             }
         }
     }
@@ -150,12 +150,10 @@
     CCARRAY_FOREACH(self.children, child)
     {
         // Check if the child is a game object
+        @try{
         if ([child isKindOfClass:[GameObject class]])
         {
             GameObject* gameObject = (GameObject*)child;
-            
-            // Update all game objects
-            //NSLog([gameObject description]);
             [gameObject update];
             if ([gameObject isKindOfClass:[Monster1 class]]) {
                 Monster1 *m=(Monster1 *)gameObject;
@@ -182,6 +180,9 @@
             
             }
             
+        }
+        }@catch (NSException *exception) {
+            NSLog(@"[ERROR]\nstr[%@]\nexception[%@]", [child description], exception);
         }
     }
     NSMutableArray* gameObjectsToRemove = [NSMutableArray array];
@@ -219,7 +220,7 @@
         self.maxmonsterinwave+=self.maxmonsterinwave*1.5;
         self.sentmonster=0;
         self.killmonster=0;
-        if (self.levelmonsters< self.maxmonsterinwave) {
+        if (self.levelmonsters< self.levelmaxmonster) {
             self.levelmonsters++;
         }
     }
@@ -238,7 +239,10 @@
 }
 -(void)createmonster{
    // CGSize size=[CCDirector sharedDirector].winSize;
-    Monster1 *m=[[Monster1 alloc]init];
+    int level = (arc4random() % self.levelmonsters) + 1;
+    NSString *classname = [NSString stringWithFormat:@"Monster%d",level];
+//    NSLog(classname);
+    GameObject *m=[[NSClassFromString(classname) alloc]init];
    // m.position=ccp(size.width, size.height);
     [self addChild:m];
 }

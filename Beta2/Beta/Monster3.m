@@ -7,76 +7,69 @@
 //
 
 #import "Monster3.h"
-#import "Attackice.h"
-
+#import "Attack.h"
 @implementation Monster3
 
 -(id)init{
     if(self=[super init]){
-        self.imageM=[CCSprite spriteWithFile:@"M.png"];
+        self.imageM=[CCSprite spriteWithFile:@"ghost_white.png"];
         [self addChild:self.imageM];
         CGSize size=[CCDirector sharedDirector].winSize;
+        self.attackname = @"shot2-1.png";
+        self.status.MaxHP=1500;
+        self.status.HP=500;
+        self.status.Attack=1;
+        self.status.Speed=0.5f;
         //        self.position=ccp(size.width, size.height);
-        [self schedule:@selector(charge2) interval:2.0f];
+        [self schedule:@selector(charge2) interval:0.2f];
     }
     return self;
 }
 
-float dx,dy,dr;
-float radian,degree;//角度
 
-float positionx;
-float positiony;
-
-float T,c;// a cycle,count
 
 -(void)update{
     
-    dx = self.target.x-self.position.x;
-    dy = self.target.y-self.position.y;
-    dr =dx*dx+dy*dy;
-    dr =sqrtf(dr);
+    self.dx = self.target.x-self.position.x;
+    self.dy = self.target.y-self.position.y;
+    self.dr =self.dx*self.dx+self.dy*self.dy;
+    self.dr =sqrtf(self.dr);
     
-    degree+=1;
-    radian=degree*M_PI/180;
+    self.degree+=0.3f;
+    self.radian=self.degree*M_PI/180;
     
-    T=100;
-    c=c+1;
-    if (c>T) {
-        c=0;
+    self.T=100;
+    self.c=self.c+1;
+    if (self.c>self.T) {
+        self.c=0;
     }
-
     
-    if(dr >150){
-    dr -=1;
-    self.positionx = dr*cos(radian)+self.target.x;
-    self.positiony = dr*sin(radian)+self.target.y;
+    if(self.dr >150){
+        self.dr -=0.1f;
+        self.positionx = self.dr*cos(self.radian)+self.target.x;
+        self.positiony = self.dr*sin(self.radian)+self.target.y;
     }else{
-        dr = 150;
-        self.positionx = dr*cos(radian)+self.target.x;
-        self.positiony = dr*sin(radian)+self.target.y;
-//        self.positionx = dr*cos(c*2*M_PI/T*radian)+self.target.x;
-//        self.positiony = dr*sin(c*2*M_PI/T*radian)+self.target.y;
+        self.dr += 0.1f;
+        self.positionx = self.dr*cos(self.radian)+self.target.x;
+        self.positiony = self.dr*sin(self.radian)+self.target.y;
     }
     
     self.position=ccp(self.positionx, self.positiony);
 }
 
 -(void)charge2{
+    self.dx = self.target.x-self.position.x;
+    self.dy = self.target.y-self.position.y;
+    self.dr =self.dx*self.dx+self.dy*self.dy;
+    self.dr =sqrtf(self.dr);
     
-    float Bspeed=5;
-    
-    dx = self.target.x-self.position.x;
-    dy = self.target.y-self.position.y;
-    dr =dx*dx+dy*dy;
-    dr =sqrtf(dr);
-    
-    if(dr<200){
-        Attackice *b=[[Attackice alloc] init];
+    if(self.dr<200){
+        Attack *b=[[Attack alloc] initwithAttackname:self.attackname];
         b.position=ccp(self.position.x,self.position.y);
-        b.speedx=dx/dr*Bspeed;
-        b.speedy=dy/dr*Bspeed;
-        [self.parent addChild:b];        
+        b.speedx=self.dx/self.dr*3;
+        b.speedy=self.dy/self.dr*3;
+        b.target=1;
+        [self.parent addChild:b];
     }
 }
 

@@ -13,5 +13,8 @@
 @property CGPoint target;
 @property double positionx,positiony;
 @property double speedx,speedy;
+@property float dx,dy,dr;
+@property float radian,degree;//角度
 
+@property float T,c;// a cycle,count
 @end

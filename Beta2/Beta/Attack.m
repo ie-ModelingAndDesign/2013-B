@@ -45,13 +45,13 @@
         [self addChild:self.image];
         CGSize sizeofimage=[self.image boundingBox].size;
         self.radius=10;
-        self.lifetime=2;
+        self.lifetime=10;
     }
     return self;
 }
 -(void)update{
     //float imsilon=self.speedy/self.speedx;
-    self.rotation=atan2f(self.speedx, self.speedy)*180/3.14+90;
+    self.rotation=atan2f(self.speedx, self.speedy)*180/3.14;
 //    NSLog(@"%f",atan2f(self.speedx, self.speedy));
     self.lifetime-=0.03;
     

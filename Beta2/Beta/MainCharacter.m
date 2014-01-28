@@ -28,20 +28,57 @@
         CCRepeatForever *action = [CCRepeatForever actionWithAction:animateaction];
         [self.image runAction:action];
         [self addChild:self.image];
-  
-        self.status =[[Status alloc]init];
-        self.status.MaxHP=100;
-        self.status.HP=self.status.MaxHP;
-        self.status.AttackSpeed=5;
-        self.status.Attack=100;
-        //fortest only
-        self.speedx =0;
-        self.speedy =0;
-        self.direction = ccp(0, 1);
-//        CGSize sizeofimage=[self.image boundingBox].size;
-         self.radius=10;
-        
-        self.weapon = noraml;
+
+        NSArray *characterName = [[CharacterDoc share].Name componentsSeparatedByString:@"-"];
+        NSString *theName = [characterName objectAtIndex:0];
+        if ([theName isEqualToString:@"main1"]) {
+            self.status =[[Status alloc]init];
+            self.status.MaxHP=1500;
+            self.status.HP=self.status.MaxHP;
+            self.status.Speed = 1.5f;
+            self.status.Attack=250;
+            self.speedx =0;
+            self.speedy =0;
+            self.direction = ccp(0, 1);
+            self.radius=10;
+
+        }else if ([theName isEqualToString:@"main2"]) {
+            self.status =[[Status alloc]init];
+            self.status.MaxHP=3000;
+            self.status.HP=self.status.MaxHP;
+            self.status.Speed = 1.5f;
+            self.status.Attack=150;
+            self.speedx =0;
+            self.speedy =0;
+            self.direction = ccp(0, 1);
+            self.radius=10;
+        }else if ([theName isEqualToString:@"main3"]) {
+            self.status =[[Status alloc]init];
+            self.status.MaxHP=1500;
+            self.status.HP=self.status.MaxHP;
+            self.status.Speed = 3.5f;
+            self.status.Attack=150;
+            self.speedx =0;
+            self.speedy =0;
+            self.direction = ccp(0, 1);
+            self.radius=10;
+        }
+        NSString *theequipment = [characterName objectAtIndex:1];
+        if ([theequipment isEqualToString:@"B"]) {
+            self.status.Attack *=1.3f;
+            self.status.MaxHP *= 1.3f;
+            self.status.HP *= 1.3f;
+            self.status.Speed *=1.3f;
+        }else if ([theequipment isEqualToString:@"Y"]) {
+            self.status.MaxHP *= 2;
+            self.status.HP *= 2;
+        }else if ([theequipment isEqualToString:@"R"]) {
+            self.status.Attack *=2;
+        }else if([theequipment isEqualToString:@"P"]) {
+            self.status.Attack *=2;
+        }else if([theequipment isEqualToString:@"G"]) {
+            self.status.Speed *=2;
+        }
     }
     return self;
 }
@@ -55,7 +92,7 @@
     self.rotation=atan2f(self.direction.x, self.direction.y)*180/3.14-90;
     CGSize winsize = [CCDirector sharedDirector].winSize;
     float x = max(0, self.positionx);
-    self.positionx  = min(winsize.width, self.positionx);
+    self.positionx  = min(winsize.width, x);
     self.positiony = min(winsize.height, max(0, self.positiony));
     self.position = ccp(self.positionx, self.positiony);
 }
@@ -65,8 +102,8 @@
     a.position=self.position;
     a.startp=self.position;
     a.damage= self.status.Attack;
-    a.speedx=self.direction.x*self.status.AttackSpeed;
-    a.speedy=self.direction.y*self.status.AttackSpeed;
+    a.speedx=self.direction.x*2.5f;
+    a.speedy=self.direction.y*2.5f;
     a.target=0;
     
     [self.parent addChild:a];

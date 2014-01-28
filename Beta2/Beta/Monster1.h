@@ -19,4 +19,5 @@
 @property double positionx,positiony;
 @property double speedx,speedy;
 -(id)initWithName:(NSString *)name attackName:(NSString *)attack;
+-(void)createMonster;
 @end
