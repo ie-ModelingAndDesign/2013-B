@@ -32,17 +32,29 @@
         
         CGSize size=[CCDirector sharedDirector].winSize;
         
-        self.imageHowtoplay=[CCSprite spriteWithFile:@"Howtoplay.png"];
-        CGSize sizebg=[self.imageHowtoplay boundingBox].size;
-        self.imageHowtoplay.scaleX=size.width/ sizebg.width;
-        self.imageHowtoplay.scaleY=size.height/sizebg.height;
-        self.imageHowtoplay.position=ccp(size.width/2, size.height/2);
+        self.imageHowtoplay=[CCSprite spriteWithFile:@"play.png"]; //explanation
+        self.imageHowtoplay.scale=0.75f;
+        self.imageHowtoplay.position=ccp(size.width/2, size.height-60);
         [self addChild: self.imageHowtoplay];
         
-        self.imageback=[CCSprite spriteWithFile:@"scoreRe.png"]; //returnbutton image
-        self.imageback.scale=0.75f;
+        self.imageiphone=[CCSprite spriteWithFile:@"iphonehandscreen.png"]; //iphone
+        self.imageiphone.scale=0.75f;
+        self.imageiphone.position=ccp(size.width/2, size.height/2-100);
+        [self addChild: self.imageiphone];
         
-        self.imageback.position=ccp(size.width/2,size.height/5); //returnbutoon position
+        self.imageattack=[CCSprite spriteWithFile:@"attackbutton.png"]; //attackbutton
+        self.imageattack.position=ccp(size.width/2+110, size.height/3);
+        self.imageattack.scale=0.75f;
+        [self addChild: self.imageattack];
+        
+        self.imagemove=[CCSprite spriteWithFile:@"movebutton.png"]; //movebutton
+        self.imagemove.position=ccp(size.width/2-110, size.height/3);
+        self.imagemove.scale=0.75f;
+        [self addChild: self.imagemove];
+        
+        self.imageback=[CCSprite spriteWithFile:@"scoreRe.png"]; //returnbutton image
+        //self.imageback.scale=0.75f;
+        self.imageback.position=ccp(size.width-50,size.height-30); //returnbutoon position
         [self addChild: self.imageback];
         
         self.isTouchEnabled=YES;

@@ -39,7 +39,7 @@
         self.main2bs=[CCSprite spriteWithFile:@"main2bs.png"];
         self.main3bs=[CCSprite spriteWithFile:@"main3bs.png"];
         self.Return=[CCSprite spriteWithFile:@"return.png"];
-        self.status=[CCSprite spriteWithFile:@"Status.png"];
+        //self.status=[CCSprite spriteWithFile:@"Status.png"];
         
         CGSize size=[CCDirector sharedDirector].winSize;
         
@@ -49,7 +49,7 @@
         self.main2bs.position=ccp(size.width/7,size.height/2-30);
         self.main3bs.position=ccp(size.width/7,size.height/7);
         self.Return.position=ccp(size.width/9,size.height - size.height/8);
-        self.status.position=ccp(size.width/2,size.height/7);
+        //self.status.position=ccp(size.width/2,size.height/7);
         
         [self addChild: self.back];
         [self addChild: self.go];
@@ -57,7 +57,7 @@
         [self addChild: self.main2bs];
         [self addChild: self.main3bs];
         [self addChild: self.Return];
-        [self addChild: self.status];
+        //[self addChild: self.status];
         
         self.selectedCharacter=[CCSprite spriteWithFile:@"main1b.png"];
         self.selectedCharacter.position=ccp(size.width/2,size.height/2+30);
