@@ -12,21 +12,24 @@
 
 -(id)init{
     if(self=[super init]){
-        self.imageM=[CCSprite spriteWithFile:@"ghost_white.png"];
-        [self addChild:self.imageM];
-        CGSize size=[CCDirector sharedDirector].winSize;
-        self.attackname = @"shot2-1.png";
-        self.status.MaxHP=1500;
-        self.status.HP=500;
-        self.status.Attack=1;
-        self.status.Speed=0.5f;
+        [self createMonster];
         //        self.position=ccp(size.width, size.height);
         [self schedule:@selector(charge2) interval:0.2f];
     }
     return self;
 }
 
-
+-(void)createMonster {
+    self.imageM=[CCSprite spriteWithFile:@"ghost_white.png"];
+    [self addChild:self.imageM];
+    self.positionx = self.position.x;
+    self.positiony = self.position.y;
+    self.attackname = @"shot2-1.png";
+    self.status.MaxHP=1500;
+    self.status.HP=1500;
+    self.status.Attack=8;
+    self.status.Speed=0.5f;
+}
 
 -(void)update{
     

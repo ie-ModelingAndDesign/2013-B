@@ -12,8 +12,5 @@
 @interface Monster2 : Monster1
 @property (nonatomic ,strong) CCSprite *imageM;
 @property CGPoint target;
-@property double positionx,positiony;
-@property double speedx,speedy;
-
 
 @end

@@ -33,6 +33,10 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
+        CCSprite *backGround = [CCSprite spriteWithFile:@"BG.jpg"];
+        backGround.anchorPoint = ccp(0, 0);
+        [self addChild:backGround];
+        
 		self.moveboard=[CCSprite spriteWithFile:@"moveboard.png"];
         self.attackboard1=[CCSprite spriteWithFile:@"attackboard.png"];
         self.moveboard.opacity = 100;
@@ -69,7 +73,7 @@
         
         self.periodofmonster=2;
         self.monstercounter=0;
-        self.levelmaxmonster=3;
+        self.levelmaxmonster=6;
         self.levelmonsters=1;
         self.maxmonsterinwave=1;
         self.sentmonster=0;

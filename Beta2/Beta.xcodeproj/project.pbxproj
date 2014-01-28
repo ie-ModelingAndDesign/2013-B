@@ -28,6 +28,10 @@
 		7782EA781890C309001DE5B0 /* attack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA761890C309001DE5B0 /* attack.caf */; };
 		7782EA791890C309001DE5B0 /* laser.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA771890C309001DE5B0 /* laser.caf */; };
 		7782EA7B1890C31E001DE5B0 /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA7A1890C31E001DE5B0 /* explosion.caf */; };
+		7790304E1897BFCB000C3764 /* Monster4.m in Sources */ = {isa = PBXBuildFile; fileRef = 7790304D1897BFCB000C3764 /* Monster4.m */; };
+		779030511897C05C000C3764 /* Monster5.m in Sources */ = {isa = PBXBuildFile; fileRef = 779030501897C05C000C3764 /* Monster5.m */; };
+		779030541897C12A000C3764 /* Monster6.m in Sources */ = {isa = PBXBuildFile; fileRef = 779030531897C12A000C3764 /* Monster6.m */; };
+		779030561897C632000C3764 /* BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 779030551897C632000C3764 /* BG.jpg */; };
 		77C95FF8184189D200A645F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF7184189D200A645F9 /* QuartzCore.framework */; };
 		77C95FFA184189D200A645F9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF9184189D200A645F9 /* OpenGLES.framework */; };
 		77C95FFC184189D200A645F9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FFB184189D200A645F9 /* OpenAL.framework */; };
@@ -318,6 +322,13 @@
 		7782EA761890C309001DE5B0 /* attack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attack.caf; sourceTree = "<group>"; };
 		7782EA771890C309001DE5B0 /* laser.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = laser.caf; sourceTree = "<group>"; };
 		7782EA7A1890C31E001DE5B0 /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.caf; sourceTree = "<group>"; };
+		7790304C1897BFCB000C3764 /* Monster4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster4.h; sourceTree = "<group>"; };
+		7790304D1897BFCB000C3764 /* Monster4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster4.m; sourceTree = "<group>"; };
+		7790304F1897C05C000C3764 /* Monster5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster5.h; sourceTree = "<group>"; };
+		779030501897C05C000C3764 /* Monster5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster5.m; sourceTree = "<group>"; };
+		779030521897C12A000C3764 /* Monster6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster6.h; sourceTree = "<group>"; };
+		779030531897C12A000C3764 /* Monster6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster6.m; sourceTree = "<group>"; };
+		779030551897C632000C3764 /* BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG.jpg; sourceTree = "<group>"; };
 		77C95FF4184189D200A645F9 /* Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C95FF7184189D200A645F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		77C95FF9184189D200A645F9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -825,6 +836,12 @@
 				68582F4118604C940055DF4E /* Monster2.h */,
 				68582F4218604C940055DF4E /* Monster3.m */,
 				68582F4318604C940055DF4E /* Monster3.h */,
+				7790304C1897BFCB000C3764 /* Monster4.h */,
+				7790304D1897BFCB000C3764 /* Monster4.m */,
+				7790304F1897C05C000C3764 /* Monster5.h */,
+				779030501897C05C000C3764 /* Monster5.m */,
+				779030521897C12A000C3764 /* Monster6.h */,
+				779030531897C12A000C3764 /* Monster6.m */,
 				EAA10FC71856D9FB004188C0 /* setting.h */,
 				EAA10FC81856D9FB004188C0 /* setting.m */,
 				7782EA701890B4EA001DE5B0 /* settingDoc.h */,
@@ -1243,6 +1260,7 @@
 		EA2FAD5C1868E4470010D427 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				779030551897C632000C3764 /* BG.jpg */,
 				7782EA2D188E76AE001DE5B0 /* button.caf */,
 				7782EA1C188E7272001DE5B0 /* Explosion */,
 				EA115787188640B1006A0BF3 /* gameover */,
@@ -1654,6 +1672,7 @@
 				EA2FADF51868E4470010D427 /* imageattack.png in Resources */,
 				EA2FAE461868E4470010D427 /* scoreubar.png in Resources */,
 				EA2FAE141868E4470010D427 /* main1-Y1.png in Resources */,
+				779030561897C632000C3764 /* BG.jpg in Resources */,
 				EA2FAE331868E4470010D427 /* shot1-4.png in Resources */,
 				EA115798188640B1006A0BF3 /* laser.mp3 in Resources */,
 				EA11CAE3187F412700B4CA50 /* bluebutton.png in Resources */,
@@ -1712,6 +1731,7 @@
 				7782EA751890BEB0001DE5B0 /* BoomEffect.m in Sources */,
 				77C96062184189D300A645F9 /* ccDeprecated.m in Sources */,
 				77C9611D184189D500A645F9 /* CCDirectorMac.m in Sources */,
+				779030511897C05C000C3764 /* Monster5.m in Sources */,
 				77C96077184189D300A645F9 /* ccGLStateCache.m in Sources */,
 				77C96149184189D500A645F9 /* TransformUtils.m in Sources */,
 				77C96096184189D400A645F9 /* CCNode+Debug.m in Sources */,
@@ -1745,6 +1765,7 @@
 				77C96090184189D400A645F9 /* CCMenuItem.m in Sources */,
 				77C9602B184189D300A645F9 /* CCActionCamera.m in Sources */,
 				77C9615D184189D500A645F9 /* CDXPropertyModifierAction.m in Sources */,
+				779030541897C12A000C3764 /* Monster6.m in Sources */,
 				2909B40A184AE92600A47312 /* PlayerDocument.m in Sources */,
 				EA93F7FF1868E9930074CCF6 /* CharacterSetting.m in Sources */,
 				77C9612D184189D500A645F9 /* CCArray.m in Sources */,
@@ -1786,6 +1807,7 @@
 				77C96112184189D500A645F9 /* CCGLView.m in Sources */,
 				77C9613F184189D500A645F9 /* CGPointExtension.m in Sources */,
 				77C961C118419E2800A645F9 /* CharacterDoc.m in Sources */,
+				7790304E1897BFCB000C3764 /* Monster4.m in Sources */,
 				77C96043184189D300A645F9 /* CCActionPageTurn3D.m in Sources */,
 				77C96194184189D600A645F9 /* vec3.c in Sources */,
 				77C96146184189D500A645F9 /* TGAlib.m in Sources */,

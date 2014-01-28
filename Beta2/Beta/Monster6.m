@@ -1,15 +1,14 @@
 //
-//  MonsterThird.m
+//  Monster6.m
 //  Beta
 //
-//  Created by Yuuto ARAKAWA on 2013/12/10.
-//  Copyright (c) 2013年 vilayouth vongsomxai. All rights reserved.
+//  Created by vilayouth vongsomxai on 2014/01/28.
+//  Copyright (c) 2014年 vilayouth vongsomxai. All rights reserved.
 //
 
-#import "Monster2.h"
-#import "Attack.h"
-@implementation Monster2
+#import "Monster6.h"
 
+@implementation Monster6
 -(id)init{
     if(self=[super init]){
         [self createMonster];
@@ -18,28 +17,37 @@
 }
 
 -(void)createMonster {
-    self.imageM=[CCSprite spriteWithFile:@"daruma.png"];
+    NSString *name = @"senkan1-1.png";
+    NSString *name2 = @"senkan1-2.png";
+    CCAnimation *characteranimation =[[CCAnimation alloc] init];
+    [characteranimation addSpriteFrameWithFilename:name];
+    [characteranimation addSpriteFrameWithFilename:name2];
+    characteranimation.delayPerUnit = 0.03;
+    CCTexture2D *texture=[[CCTextureCache sharedTextureCache] addImage:name];
+    self.imageM = [CCSprite spriteWithTexture:texture];
+    
+    CCAnimate *animateaction = [CCAnimate actionWithAnimation:characteranimation];
+    CCRepeatForever *action = [CCRepeatForever actionWithAction:animateaction];
+    [self.imageM runAction:action];
     [self addChild:self.imageM];
+    
     CGSize size=[CCDirector sharedDirector].winSize;
     int upordown = arc4random()%2;
     self.position=ccp(arc4random() % (int)size.width, upordown*size.height);
     self.positionx = self.position.x;
     self.positiony = self.position.y;
-    
     self.status=[[Status alloc] init];
-    self.status.MaxHP=500;
-    self.status.HP=500;
-    self.status.Attack=12;
-    self.status.Speed=0.3f;
+    self.status.MaxHP=2500;
+    self.status.HP=2500;
+    self.status.Attack=20;
+    self.status.Speed=2;
     //        self.position=ccp(size.width, size.height);
     [self schedule:@selector(charge1) interval:3.0f];
     //        CGSize sizeofimage=[self.imageM boundingBox].size;
     self.radius=10;
-    self.attackname=@"shot1-1.png";
-    [self schedule:@selector(charge3) interval:0.4f];
+    self.attackname=@"shot4-3.png";
+    [self schedule:@selector(charge3) interval:0.5f];
 }
-
-float dx,dy,dr;
 
 -(void)update{
     float dx=self.target.x-self.position.x;
@@ -57,25 +65,6 @@ float dx,dy,dr;
     if (self.status.HP<=0) {
         self.isScheduledForRemove=YES;
     }
-    
+    self.rotation=atan2f(dx, dy)*180/3.14+90;
 }
--(void)charge3{
-    
-    float Bspeed=25;
-    
-    dx = self.target.x-self.position.x;
-    dy = self.target.y-self.position.y;
-    dr =dx*dx+dy*dy;
-    dr =sqrtf(dr);
-    
-    Attack *a=[[Attack alloc] initwithAttackname:self.attackname];
-    a.position=ccp(self.position.x,self.position.y);
-    a.speedx=dx/dr*2;
-    a.speedy=dy/dr*2;
-    a.damage=self.status.Attack;
-    a.target=1;
-    [self.parent addChild:a];
-
-}
-
 @end

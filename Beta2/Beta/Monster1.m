@@ -21,8 +21,10 @@
     self.imageM=[CCSprite spriteWithFile:@"ghast.png"];
     [self addChild:self.imageM];
     CGSize size=[CCDirector sharedDirector].winSize;
-    float randx=random()%360/360*3.14;
-    self.position=ccp(sinf(randx)*size.width, randx*size.height);
+    int upordown = arc4random()%2;
+    self.position=ccp(arc4random() % (int)size.width, upordown*size.height);
+    self.positionx = self.position.x;
+    self.positiony = self.position.y;
     self.status=[[Status alloc] init];
     self.status.MaxHP=100;
     self.status.HP=100;
