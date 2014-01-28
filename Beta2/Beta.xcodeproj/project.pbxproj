@@ -24,6 +24,11 @@
 		7782EA2E188E76AE001DE5B0 /* button.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA2D188E76AE001DE5B0 /* button.caf */; };
 		7782EA30188E7756001DE5B0 /* CharacterSetting.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA2F188E7756001DE5B0 /* CharacterSetting.caf */; };
 		7782EA32188E7A4F001DE5B0 /* CharacterSelect.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA31188E7A4F001DE5B0 /* CharacterSelect.caf */; };
+		7782EA721890B4EA001DE5B0 /* settingDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 7782EA711890B4EA001DE5B0 /* settingDoc.m */; };
+		7782EA751890BEB0001DE5B0 /* BoomEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7782EA741890BEB0001DE5B0 /* BoomEffect.m */; };
+		7782EA781890C309001DE5B0 /* attack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA761890C309001DE5B0 /* attack.caf */; };
+		7782EA791890C309001DE5B0 /* laser.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA771890C309001DE5B0 /* laser.caf */; };
+		7782EA7B1890C31E001DE5B0 /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7782EA7A1890C31E001DE5B0 /* explosion.caf */; };
 		77C95FF8184189D200A645F9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF7184189D200A645F9 /* QuartzCore.framework */; };
 		77C95FFA184189D200A645F9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FF9184189D200A645F9 /* OpenGLES.framework */; };
 		77C95FFC184189D200A645F9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C95FFB184189D200A645F9 /* OpenAL.framework */; };
@@ -309,6 +314,13 @@
 		7782EA2D188E76AE001DE5B0 /* button.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.caf; sourceTree = "<group>"; };
 		7782EA2F188E7756001DE5B0 /* CharacterSetting.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharacterSetting.caf; sourceTree = "<group>"; };
 		7782EA31188E7A4F001DE5B0 /* CharacterSelect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharacterSelect.caf; sourceTree = "<group>"; };
+		7782EA701890B4EA001DE5B0 /* settingDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingDoc.h; sourceTree = "<group>"; };
+		7782EA711890B4EA001DE5B0 /* settingDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingDoc.m; sourceTree = "<group>"; };
+		7782EA731890BEB0001DE5B0 /* BoomEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoomEffect.h; sourceTree = "<group>"; };
+		7782EA741890BEB0001DE5B0 /* BoomEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoomEffect.m; sourceTree = "<group>"; };
+		7782EA761890C309001DE5B0 /* attack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attack.caf; sourceTree = "<group>"; };
+		7782EA771890C309001DE5B0 /* laser.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = laser.caf; sourceTree = "<group>"; };
+		7782EA7A1890C31E001DE5B0 /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.caf; sourceTree = "<group>"; };
 		77C95FF4184189D200A645F9 /* Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C95FF7184189D200A645F9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		77C95FF9184189D200A645F9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -802,6 +814,8 @@
 				EA93F7FE1868E9930074CCF6 /* CharacterSetting.m */,
 				685830E5186064D20055DF4E /* Howto.h */,
 				685830E4186064D20055DF4E /* Howto.m */,
+				7782EA731890BEB0001DE5B0 /* BoomEffect.h */,
+				7782EA741890BEB0001DE5B0 /* BoomEffect.m */,
 				2909B26F184AE92600A47312 /* Attack.h */,
 				2909B270184AE92600A47312 /* Attack.m */,
 				2909B271184AE92600A47312 /* Attackice.h */,
@@ -818,6 +832,8 @@
 				68582F4318604C940055DF4E /* Monster3.h */,
 				EAA10FC71856D9FB004188C0 /* setting.h */,
 				EAA10FC81856D9FB004188C0 /* setting.m */,
+				7782EA701890B4EA001DE5B0 /* settingDoc.h */,
+				7782EA711890B4EA001DE5B0 /* settingDoc.m */,
 				EAA10FA6185626A0004188C0 /* Score.h */,
 				EAA10FA7185626A0004188C0 /* Score.m */,
 				77C961A2184189D600A645F9 /* IntroLayer.h */,
@@ -1215,6 +1231,9 @@
 		EA11578A188640B1006A0BF3 /* SoundEffect */ = {
 			isa = PBXGroup;
 			children = (
+				7782EA7A1890C31E001DE5B0 /* explosion.caf */,
+				7782EA761890C309001DE5B0 /* attack.caf */,
+				7782EA771890C309001DE5B0 /* laser.caf */,
 				7782EA31188E7A4F001DE5B0 /* CharacterSelect.caf */,
 				EA11578B188640B1006A0BF3 /* attack.mp3 */,
 				EA11578C188640B1006A0BF3 /* BossAlarm.mp3 */,
@@ -1572,6 +1591,7 @@
 				EA2FAE441868E4470010D427 /* scoreback2.png in Resources */,
 				EA2FAE2B1868E4470010D427 /* ghast.png in Resources */,
 				EA2FADE51868E4470010D427 /* main1r.png in Resources */,
+				7782EA7B1890C31E001DE5B0 /* explosion.caf in Resources */,
 				EA11CAE5187F412700B4CA50 /* purplebutton.png in Resources */,
 				EA2FAE181868E4470010D427 /* main2-G1.png in Resources */,
 				7782EA2E188E76AE001DE5B0 /* button.caf in Resources */,
@@ -1614,6 +1634,7 @@
 				EA2FAE2E1868E4470010D427 /* shot1-1.png in Resources */,
 				EA2FAE341868E4470010D427 /* tank.png in Resources */,
 				EA2FADE71868E4470010D427 /* main2b.png in Resources */,
+				7782EA781890C309001DE5B0 /* attack.caf in Resources */,
 				EA2FADF41868E4470010D427 /* Howtoplay.png in Resources */,
 				EA11CAE7187F412700B4CA50 /* yellowbutton.png in Resources */,
 				EA115795188640B1006A0BF3 /* button2.mp3 in Resources */,
@@ -1675,6 +1696,7 @@
 				EA2FAE2C1868E4470010D427 /* shot1-2.png in Resources */,
 				EA2FADF61868E4470010D427 /* imageAttackButton.png in Resources */,
 				EA2FAE0B1868E4470010D427 /* mainlaser3.png in Resources */,
+				7782EA791890C309001DE5B0 /* laser.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1692,6 +1714,7 @@
 				77C960EB184189D400A645F9 /* CCTileMapAtlas.m in Sources */,
 				77C960EE184189D400A645F9 /* CCTMXLayer.m in Sources */,
 				77C96186184189D500A645F9 /* mat4.c in Sources */,
+				7782EA751890BEB0001DE5B0 /* BoomEffect.m in Sources */,
 				77C96062184189D300A645F9 /* ccDeprecated.m in Sources */,
 				77C9611D184189D500A645F9 /* CCDirectorMac.m in Sources */,
 				77C96077184189D300A645F9 /* ccGLStateCache.m in Sources */,
@@ -1744,6 +1767,7 @@
 				77C96080184189D300A645F9 /* CCLabelAtlas.m in Sources */,
 				77C9609C184189D400A645F9 /* CCParallaxNode.m in Sources */,
 				77C961AC18418E5200A645F9 /* GameObject.m in Sources */,
+				7782EA721890B4EA001DE5B0 /* settingDoc.m in Sources */,
 				77C961A4184189D600A645F9 /* IntroLayer.m in Sources */,
 				77C96034184189D300A645F9 /* CCActionGrid.m in Sources */,
 				77C9607D184189D300A645F9 /* CCGrid.m in Sources */,
