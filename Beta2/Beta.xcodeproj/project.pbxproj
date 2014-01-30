@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2909B396184AE92600A47312 /* Attack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909B270184AE92600A47312 /* Attack.m */; };
 		2909B40A184AE92600A47312 /* PlayerDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2909B37B184AE92600A47312 /* PlayerDocument.m */; };
+		683A86BD1899E9C800192EF9 /* AttackBurst.m in Sources */ = {isa = PBXBuildFile; fileRef = 683A86BC1899E9C800192EF9 /* AttackBurst.m */; };
 		68582F4418604C940055DF4E /* Monster2.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4018604C940055DF4E /* Monster2.m */; };
 		68582F4518604C940055DF4E /* Monster3.m in Sources */ = {isa = PBXBuildFile; fileRef = 68582F4218604C940055DF4E /* Monster3.m */; };
 		685830E6186064D20055DF4E /* Howto.m in Sources */ = {isa = PBXBuildFile; fileRef = 685830E4186064D20055DF4E /* Howto.m */; };
@@ -298,6 +299,8 @@
 		2909B270184AE92600A47312 /* Attack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attack.m; sourceTree = "<group>"; };
 		2909B37A184AE92600A47312 /* PlayerDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDocument.h; sourceTree = "<group>"; };
 		2909B37B184AE92600A47312 /* PlayerDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDocument.m; sourceTree = "<group>"; };
+		683A86BB1899E9C800192EF9 /* AttackBurst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttackBurst.h; sourceTree = "<group>"; };
+		683A86BC1899E9C800192EF9 /* AttackBurst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttackBurst.m; sourceTree = "<group>"; };
 		68582F4018604C940055DF4E /* Monster2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster2.m; sourceTree = "<group>"; };
 		68582F4118604C940055DF4E /* Monster2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monster2.h; sourceTree = "<group>"; };
 		68582F4218604C940055DF4E /* Monster3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monster3.m; sourceTree = "<group>"; };
@@ -818,6 +821,8 @@
 		77C9600B184189D200A645F9 /* Beta */ = {
 			isa = PBXGroup;
 			children = (
+				683A86BB1899E9C800192EF9 /* AttackBurst.h */,
+				683A86BC1899E9C800192EF9 /* AttackBurst.m */,
 				EA93F7FD1868E9890074CCF6 /* CharacterSetting.h */,
 				EA93F7FE1868E9930074CCF6 /* CharacterSetting.m */,
 				685830E5186064D20055DF4E /* Howto.h */,
@@ -1773,6 +1778,7 @@
 				77C96136184189D500A645F9 /* CCProfiling.m in Sources */,
 				77C960CD184189D400A645F9 /* CCShaderCache.m in Sources */,
 				77C960D3184189D400A645F9 /* CCSprite.m in Sources */,
+				683A86BD1899E9C800192EF9 /* AttackBurst.m in Sources */,
 				77C9607A184189D300A645F9 /* CCGrabber.m in Sources */,
 				77C96184184189D500A645F9 /* mat3.c in Sources */,
 				EAA10FA9185626A0004188C0 /* Score.m in Sources */,
