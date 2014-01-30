@@ -27,5 +27,6 @@
     self.status.HP=4000;
     self.status.Attack=200;
     self.status.Speed=0.5f;
+    self.radius=15;
 }
 @end
