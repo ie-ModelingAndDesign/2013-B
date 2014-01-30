@@ -13,7 +13,6 @@
 -(id)init{
     if(self=[super init]){
         [self createMonster];
-        self.radius=10;
     }
     return self;
 }
@@ -33,6 +32,8 @@
     self.status.Speed=0.5f;
     //        self.position=ccp(size.width, size.height);
     [self schedule:@selector(charge1) interval:2.0f];
+    //        CGSize sizeofimage=[self.imageM boundingBox].size;
+    self.radius=10;
     self.attackname=@"shot1-2.png";
 }
 
