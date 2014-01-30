@@ -29,6 +29,7 @@
     self.status.HP=1500;
     self.status.Attack=30;
     self.status.Speed=0.5f;
+    self.radius=30;
 }
 
 -(void)update{
