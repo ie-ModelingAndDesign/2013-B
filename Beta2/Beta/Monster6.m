@@ -44,7 +44,7 @@
     //        self.position=ccp(size.width, size.height);
   //  [self schedule:@selector(charge1) interval:3.0f];
     //        CGSize sizeofimage=[self.imageM boundingBox].size;
-    self.radius=10;
+    self.radius=25;
     self.attackname=@"shot4-3.png";
     [self schedule:@selector(charge3) interval:3];
 }
