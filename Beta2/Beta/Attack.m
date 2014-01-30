@@ -22,9 +22,8 @@
       //  self.image=[[CCSprite alloc] initWithFile:@"fire.gif"];
         self.image=[CCSprite spriteWithFile:@"mainshot1.png"];
         [self addChild:self.image];
-        CGSize sizeofimage=[self.image boundingBox].size;
         //self.radius=sizeofimage.height;
-        self.radius=10;
+        self.radius=2;
         self.lifetime=2;
         if ([settingDoc share].isEffectSund) {
             [[SimpleAudioEngine sharedEngine] playEffect:@"attack.caf"];
@@ -44,7 +43,7 @@
         self.image=[CCSprite spriteWithFile:name];
         [self addChild:self.image];
         CGSize sizeofimage=[self.image boundingBox].size;
-        self.radius=10;
+        self.radius=2;
         self.lifetime=10;
     }
     return self;

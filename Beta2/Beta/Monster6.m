@@ -39,14 +39,14 @@
     self.status=[[Status alloc] init];
     self.status.MaxHP=2500;
     self.status.HP=2500;
-    self.status.Attack=20;
+    self.status.Attack=400;
     self.status.Speed=2;
     //        self.position=ccp(size.width, size.height);
-    [self schedule:@selector(charge1) interval:3.0f];
+  //  [self schedule:@selector(charge1) interval:3.0f];
     //        CGSize sizeofimage=[self.imageM boundingBox].size;
     self.radius=10;
     self.attackname=@"shot4-3.png";
-    [self schedule:@selector(charge3) interval:0.5f];
+    [self schedule:@selector(charge3) interval:3];
 }
 
 -(void)update{

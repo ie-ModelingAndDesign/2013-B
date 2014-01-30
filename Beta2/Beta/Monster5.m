@@ -13,7 +13,7 @@
     if(self=[super init]){
         [self createMonster];
         //        self.position=ccp(size.width, size.height);
-        [self schedule:@selector(charge2) interval:0.2f];
+        [self schedule:@selector(charge2) interval:3];
     }
     return self;
 }
@@ -25,7 +25,7 @@
     self.attackname = @"shot1-4.png";
     self.status.MaxHP=4000;
     self.status.HP=4000;
-    self.status.Attack=25;
+    self.status.Attack=200;
     self.status.Speed=0.5f;
 }
 @end

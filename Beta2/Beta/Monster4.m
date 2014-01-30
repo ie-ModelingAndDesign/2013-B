@@ -27,7 +27,7 @@
     self.status=[[Status alloc] init];
     self.status.MaxHP=1000;
     self.status.HP=1000;
-    self.status.Attack=100;
+    self.status.Attack=150;
     self.status.Speed=0.1f;
     //        self.position=ccp(size.width, size.height);
     [self schedule:@selector(charge1) interval:5.0f];

@@ -40,7 +40,7 @@
             self.speedx =0;
             self.speedy =0;
             self.direction = ccp(0, 1);
-            self.radius=10;
+            self.radius=3;
 
         }else if ([theName isEqualToString:@"main2"]) {
             self.status =[[Status alloc]init];
@@ -51,7 +51,7 @@
             self.speedx =0;
             self.speedy =0;
             self.direction = ccp(0, 1);
-            self.radius=10;
+            self.radius=3;
         }else if ([theName isEqualToString:@"main3"]) {
             self.status =[[Status alloc]init];
             self.status.MaxHP=1500;
@@ -61,7 +61,7 @@
             self.speedx =0;
             self.speedy =0;
             self.direction = ccp(0, 1);
-            self.radius=10;
+            self.radius=3;
         }
         NSString *theequipment = [characterName objectAtIndex:1];
         if ([theequipment isEqualToString:@"B"]) {
