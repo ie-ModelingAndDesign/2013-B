@@ -55,7 +55,7 @@
         //self.monster.position=ccp(50,50);
         self.Score.position=ccp(size.width/2-75,size.height/2-100);
         self.setting.position=ccp(size.width/2+55,size.height/2-100);
-        self.Howto.position=ccp(430,50);
+        self.Howto.position=ccp(size.width-size.width/9,size.height/6);
         
         [self addChild: self.back];
         [self addChild: self.ready];
