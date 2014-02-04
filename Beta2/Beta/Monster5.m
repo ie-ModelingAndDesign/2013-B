@@ -25,8 +25,8 @@
     self.attackname = @"shot1-4.png";
     self.status.MaxHP=4000;
     self.status.HP=4000;
-    self.status.Attack=200;
+    self.status.Attack=20;
     self.status.Speed=0.5f;
-    self.radius=25;
+    self.radius=55;
 }
 @end

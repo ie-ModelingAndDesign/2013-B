@@ -171,7 +171,7 @@
                         if (ccpDistance(attack.position, m.position)<attack.radius+m.radius) {
                             [m handleCollisionWith:attack];
                             [attack handleCollisionWith:m];
-                            NSLog(@"%f",m.radius);
+                         //   NSLog(@"%f",m.radius);
                         }
                     }
                 }else if (attack.target ==1){
