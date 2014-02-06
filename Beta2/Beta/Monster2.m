@@ -31,6 +31,7 @@
     self.status.HP=500;
     self.status.Attack=18;
     self.status.Speed=0.3f;
+    self.radius=10;
     self.attackname=@"shot1-1.png";
     [self schedule:@selector(charge3) interval:1];
 }
