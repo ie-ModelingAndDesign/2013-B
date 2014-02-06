@@ -42,7 +42,6 @@
         //  self.image=[[CCSprite alloc] initWithFile:@"fire.gif"];
         self.image=[CCSprite spriteWithFile:name];
         [self addChild:self.image];
-        CGSize sizeofimage=[self.image boundingBox].size;
         self.radius=2;
         self.lifetime=10;
     }

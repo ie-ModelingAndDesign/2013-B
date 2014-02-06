@@ -18,7 +18,5 @@
 
 @property (nonatomic,strong) CCSprite *image;
 
--(BOOL)isattacked:(CGPoint)p;
--(void)lifedown;
 -(id)initwithAttackname:(NSString *)name;
 @end
