@@ -166,6 +166,7 @@
 		77C961AF18418EB400A645F9 /* MainCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961AE18418EB400A645F9 /* MainCharacter.m */; };
 		77C961B8184196AF00A645F9 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961B7184196AF00A645F9 /* GameScene.m */; };
 		77C961C118419E2800A645F9 /* CharacterDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C961C018419E2800A645F9 /* CharacterDoc.m */; };
+		77D5E6A818A33B7200A9EF4E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D5E6A718A33B7100A9EF4E /* Item.m */; };
 		EA11578618864088006A0BF3 /* gameBGM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA11578518864088006A0BF3 /* gameBGM.mp3 */; };
 		EA115791188640B1006A0BF3 /* gameover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA115788188640B1006A0BF3 /* gameover.jpg */; };
 		EA115792188640B1006A0BF3 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA115789188640B1006A0BF3 /* gameover.mp3 */; };
@@ -613,6 +614,8 @@
 		77C961B7184196AF00A645F9 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		77C961BF18419E2800A645F9 /* CharacterDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterDoc.h; sourceTree = "<group>"; };
 		77C961C018419E2800A645F9 /* CharacterDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterDoc.m; sourceTree = "<group>"; };
+		77D5E6A618A33B7100A9EF4E /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		77D5E6A718A33B7100A9EF4E /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		EA11578518864088006A0BF3 /* gameBGM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameBGM.mp3; sourceTree = "<group>"; };
 		EA115788188640B1006A0BF3 /* gameover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gameover.jpg; sourceTree = "<group>"; };
 		EA115789188640B1006A0BF3 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
@@ -841,6 +844,8 @@
 		77C9600B184189D200A645F9 /* Beta */ = {
 			isa = PBXGroup;
 			children = (
+				77D5E6A618A33B7100A9EF4E /* Item.h */,
+				77D5E6A718A33B7100A9EF4E /* Item.m */,
 				683A86BB1899E9C800192EF9 /* AttackBurst.h */,
 				683A86BC1899E9C800192EF9 /* AttackBurst.m */,
 				EA93F7FD1868E9890074CCF6 /* CharacterSetting.h */,
@@ -1758,6 +1763,7 @@
 				77C9611D184189D500A645F9 /* CCDirectorMac.m in Sources */,
 				779030511897C05C000C3764 /* Monster5.m in Sources */,
 				77C96077184189D300A645F9 /* ccGLStateCache.m in Sources */,
+				77D5E6A818A33B7200A9EF4E /* Item.m in Sources */,
 				77C96149184189D500A645F9 /* TransformUtils.m in Sources */,
 				77C96096184189D400A645F9 /* CCNode+Debug.m in Sources */,
 				77C96071184189D300A645F9 /* ccFPSImages.m in Sources */,
