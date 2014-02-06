@@ -10,6 +10,8 @@
 #import "Attack.h"
 #import "PlayerDocument.h"
 #import "CharacterDoc.h"
+#import "Item.h"
+#import "SimpleAudioEngine.h"
 @implementation MainCharacter
 -(id)init{
     if(self=[super init]){
@@ -113,6 +115,10 @@
     if ([gameObject isKindOfClass:[Attack class]]) {
         Attack *attack=(Attack *)gameObject;
         self.status.HP-=attack.damage;
+    }else if ([gameObject isKindOfClass:[Item class]]){
+        self.status.HP += 100;
+        self.status.HP = min(self.status.HP, self.status.MaxHP);
+        [[SimpleAudioEngine sharedEngine] playEffect:@"CharacterSelect.caf" pitch:2 pan:0 gain:1];
     }
 }
 @end

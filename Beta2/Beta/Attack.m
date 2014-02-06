@@ -23,7 +23,7 @@
         self.image=[CCSprite spriteWithFile:@"mainshot1.png"];
         [self addChild:self.image];
         //self.radius=sizeofimage.height;
-        self.radius=13;
+        self.radius=5;
         self.lifetime=2;
         if ([settingDoc share].isEffectSund) {
             [[SimpleAudioEngine sharedEngine] playEffect:@"attack.caf"];

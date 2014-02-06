@@ -11,6 +11,7 @@
 #import "Attack.h"
 #import "Score.h"
 #import "settingDoc.h"
+#import "Item.h"
 @implementation GameScene
 +(CCScene *) scene
 {
@@ -182,7 +183,12 @@
                 }
             
             }
-            
+            if ([gameObject isKindOfClass:[Item class]]) {
+                if (ccpDistance(gameObject.position, self.character.position)<gameObject.radius+self.character.radius) {
+                    [self.character handleCollisionWith:gameObject];
+                    [gameObject handleCollisionWith:self.character];
+                }
+            }
         }
         }@catch (NSException *exception) {
             NSLog(@"[ERROR]\nstr[%@]\nexception[%@]", [child description], exception);

@@ -8,6 +8,7 @@
 
 #import "Monster1.h"
 #import "Attack.h"
+#import "Item.h"
 @implementation Monster1
 
 -(id)init{
@@ -104,6 +105,12 @@ float positiony;
         self.status.HP-=attack.damage;
         if (self.status.HP <= 0) {
             self.isScheduledForRemove =YES;
+            int ran = arc4random()%100;
+            if (ran%10 == 0) {
+                Item *item = [[Item alloc] init];
+                item.position = self.position;
+                [self.parent addChild:item];
+            }
         }
     }
 }
